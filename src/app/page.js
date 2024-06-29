@@ -2,18 +2,14 @@
 
 import styles from "./page.module.css";
 import Container from "react-bootstrap/Container";
-import NavigationBar from "@/components/NavigationBar";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <NavigationBar />
-      <Container className="mt-5">
-        <h1>Home</h1>
-        <p>
-          Hello world!
-        </p>
-      </Container>
+      <h1>Home</h1>
+      <p>
+        Hello world!
+      </p>
     </main>
   );
 }

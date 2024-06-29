@@ -1,18 +1,14 @@
 "use client";
 
 import Container from "react-bootstrap/Container";
-import NavigationBar from "@/components/NavigationBar";
 
 export default function Projects() {
   return (
     <main>
-      <NavigationBar />
-      <Container className="mt-5">
-        <h1>Projects</h1>
-        <p>
-          Hello world!
-        </p>
-      </Container>
+      <h1>Projects</h1>
+      <p>
+        Hello world!
+      </p>
     </main>
   );
 }
