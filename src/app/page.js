@@ -46,7 +46,7 @@ export default function Home() {
             />
           </Col>
           <Col className="align-content-center p-3" md={7}>
-            <h2 className="mb-4">Welcome to My Digital Universe</h2>
+            <h2 className="mb-4">Welcome to <span className={styles.highlighted}>My Digital Universe</span></h2>
             <p>
               I'm a 23-year-old code enthusiast from Wrocław, currently navigating the galaxy of IT Automation Systems at Wrocław University of Science and Technology. My journey from <span className={styles.highlighted}>QBASIC</span> text adventures to full-stack engineering has been quite the space odyssey!
             </p>

@@ -19,7 +19,7 @@ const TechStack = ({ tech, icon }) => (
 
 const ExperienceItem = ({ title, company, period, description }) => (
   <div className={styles.experienceItem}>
-    <h4><span className={styles.highlightedText}>{title}</span> - <span className={styles.highlightedText}>{company}</span></h4>
+    <h4><span className={globalStyles.highlighted}>{title}</span> - <span className={globalStyles.highlighted}>{company}</span></h4>
     <p className="text-white">{period}</p>
     <p>{description}</p>
   </div>
@@ -45,9 +45,9 @@ export default function About() {
     { name: "Blazor", icon: <SiBlazor size={30} color="#7dbeff" /> },
     { name: "EF Core", icon: <SiDotnet size={30} color="#7dbeff" /> },
     { name: "UWP", icon: <FaWindows size={30} color="#7dbeff" /> },
-    { name: "Javascript", icon: <SiJavascript size={30} color="#7dbeff" /> },
+    { name: "JavaScript", icon: <SiJavascript size={30} color="#7dbeff" /> },
     { name: "React", icon: <FaReact size={30} color="#7dbeff" /> },
-    { name: "Next.js", icon: <SiDotnet size={30} color="#7dbeff" /> },
+    { name: "Next.js", icon: <SiJavascript size={30} color="#7dbeff" /> },
     { name: "Docker", icon: <FaDocker size={30} color="#7dbeff" /> },
     { name: "Kotlin", icon: <SiKotlin size={30} color="#7dbeff" /> },
     { name: "C++", icon: <SiCplusplus size={30} color="#7dbeff" /> },
@@ -91,18 +91,18 @@ export default function About() {
           </Col>
           <Col md={7}>
             <div ref={aboutTextRef} className={styles.hiddenInitially}>
-              <h1 className={styles.sectionTitle}>About <span className={styles.highlightedText}>Me</span></h1>
+              <h1 className={styles.sectionTitle}>About <span className={globalStyles.highlighted}>Me</span></h1>
               <p>
-                Greetings, fellow code enthusiasts and digital explorers! I'm <span className={styles.highlightedText}>Michał Pietrykowski</span>, a 23-year-old software alchemist hailing from the enchanting city of <span className={styles.highlightedText}>Wrocław, Poland</span>. My journey through the binary realms began in the hallowed halls of secondary school, where I first encountered the mystical language of <span className={styles.highlightedText}>QBASIC</span>. Little did I know that this encounter would spark a lifelong passion for coding and set me on a path to becoming a <span className={styles.highlightedText}>full-stack sorcerer</span>.
+                Greetings, fellow code enthusiasts and digital explorers! I'm <span className={globalStyles.highlighted}>Michał Pietrykowski</span>, a 23-year-old software alchemist hailing from the enchanting city of <span className={globalStyles.highlighted}>Wrocław, Poland</span>. My journey through the binary realms began in the hallowed halls of secondary school, where I first encountered the mystical language of <span className={globalStyles.highlighted}>QBASIC</span>. Little did I know that this encounter would spark a lifelong passion for coding and set me on a path to becoming a <span className={globalStyles.highlighted}>full-stack sorcerer</span>.
               </p>
               <p>
-                My quest for knowledge led me to the prestigious <span className={styles.highlightedText}>Wrocław University of Science and Technology</span>, where I'm currently unraveling the secrets of <span className={styles.highlightedText}>IT Automation Systems</span>. This academic adventure has equipped me with a diverse arsenal of programming languages and technologies, from the serpentine coils of <span className={styles.highlightedText}>Python</span> to the sleek efficiency of <span className={styles.highlightedText}>C#</span>.
+                My quest for knowledge led me to the prestigious <span className={globalStyles.highlighted}>Wrocław University of Science and Technology</span>, where I'm currently unraveling the secrets of <span className={globalStyles.highlighted}>IT Automation Systems</span>. This academic adventure has equipped me with a diverse arsenal of programming languages and technologies, from the serpentine coils of <span className={globalStyles.highlighted}>Python</span> to the sleek efficiency of <span className={globalStyles.highlighted}>C#</span>.
               </p>
               <p>
-                When I'm not conjuring code or debugging in digital dungeons, you might find me lost in the pages of an <span className={styles.highlightedText}>Asimov</span> novel, contemplating the future of AI, or perfecting the art of the <span className={styles.highlightedText}>Japanese tea ceremony</span>. And yes, I've been known to save <span className={styles.highlightedText}>Night City</span> a time or two in <span className={styles.highlightedText}>Cyberpunk 2077</span> - because even in the virtual world, there's always code to be written and bugs to be squashed!
+                When I'm not conjuring code or debugging in digital dungeons, you might find me lost in the pages of an <span className={globalStyles.highlighted}>Asimov</span> novel, contemplating the future of AI, or perfecting the art of the <span className={globalStyles.highlighted}>Japanese tea ceremony</span>. And yes, I've been known to save <span className={globalStyles.highlighted}>Night City</span> a time or two in <span className={globalStyles.highlighted}>Cyberpunk 2077</span> - because even in the virtual world, there's always code to be written and bugs to be squashed!
               </p>
               <p>
-                My superpower? I can debug code faster than I can slurp a bowl of <span className={styles.highlightedText}>ramen</span> - and trust me, that's saying something! So whether you're here to collaborate on the next big tech innovation or simply to chat about the intersection of code and culture, I'm always ready for the next adventure. Let's write the future together, one line of code at a time!
+                My superpower? I can debug code faster than I can slurp a bowl of <span className={globalStyles.highlighted}>ramen</span> - and trust me, that's saying something! So whether you're here to collaborate on the next big tech innovation or simply to chat about the intersection of code and culture, I'm always ready for the next adventure. Let's write the future together, one line of code at a time!
               </p>
             </div>
           </Col>
@@ -112,9 +112,9 @@ export default function About() {
       <Container className="my-5">
         <Row className="mb-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>Education</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Education</span></h2>
             <div className={styles.educationItem}>
-              <h4><span className={styles.highlightedText}>IT Automation Systems</span></h4>
+              <h4><span className={globalStyles.highlighted}>IT Automation Systems</span></h4>
               <p>Wrocław University of Science and Technology</p>
               <p className="text-white">October 2021 - Present</p>
             </div>
@@ -123,7 +123,7 @@ export default function About() {
 
         <Row className="mb-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>Professional Experience</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Professional Experience</span></h2>
             <ExperienceItem 
               title="Full Stack Developer"
               company="Correct Context (Comscore)"
@@ -149,7 +149,7 @@ export default function About() {
       <SectionBackground>
         <Row className="py-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>Technology Stack</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Technology Stack</span></h2>
             <div className="d-flex flex-wrap justify-content-center">
               {technologies.map((tech, index) => (
                 <TechStack key={index} tech={tech.name} icon={tech.icon} />
@@ -159,7 +159,7 @@ export default function About() {
         </Row>
         <Row className="py-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>Tools & Environments</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Tools & Environments</span></h2>
             <div className="d-flex flex-wrap justify-content-center">
               {tools.map((tool, index) => (
                 <TechStack key={index} tech={tool.name} icon={tool.icon} />
@@ -172,15 +172,15 @@ export default function About() {
       <Container>
         <Row className="py-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>What's Next?</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>What's Next?</span></h2>
             <p>
-              As I continue to explore the vast universe of technology, I'm particularly excited about diving deeper into <span className={styles.highlightedText}>machine learning</span> and <span className={styles.highlightedText}>AI</span>. The potential of these technologies to revolutionize industries and solve complex problems is truly awe-inspiring, and I'm eager to be at the forefront of this digital revolution.
+              As I continue to explore the vast universe of technology, I'm particularly excited about diving deeper into <span className={globalStyles.highlighted}>machine learning</span> and <span className={globalStyles.highlighted}>AI</span>. The potential of these technologies to revolutionize industries and solve complex problems is truly awe-inspiring, and I'm eager to be at the forefront of this digital revolution.
             </p>
             <p>
-              I'm also looking forward to contributing more to <span className={styles.highlightedText}>open-source projects</span>. The collaborative nature of open-source development aligns perfectly with my belief in the power of community-driven innovation. Additionally, I'm contemplating starting a <span className={styles.highlightedText}>tech blog</span> to share my adventures in coding, lessons learned, and insights gained along the way.
+              I'm also looking forward to contributing more to <span className={globalStyles.highlighted}>open-source projects</span>. The collaborative nature of open-source development aligns perfectly with my belief in the power of community-driven innovation. Additionally, I'm contemplating starting a <span className={globalStyles.highlighted}>tech blog</span> to share my adventures in coding, lessons learned, and insights gained along the way.
             </p>
             <p>
-              Whether you're here to collaborate on a groundbreaking project, discuss the intricate plot twists of your favorite <span className={styles.highlightedText}>sci-fi novel</span>, or engage in a friendly debate about the best <span className={styles.highlightedText}>ramen spots in Wrocław</span>, I'm always up for an engaging conversation. Let's connect, innovate, and create something extraordinary together!
+              Whether you're here to collaborate on a groundbreaking project, discuss the intricate plot twists of your favorite <span className={globalStyles.highlighted}>sci-fi novel</span>, or engage in a friendly debate about the best <span className={globalStyles.highlighted}>ramen spots in Wrocław</span>, I'm always up for an engaging conversation. Let's connect, innovate, and create something extraordinary together!
             </p>
           </Col>
         </Row>
