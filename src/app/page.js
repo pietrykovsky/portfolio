@@ -25,7 +25,8 @@ export default function Home() {
             </Col>
             <Col className="p-3" md={5}>
               <Image 
-                className="img-fluid" 
+                fluid 
+                className={styles.headerImage}
                 src="/assets/home-img.svg" 
                 alt="Home Image" 
                 style={{ maxHeight: "500px" }}

@@ -3,6 +3,16 @@
   font-weight: bold;
 }
 
+.headerImage {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .tildeBackground {
   position: relative;
   z-index: 1;
