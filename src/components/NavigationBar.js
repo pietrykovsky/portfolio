@@ -8,10 +8,10 @@ export default function NavigationBar() {
     return (
         <Navbar expand="md">
             <Container>
-                <Navbar.Brand href="/">PIETRYKOVSKY</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                <Navbar.Brand href="/">pietrykovsky</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ms-auto">
                         <Nav.Item>
                             <Nav.Link href="/">
                                 Home

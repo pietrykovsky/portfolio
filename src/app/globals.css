@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Fira Code");
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Fira Code' !important;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, rgb(15, 11, 24), rgb(11, 13, 40));
+  color: white !important;
+}
+
+.navbar-brand {
+  color: rgb(250, 250, 250) !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
