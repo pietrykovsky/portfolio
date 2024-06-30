@@ -4,12 +4,19 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { LuHome, LuLaptop, LuUser, LuFileText } from 'react-icons/lu';
+import Typewriter from 'typewriter-effect';
 
 export default function NavigationBar() {
     return (
         <Navbar fixed="top" expand="md">
             <Container>
-                <Navbar.Brand href="/">&#123; pietrykovsky &#125;;</Navbar.Brand>
+                <Navbar.Brand href="/">
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter.typeString("pietrykovsky();").start()
+                        }}
+                    />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav">
                     <span></span>
                     <span></span>
