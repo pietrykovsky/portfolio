@@ -9,7 +9,7 @@ export default function NavigationBar() {
     return (
         <Navbar fixed="top" expand="md">
             <Container>
-                <Navbar.Brand href="/">pietrykovsky</Navbar.Brand>
+                <Navbar.Brand href="/">&#123; pietrykovsky &#125;;</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav">
                     <span></span>
                     <span></span>
