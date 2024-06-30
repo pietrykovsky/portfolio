@@ -81,6 +81,7 @@ button:focus {
 .fixed-top {
   background-color: rgba(12, 11, 24, 0.5) !important;
   backdrop-filter: blur(10px) !important;
+  font-size: 20px !important;
 }
 
 .navbar-toggler {
@@ -133,6 +134,7 @@ button:focus {
 }
 
 .navbar-brand {
+  font-size: 25px !important;
   color: white !important;
 }
 
@@ -172,6 +174,10 @@ button:focus {
   
   .navbar-nav .nav-item a:hover::after {
     transform: none;
+  }
+
+  .navbar-nav .nav-item {
+    text-align: center !important;
   }
 
   .navbar-nav .nav-item a:hover {

@@ -35,7 +35,7 @@ export default function Home() {
           </Row>
         </Container>
       </Container>
-      <Container className="my-5">
+      <Container className="my-5 pt-5">
         <Row>
           <Col className="text-center p-3" md={5}>
             <Image 

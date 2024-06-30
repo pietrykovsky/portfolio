@@ -2,7 +2,6 @@
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LuHome, LuLaptop, LuUser, LuFileText } from 'react-icons/lu';
-import Typewriter from 'typewriter-effect';
 
 export default function NavigationBar() {
     return (
