@@ -1,0 +1,45 @@
+.resumeContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.headerRow {
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  margin-bottom: 0;
+}
+
+.pdfContainer {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.pdfEmbed {
+  border: none;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .resumeContainer {
+    padding-top: 1rem;
+  }
+
+  .headerRow {
+    margin-bottom: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .pdfContainer {
+    padding: 0.5rem;
+  }
+
+  .pdfEmbed {
+    min-height: 500px;
+  }
+}
