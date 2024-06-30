@@ -14,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <NavigationBar />
-        <Container fluid>
+        <div className="particles-container">
           <StarBackground />
+        </div>
+        <NavigationBar />
+        <Container className="main-container" fluid>
           {children}
         </Container>
       </body>
