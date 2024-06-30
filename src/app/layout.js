@@ -1,9 +1,10 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NavigationBar from "@/components/NavigationBar";
 import Container from "react-bootstrap/Container";
+import NavigationBar from "@/components/NavigationBar";
 import StarBackground from "@/components/Particles/StarBackground";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "pietrykovsky",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <Container className="main-container" fluid>
           {children}
         </Container>
+        <Footer />
       </body>
     </html>
   );
