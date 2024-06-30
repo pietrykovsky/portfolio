@@ -157,9 +157,6 @@ export default function About() {
             </div>
           </Col>
         </Row>
-      </SectionBackground>
-
-      <Container className="my-5">
         <Row className="py-5">
           <Col>
             <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>Tools & Environments</span></h2>
@@ -170,9 +167,9 @@ export default function About() {
             </div>
           </Col>
         </Row>
-      </Container>
+      </SectionBackground>
 
-      <SectionBackground>
+      <Container>
         <Row className="py-5">
           <Col>
             <h2 className={styles.sectionTitle}><span className={styles.highlightedText}>What's Next?</span></h2>
@@ -187,7 +184,7 @@ export default function About() {
             </p>
           </Col>
         </Row>
-      </SectionBackground>
+      </Container>
     </>
   );
 }
