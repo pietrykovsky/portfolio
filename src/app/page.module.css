@@ -1,0 +1,38 @@
+.highlighted {
+  color: #7dbeff !important;
+  font-weight: bold;
+}
+
+.tildeBackground {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.tildeBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  right: -100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cpath d='M0,50 C300,0 900,100 1200,50 L1200,350 C900,400 300,300 0,350 Z' fill='%23000000'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  z-index: -1;
+  animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

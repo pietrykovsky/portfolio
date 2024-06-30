@@ -34,6 +34,10 @@ button:focus {
   box-shadow: none !important;
 }
 
+.Typewriter__wrapper {
+  line-height: 1.7 !important;
+}
+
 /* --- MAIN CONTAINERS --- */
 .main-container {
   position: relative;
@@ -41,6 +45,7 @@ button:focus {
   margin-top: 60px !important;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
+  padding-inline: 0 !important;
 }
 
 .particles-container {
