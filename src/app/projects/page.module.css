@@ -5,7 +5,6 @@
 
 .pageTitle {
   margin-bottom: 2rem;
-  text-align: center;
   color: white;
 }
 
@@ -13,9 +12,16 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(125, 190, 255, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease-out;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.projectCard.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .projectCard:hover {

@@ -1,45 +1,53 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiPython, SiDjango, SiReact, SiJavascript, SiCsharp, SiDotnet, SiDocker, SiSelenium, SiNginx, SiBlazor, SiNextdotjs } from 'react-icons/si';
 import styles from './page.module.css';
 
-const ProjectCard = ({ title, description, image, technologies, demoLink, repoLink }) => (
-  <Card className={styles.projectCard}>
-    <Card.Img variant="top" src={image} className={styles.projectImage} />
-    <Card.Body className={styles.cardBody}>
-      <div>
-        <Card.Title className={styles.projectTitle}>{title}</Card.Title>
-        <Card.Text className={styles.projectDescription}>{description}</Card.Text>
-      </div>
-      <div className={styles.cardFooter}>
-        <div className={styles.technologies}>
-          {technologies.map((tech, index) => (
-            <span key={index} className={styles.techIcon}>{tech}</span>
-          ))}
-        </div>
-        <div className={styles.buttonContainer}>
-          {demoLink && (
-            <Button variant="primary" href={demoLink} target="_blank" className={`${styles.projectButton} ${styles.demoButton}`}>
-              <FaExternalLinkAlt /> Demo
-            </Button>
-          )}
-          <Button 
-            variant="outline-light" 
-            href={repoLink} 
-            target="_blank" 
-            className={`${styles.projectButton} ${styles.repoButton}`}
-          >
-            <FaGithub /> Repository
-          </Button>
-        </div>
-      </div>
-    </Card.Body>
-  </Card>
-);
+const ProjectCard = ({ title, description, image, technologies, demoLink, repoLink, delay }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  return (
+    <Card className={`${styles.projectCard} ${isVisible ? styles.visible : ''}`}>
+      <Card.Img variant="top" src={image} className={styles.projectImage} />
+      <Card.Body className={styles.cardBody}>
+        <div>
+          <Card.Title className={styles.projectTitle}>{title}</Card.Title>
+          <Card.Text className={styles.projectDescription}>{description}</Card.Text>
+        </div>
+        <div className={styles.cardFooter}>
+          <div className={styles.technologies}>
+            {technologies.map((tech, index) => (
+              <span key={index} className={styles.techIcon}>{tech}</span>
+            ))}
+          </div>
+          <div className={styles.buttonContainer}>
+            {demoLink && (
+              <Button variant="primary" href={demoLink} target="_blank" className={`${styles.projectButton} ${styles.demoButton}`}>
+                <FaExternalLinkAlt /> Demo
+              </Button>
+            )}
+            <Button 
+              variant="outline-light" 
+              href={repoLink} 
+              target="_blank" 
+              className={`${styles.projectButton} ${styles.repoButton}`}
+            >
+              <FaGithub /> Repository
+            </Button>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
+  );
+};
 
 const projects = [
   {
@@ -81,7 +89,7 @@ export default function Projects() {
       <Row xs={1} md={2} lg={3} className="g-4">
         {projects.map((project, index) => (
           <Col key={index}>
-            <ProjectCard {...project} />
+            <ProjectCard {...project} delay={index * 200} />
           </Col>
         ))}
       </Row>
