@@ -1,0 +1,123 @@
+.projectsContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pageTitle {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.projectCard {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(125, 190, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(125, 190, 255, 0.4);
+}
+
+.projectImage {
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectTitle {
+  color: #7dbeff;
+  font-weight: bold;
+}
+
+.projectDescription {
+  color: white;
+  flex-grow: 1;
+}
+
+.cardFooter {
+  margin-top: auto;
+}
+
+.technologies {
+  margin-bottom: 1rem;
+}
+
+.techIcon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: #7dbeff;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectButton {
+  flex: 1;
+  margin: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectButton svg {
+  margin-right: 0.5rem;
+}
+
+.projectButton:first-child {
+  margin-left: 0;
+}
+
+.projectButton:last-child {
+  margin-right: 0;
+}
+
+.demoButton {
+  background-color: #7dbeff;
+  border-color: #7dbeff;
+  color: black;
+}
+
+.demoButton:hover {
+  background-color: #5ca8ff;
+  border-color: #5ca8ff;
+  color: black;
+}
+
+.repoButton {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.repoButton:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .projectsContainer {
+    padding-top: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projectCard {
+    margin-bottom: 1rem;
+  }
+}

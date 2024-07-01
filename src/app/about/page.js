@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import { FaPython, FaReact, FaDocker, FaGitAlt, FaJira, FaGithub, FaBitbucket, FaGitlab, FaSlack, FaMicrosoft, FaUbuntu, FaApple, FaWindows } from 'react-icons/fa';
-import { SiDjango, SiCsharp, SiDotnet, SiJavascript, SiKotlin, SiCplusplus, SiFastapi, SiSelenium, SiPytest, SiBlazor, SiVisualstudiocode, SiGnubash } from 'react-icons/si';
+import { SiDjango, SiCsharp, SiDotnet, SiJavascript, SiKotlin, SiCplusplus, SiFastapi, SiSelenium, SiPytest, SiBlazor, SiVisualstudiocode, SiGnubash, SiNginx, SiNextdotjs } from 'react-icons/si';
 import { DiZend } from 'react-icons/di';
 import globalStyles from '../page.module.css';
 import styles from './page.module.css';
@@ -47,10 +47,11 @@ export default function About() {
     { name: "UWP", icon: <FaWindows size={30} color="#7dbeff" /> },
     { name: "JavaScript", icon: <SiJavascript size={30} color="#7dbeff" /> },
     { name: "React", icon: <FaReact size={30} color="#7dbeff" /> },
-    { name: "Next.js", icon: <SiJavascript size={30} color="#7dbeff" /> },
+    { name: "Next.js", icon: <SiNextdotjs size={30} color="#7dbeff" /> },
     { name: "Docker", icon: <FaDocker size={30} color="#7dbeff" /> },
     { name: "Kotlin", icon: <SiKotlin size={30} color="#7dbeff" /> },
     { name: "C++", icon: <SiCplusplus size={30} color="#7dbeff" /> },
+    { name: "nginx", icon: <SiNginx size={30} color="#7dbeff" /> },
   ];
 
   const tools = [
