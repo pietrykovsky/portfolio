@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiPython, SiDjango, SiReact, SiJavascript, SiCsharp, SiDotnet, SiDocker, SiSelenium, SiNginx, SiBlazor, SiNextdotjs } from 'react-icons/si';
+import { SiPython, SiDjango, SiReact, SiJavascript, SiCsharp, SiDotnet, SiDocker, SiSelenium, SiNginx, SiBlazor, SiNextdotjs, SiKotlin, SiAndroidstudio } from 'react-icons/si';
 import styles from './page.module.css';
 
 const ProjectCard = ({ title, description, image, technologies, demoLink, repoLink, delay }) => {
@@ -53,33 +53,61 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website built with Next.js and React Bootstrap, showcasing my projects and skills.",
-    image: "/previews/placeholder.jpg",
-    technologies: [<SiReact />, <SiJavascript />, <SiNextdotjs />],
+    image: "/previews/portfolio.jpg",
+    technologies: [<SiReact />, <SiJavascript />, <SiNextdotjs />, <SiNginx />],
     repoLink: "https://github.com/pietrykovsky/portfolio"
+  },
+  {
+    title: "Python Raycaster",
+    description: "Game written in Python using Pygame library with game engine built from scratch. Features raycasting rendering, collision detection, user interface, equipable weapons and simple AI.",
+    image: "/previews/python-raycaster.gif",
+    technologies: [<SiPython />],
+    repoLink: "https://github.com/pietrykovsky/python-raycaster"
   },
   {
     title: "Lego Ranking",
     description: "A web application for ranking most cost effective Lego bundles, with custom scraper. Built with Django, Selenium, Docker and React.",
-    image: "/previews/placeholder.jpg",
-    technologies: [<SiPython />, <SiDjango />, <SiReact />, <SiDocker />, <SiSelenium />],
+    image: "/previews/lego-ranking.jpg",
+    technologies: [<SiPython />, <SiDjango />, <SiReact />, <SiDocker />, <SiSelenium />, <SiNginx />],
     demoLink: "http://lego-ranking.duckdns.org",
     repoLink: "https://github.com/pietrykovsky/lego-ranking-app"
   },
   {
+    title: "Android Todo App",
+    description: "Simple Todo App for Android with CRUD operations, custom notification system, alarm setting, filtering mechanism, written in Kotlin using Android Studio.",
+    image: "/previews/android-todoapp.jpg",
+    technologies: [<SiKotlin />, <SiAndroidstudio />],
+    repoLink: "https://github.com/pietrykovsky/todoapp"
+  },
+  {
     title: "SzczurTV",
     description: "A simple streaming platform inspired by Twitch and Kick with streaming feature, live chat and user authentication. Developed using C#, Blazor, ASP.NET Core, Docker and nginx.",
-    image: "/previews/placeholder.jpg",
+    image: "/previews/szczurtv.jpg",
     technologies: [<SiCsharp />, <SiDotnet />, <SiBlazor />, <SiDocker />, <SiNginx />],
     demoLink: "http://szczurtv.duckdns.org",
     repoLink: "https://github.com/pietrykovsky/szczurtv"
   },
   {
-    title: "Python Raycaster",
-    description: "Game written in Python using Pygame library with game engine built from scratch. Features raycasting rendering, collision detection, user interface, equipable weapons and simple AI.",
-    image: "/previews/placeholder.jpg",
+    title: "Django Blog",
+    description: "django-blog is a simple blog built with Django with posts and categories CRUD functionality, user authentication system, posts commenting system, user profiles, template-based interface styled with bootstrap, search system, category filtering, email notification and feedback system, redactor status allowing user to CRUD posts and comments.",
+    image: "/previews/django-blog.jpg",
+    technologies: [<SiPython />, <SiDjango />],
+    repoLink: "https://github.com/pietrykovsky/django-blog"
+  },
+  {
+    title: "Tic Tac Toe with AI",
+    description: "Simple Python tictactoe game with alpha beta pruning minimax AI implemented with pygame.",
+    image: "/previews/tictactoe.gif",
     technologies: [<SiPython />],
-    repoLink: "https://github.com/pietrykovsky/python-raycaster"
-  }
+    repoLink: "https://github.com/pietrykovsky/tic-tac-toe"
+  },
+  {
+    title: "Maze Generator",
+    description: "Maze Generator is a Python project that uses an A* pathfinding algorithm to find the shortest path through a randomly generated maze. The project also includes a maze generator based on a modified version of Kruskal's algorithm.",
+    image: "/previews/maze-solver.jpg",
+    technologies: [<SiPython />],
+    repoLink: "https://github.com/pietrykovsky/maze-solver"
+  },
 ];
 
 export default function Projects() {
