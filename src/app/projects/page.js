@@ -54,7 +54,7 @@ const projects = [
     title: "Portfolio Website",
     description: "A personal portfolio website built with Next.js and React Bootstrap, showcasing my projects and skills.",
     image: "/previews/portfolio.jpg",
-    technologies: [<SiReact />, <SiJavascript />, <SiNextdotjs />, <SiNginx />],
+    technologies: [<SiReact />, <SiJavascript />, <SiNextdotjs />, <SiNginx />, <SiDocker />],
     repoLink: "https://github.com/pietrykovsky/portfolio"
   },
   {
