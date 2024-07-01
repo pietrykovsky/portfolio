@@ -3,7 +3,7 @@
 ![Portfolio Preview](public/previews/portfolio.jpg)
 
 ## Demo
-Check out the live demo: [pietrykovsky.duckdns.org](https://pietrykovsky.duckdns.org)
+Check out the live demo: [pietrykovsky.com](https://pietrykovsky.com)
 
 ## Description
 This project is a personal portfolio website built with Next.js and React Bootstrap. It showcases my projects, skills, and professional experience in a modern, responsive design.
