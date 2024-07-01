@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+![Portfolio Preview](public/previews/portfolio.jpg)
 
-First, run the development server:
+## Demo
+Check out the live demo: [pietrykovsky.duckdns.org](https://pietrykovsky.duckdns.org)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description
+This project is a personal portfolio website built with Next.js and React Bootstrap. It showcases my projects, skills, and professional experience in a modern, responsive design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- Responsive design using React Bootstrap
+- Dynamic project showcase
+- About me section with professional background
+- Resume/CV page
+- Particle.js background for visual appeal
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
+- Next.js
+- React
+- React Bootstrap
+- Docker
+- Nginx (for deployment)
+- Particle.js
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Prerequisites
+- Node.js (v22)
+- npm (v10)
+- Docker and Docker Compose (for deployment)
 
-## Learn More
+## Local Development Setup
+1. Clone the repository:
+   ```
+   git clone https://github.com/pietrykovsky/portfolio.git
+   cd portfolio
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+   ```
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-## Deploy on Vercel
+## Deployment
+This project is set up for deployment using Docker and Nginx as a reverse proxy.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Ensure you have Docker and Docker Compose installed on your server.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Clone the repository on your server.
+
+3. Create a `.env` file in the project root and add any necessary environment variables.
+
+4. Build and start the Docker containers:
+   ```
+   docker-compose up -d --build
+   ```
+
+5. The application should now be running on your server.
+
+## Nginx Configuration
+To configure Nginx as a reverse proxy for your portfolio:
+
+1. Add the following server block to your Nginx configuration file:
+
+   ```nginx
+   server {
+       listen 80;
+       server_name yourdomain.com;
+
+       location / {
+           proxy_pass http://portfolio:3000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+   }
+   ```
+
+2. Replace `yourdomain.com` with your actual domain name.
+
+3. If you're using Docker Compose for Nginx, make sure the portfolio network is included:
+
+   ```yaml
+   version: '3.9'
+   services:
+     nginx:
+       # ... (existing configuration)
+       networks:
+         - portfolio_app-network
+   
+   networks:
+     portfolio_app-network:
+       external: true
+   ```
+
+4. Restart Nginx to apply the changes:
+   ```
+   docker-compose restart nginx
+   ```
+
+## SSL Certificate
+To secure your website with HTTPS:
+
+1. Ensure your domain is pointed to your server's IP address.
+
+2. Use Certbot (running in the Nginx container) to obtain an SSL certificate:
+   ```
+   docker-compose exec nginx certbot --nginx -d yourdomain.com
+   ```
+
+3. Follow the prompts to complete the certificate installation.
+
+## Customization
+- Update the `src/app/page.js` file to modify the home page content.
+- Edit `src/app/about/page.js` to update your about me information.
+- Modify `src/app/projects/page.js` to showcase your projects.
+- Update `src/app/resume/page.js` to reflect your current resume/CV.
+
+## Contributing
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/pietrykovsky/portfolio/issues) if you want to contribute.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+- [Next.js](https://nextjs.org/)
+- [React Bootstrap](https://react-bootstrap.github.io/)
+- [Particle.js](https://particles.js.org/)
+- [Docker](https://www.docker.com/)
+- [Nginx](https://www.nginx.com/)
