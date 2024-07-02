@@ -2,8 +2,10 @@ name: Deploy to Private Server
 
 on:
   push:
+    branches:
+      - '1-automate-deployment-process'
     tags:
-      - 'v*' # This will trigger the workflow for any tag that starts with 'v'
+      - 'v*'
 
 env:
   DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
@@ -29,7 +31,15 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SERVER_SSH_KEY }}
-        known_hosts: ${{ secrets.SERVER_IP }}:${{ secrets.SERVER_PORT }}
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+    
+    - name: Debug SSH connection
+      env:
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        SERVER_USER: ${{ secrets.SERVER_USER }}
+        SERVER_PORT: ${{ secrets.SERVER_PORT }}
+      run: |
+        ssh -vvv -p $SERVER_PORT $SERVER_USER@$SERVER_IP exit
     
     - name: Deploy to Server
       env:
