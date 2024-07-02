@@ -2,8 +2,6 @@ name: Deploy to Private Server
 
 on:
   push:
-    branches:
-      - '1-automate-deployment-process'
     tags:
       - 'v*'
 
@@ -32,14 +30,6 @@ jobs:
       with:
         key: ${{ secrets.SERVER_SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    
-    - name: Debug SSH connection
-      env:
-        SERVER_IP: ${{ secrets.SERVER_IP }}
-        SERVER_USER: ${{ secrets.SERVER_USER }}
-        SERVER_PORT: ${{ secrets.SERVER_PORT }}
-      run: |
-        ssh -vvv -p $SERVER_PORT $SERVER_USER@$SERVER_IP exit
     
     - name: Deploy to Server
       env:
