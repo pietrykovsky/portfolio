@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FaDownload } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
+import { Container, Button, Spinner } from 'react-bootstrap';
+import { FaDownload, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -17,9 +17,27 @@ export default function Resume() {
   const pdfUrl = '/resume_preview.pdf';
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [pdfDimensions, setPdfDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = Math.min(window.innerWidth * 0.9, 800);
+      setPdfDimensions({ width, height: width * 1.414 }); // Assuming A4 aspect ratio
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
+    setLoading(false);
+  }
+
+  function changePage(offset) {
+    setPageNumber(prevPageNumber => Math.min(Math.max(prevPageNumber + offset, 1), numPages));
   }
 
   const handleDownload = () => {
@@ -33,24 +51,57 @@ export default function Resume() {
 
   return (
     <Container className={styles.resumeContainer}>
-      <Row className={styles.headerRow}>
-        <Col className="d-flex justify-content-between align-items-center">
+      <div className={styles.pdfContent}>
+        <div className={styles.headerRow}>
           <h1 className={styles.pageTitle}>Resume</h1>
-          <Button variant="outline-light" onClick={handleDownload}>
+          <Button variant="outline-light" onClick={handleDownload} className={styles.downloadButton}>
             <FaDownload className="me-2" /> Download
           </Button>
-        </Col>
-      </Row>
+        </div>
 
-      <Row>
-        <Col>
-          <div className={styles.pdfContainer}>
-            <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
-              <Page pageNumber={pageNumber} />
-            </Document>
+        <div className={styles.pdfWrapper} style={{ height: pdfDimensions.height }}>
+          {loading && (
+            <div className={styles.spinnerWrapper}>
+              <Spinner animation="border" variant="light" />
+            </div>
+          )}
+          <Document
+            file={pdfUrl}
+            onLoadSuccess={onDocumentLoadSuccess}
+            className={styles.pdfDocument}
+          >
+            <Page 
+              pageNumber={pageNumber} 
+              className={styles.pdfPage}
+              width={pdfDimensions.width}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+            />
+          </Document>
+        </div>
+
+        {numPages > 1 && (
+          <div className={styles.paginationRow}>
+            <Button 
+              onClick={() => changePage(-1)} 
+              disabled={pageNumber <= 1}
+              aria-label="Previous page"
+              className={styles.paginationButton}
+            >
+              <FaChevronLeft />
+            </Button>
+            <span className={styles.pageInfo}>Page {pageNumber} of {numPages}</span>
+            <Button 
+              onClick={() => changePage(1)} 
+              disabled={pageNumber >= numPages}
+              aria-label="Next page"
+              className={styles.paginationButton}
+            >
+              <FaChevronRight />
+            </Button>
           </div>
-        </Col>
-      </Row>
+        )}
+      </div>
     </Container>
   );
 }
