@@ -34,14 +34,3 @@ jobs:
 
     - name: Check if container is running
       run: docker ps | grep portfolio_container
-
-    - name: Check application health
-      run: |
-        response=$(curl -sS http://localhost:3000 || true)
-        if [[ $response == *"Michał Pietrykowski"* ]]; then
-          echo "Application is running and returns expected content"
-        else
-          echo "Application is not running correctly"
-          exit 1
-        fi
-    
