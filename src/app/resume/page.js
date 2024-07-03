@@ -15,17 +15,16 @@ export default function Resume() {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [pdfDimensions, setPdfDimensions] = useState({ width: 0, height: 0 });
+  const [containerWidth, setContainerWidth] = useState(0);
 
   useEffect(() => {
-    const updateDimensions = () => {
-      const width = Math.min(window.innerWidth * 0.9, 800);
-      setPdfDimensions({ width, height: width * 1.414 }); // Assuming A4 aspect ratio
+    const updateWidth = () => {
+      setContainerWidth(Math.min(window.innerWidth * 0.9, 800));
     };
 
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    return () => window.removeEventListener('resize', updateDimensions);
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
   function onDocumentLoadSuccess({ numPages }) {
@@ -48,7 +47,7 @@ export default function Resume() {
 
   return (
     <Container className={styles.resumeContainer}>
-      <div className={styles.pdfContent}>
+      <div className={styles.pdfContent} style={{ maxWidth: containerWidth }}>
         <div className={styles.headerRow}>
           <h1 className={styles.pageTitle}>Resume</h1>
           <Button variant="outline-light" onClick={handleDownload} className={styles.downloadButton}>
@@ -56,7 +55,7 @@ export default function Resume() {
           </Button>
         </div>
 
-        <div className={styles.pdfWrapper} style={{ height: pdfDimensions.height }}>
+        <div className={styles.pdfWrapper}>
           {loading && (
             <div className={styles.spinnerWrapper}>
               <Spinner animation="border" variant="light" />
@@ -70,9 +69,9 @@ export default function Resume() {
             <Page 
               pageNumber={pageNumber} 
               className={styles.pdfPage}
-              width={pdfDimensions.width}
               renderTextLayer={false}
               renderAnnotationLayer={false}
+              scale={1.5}
             />
           </Document>
         </div>
