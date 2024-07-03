@@ -18,11 +18,14 @@ jobs:
     - name: Build Docker image
       run: docker build -t portfolio .
 
-    - name: Run tests in Docker
-      run: |
-        docker run --rm portfolio npm ci
-        docker run --rm portfolio npm run lint
-        docker run --rm portfolio npm run build --if-present
+    - name: Install node dependencies
+      run: docker run --rm portfolio npm ci
+
+    - name: Analyze code
+      run: docker run --rm portfolio npm run lint
+
+    - name: Build project
+      run: docker run --rm portfolio npm run build --if-present
 
     - name: Run container
       run: docker run -d -p 3000:3000 --name portfolio_container portfolio
