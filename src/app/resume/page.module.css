@@ -1,45 +1,120 @@
 .resumeContainer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.pdfContent {
+  margin: 0 auto;
+  width: 100%;
 }
 
 .headerRow {
-  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
 .pageTitle {
-  margin-bottom: 0;
+  margin: 0;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
-.pdfContainer {
+.downloadButton {
+  white-space: nowrap;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.pdfWrapper {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
-.pdfEmbed {
-  border: none;
-  border-radius: 4px;
+.spinnerWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pdfDocument {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdfPage {
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pdfPage canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.paginationRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.paginationButton {
+  background: none !important;
+  border: none !important;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.paginationButton:hover:not(:disabled) {
+  color: #7dbeff;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  margin: 0 1rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   .resumeContainer {
-    padding-top: 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .headerRow {
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
   }
 
   .pageTitle {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
 
-  .pdfContainer {
+  .downloadButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .pdfWrapper {
     padding: 0.5rem;
   }
 
-  .pdfEmbed {
-    min-height: 500px;
+  .pageInfo {
+    font-size: 0.9rem;
   }
 }
