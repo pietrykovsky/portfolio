@@ -7,27 +7,29 @@ on:
   pull_request:
     branches: [ "master" ]
 
+
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
-    - name: Analyze code
-      run: npm run lint
-    - name: Build
-      run: npm run build --if-present
+
+    - name: Build Docker image
+      run: docker build -t portfolio .
+
+    - name: Run tests in Docker
+      run: |
+        docker run --rm portfolio npm ci
+        docker run --rm portfolio npm run lint
+        docker run --rm portfolio npm run build --if-present
+
+    - name: Run container
+      run: docker run -d -p 3000:3000 --name portfolio_container portfolio
+
+    - name: Check if container is running
+      run: docker ps | grep portfolio_container
+
+    - name: Stop container
+      run: docker stop portfolio_container
     
