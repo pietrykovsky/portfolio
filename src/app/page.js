@@ -1,9 +1,13 @@
 "use client";
+
 import styles from "./page.module.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
+import {useTranslations} from 'next-intl';
 
 export default function Home() {
+  const t = useTranslations('Home');
+
   return (
     <>
       <Container fluid className={styles.tildeBackground}>

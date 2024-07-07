@@ -1,6 +1,8 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 import Container from "react-bootstrap/Container";
 import NavigationBar from "@/components/NavigationBar";
 import StarBackground from "@/components/Particles/StarBackground";
@@ -21,18 +23,24 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
+
+  const messages = await getMessages(locale);
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
-        <div className="particles-container">
-          <StarBackground />
-        </div>
-        <NavigationBar />
-        <Container className="main-container" fluid>
-          {children}
-        </Container>
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <div className="particles-container">
+            <StarBackground />
+          </div>
+          <NavigationBar />
+          <Container className="main-container" fluid>
+            {children}
+          </Container>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
