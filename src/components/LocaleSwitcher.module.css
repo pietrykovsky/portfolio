@@ -1,0 +1,45 @@
+.localeSwitcher {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.localeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+}
+
+.localeButton:hover:not(:disabled) {
+  color: #afafaf;
+}
+
+.localeButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.separator {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 20px;
+}
+
+.active {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .localeButton, .separator {
+    font-size: 16px;
+  }
+
+  .active::after {
+    display: none;
+  }
+}

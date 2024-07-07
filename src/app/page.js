@@ -1,19 +1,31 @@
 "use client";
 
+import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import { getHighlightedString, getBoldString } from "./utils";
+import { getHighlightedString } from "./utils";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Typewriter from "typewriter-effect";
 
 export default function Home() {
   const t = useTranslations('home');
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    // This effect will run whenever the locale changes
+    setKey(prevKey => prevKey + 1);
+  }, [t]);
 
   const getTypewriterString = () => {
-    const introduction = getHighlightedString(t, 'header-intro');
-    const role = getBoldString(t, 'header-role');
+    const hello = t('header-hello');
+    const introduction = t.rich('header-intro', {
+      highlighted: (chunks) => `<span class="${styles.highlighted}">${chunks}</span>`
+    });
+    const role = t.rich('header-role', {
+      bold: (chunks) => `<b>${chunks}</b>`
+    });
 
-    return `${t('header-hello')}<br>${introduction}<br> - ${role}`;
+    return `${hello}<br>${introduction}<br> - ${role}`;
   }
 
   return (
@@ -24,6 +36,7 @@ export default function Home() {
             <Col className="align-content-center p-3" md={7}>
               <h1>
                 <Typewriter
+                  key={key}
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(getTypewriterString())

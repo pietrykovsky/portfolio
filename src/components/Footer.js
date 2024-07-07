@@ -1,8 +1,8 @@
-import React, { use } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaSquareXTwitter } from "react-icons/fa6";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 const Footer = () => {
   const t = useTranslations('footer');
