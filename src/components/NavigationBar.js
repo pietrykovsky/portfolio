@@ -2,8 +2,11 @@
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LuHome, LuLaptop, LuUser, LuFileText } from 'react-icons/lu';
+import {useTranslations} from 'next-intl';
 
 export default function NavigationBar() {
+    const t = useTranslations('navbar');
+
     return (
         <Navbar fixed="top" expand="md">
             <Container>
@@ -17,22 +20,22 @@ export default function NavigationBar() {
                     <Nav className="ms-auto">
                         <Nav.Item>
                             <Nav.Link href="/">
-                                <LuHome className='mb-1'/> Home
+                                <LuHome className='mb-1'/> {t('home')}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="/projects">
-                                <LuLaptop className='mb-1'/> Projects
+                                <LuLaptop className='mb-1'/> {t('projects')}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="/about">
-                                <LuUser className='mb-1'/> About
+                                <LuUser className='mb-1'/> {t('about')}
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="/resume">
-                                <LuFileText className='mb-1'/> Resume
+                                <LuFileText className='mb-1'/> {t('resume')}
                             </Nav.Link>
                         </Nav.Item>
                     </Nav>
