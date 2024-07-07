@@ -1,12 +1,20 @@
 "use client";
 
 import styles from "./page.module.css";
+import { getHighlightedString, getBoldString } from "./utils";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Typewriter from "typewriter-effect";
 import {useTranslations} from 'next-intl';
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   const t = useTranslations('home');
+
+  const getTypewriterString = () => {
+    const introduction = getHighlightedString(t, 'header-intro');
+    const role = getBoldString(t, 'header-role');
+
+    return `${t('header-hello')}<br>${introduction}<br> - ${role}`;
+  }
 
   return (
     <>
@@ -18,9 +26,7 @@ export default function Home() {
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString("Hello world!<br>I'm ")
-                      .typeString(`<span class="${styles.highlighted}">Michał Pietrykowski</span>`)
-                      .typeString(" -<br>a <b>Software Developer</b>")
+                      .typeString(getTypewriterString())
                       .start();
                   }}
                   options={{delay: 50}}
@@ -50,16 +56,10 @@ export default function Home() {
             />
           </Col>
           <Col className="align-content-center p-3" md={7}>
-            <h2 className="mb-4">Welcome to <span className={styles.highlighted}>My Digital Universe</span></h2>
-            <p>
-              I&apos;m a 23-year-old code enthusiast from Wrocław, currently navigating the galaxy of IT Automation Systems at Wrocław University of Science and Technology. My journey from <span className={styles.highlighted}>QBASIC</span> text adventures to full-stack engineering has been quite the space odyssey!
-            </p>
-            <p>
-              As a full-stack engineer, I wield the power of <span className={styles.highlighted}>Python</span> and <span className={styles.highlighted}>JavaScript</span>, crafting digital solutions with frameworks like <span className={styles.highlighted}>Django</span> and <span className={styles.highlighted}>React</span>. I&apos;ve also ventured into the realm of <span className={styles.highlighted}>C#</span>, developing desktop applications that push the boundaries of what&apos;s possible.
-            </p>
-            <p>
-              When I&apos;m not busy decoding the mysteries of the digital realm or experimenting with <span className={styles.highlighted}>machine learning</span> algorithms, you might find me lost in Asimov&apos;s worlds, mastering the art of Japanese tea ceremonies, or saving Night City in Cyberpunk 2077. And yes, I can debug code almost as fast as I can slurp a bowl of ramen - it&apos;s my superpower!
-            </p>
+            <h2 className="mb-4" dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-header') }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-p1') }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-p2') }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-p3') }} />
           </Col>
         </Row>
       </Container>
