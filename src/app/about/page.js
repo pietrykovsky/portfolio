@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
+import { useTranslations } from 'next-intl';
+import { getHighlightedString } from '../utils';
 import { FaPython, FaReact, FaDocker, FaGitAlt, FaJira, FaGithub, FaBitbucket, FaGitlab, FaSlack, FaMicrosoft, FaUbuntu, FaApple, FaWindows } from 'react-icons/fa';
 import { SiDjango, SiCsharp, SiDotnet, SiJavascript, SiKotlin, SiCplusplus, SiFastapi, SiSelenium, SiPytest, SiBlazor, SiVisualstudiocode, SiGnubash, SiNginx, SiNextdotjs } from 'react-icons/si';
 import { DiZend } from 'react-icons/di';
@@ -34,6 +36,8 @@ const SectionBackground = ({ children }) => (
 );
 
 export default function About() {
+  const t = useTranslations('about');
+
   const technologies = [
     { name: "Python", icon: <FaPython size={30} color="#7dbeff" /> },
     { name: "Django", icon: <SiDjango size={30} color="#7dbeff" /> },
@@ -92,19 +96,11 @@ export default function About() {
           </Col>
           <Col md={7}>
             <div ref={aboutTextRef} className={styles.hiddenInitially}>
-              <h1 className={styles.sectionTitle}>About <span className={globalStyles.highlighted}>Me</span></h1>
-              <p>
-                Greetings, fellow code enthusiasts and digital explorers! I&apos;m <span className={globalStyles.highlighted}>Michał Pietrykowski</span>, a 23-year-old software alchemist hailing from the enchanting city of <span className={globalStyles.highlighted}>Wrocław, Poland</span>. My journey through the binary realms began in the hallowed halls of secondary school, where I first encountered the mystical language of <span className={globalStyles.highlighted}>QBASIC</span>. Little did I know that this encounter would spark a lifelong passion for coding and set me on a path to becoming a <span className={globalStyles.highlighted}>full-stack sorcerer</span>.
-              </p>
-              <p>
-                My quest for knowledge led me to the prestigious <span className={globalStyles.highlighted}>Wrocław University of Science and Technology</span>, where I&apos;m currently unraveling the secrets of <span className={globalStyles.highlighted}>IT Automation Systems</span>. This academic adventure has equipped me with a diverse arsenal of programming languages and technologies, from the serpentine coils of <span className={globalStyles.highlighted}>Python</span> to the sleek efficiency of <span className={globalStyles.highlighted}>C#</span>.
-              </p>
-              <p>
-                When I&apos;m not conjuring code or debugging in digital dungeons, you might find me lost in the pages of an <span className={globalStyles.highlighted}>Asimov</span> novel, contemplating the future of AI, or perfecting the art of the <span className={globalStyles.highlighted}>Japanese tea ceremony</span>. And yes, I&apos;ve been known to save <span className={globalStyles.highlighted}>Night City</span> a time or two in <span className={globalStyles.highlighted}>Cyberpunk 2077</span> - because even in the virtual world, there&apos;s always code to be written and bugs to be squashed!
-              </p>
-              <p>
-                My superpower? I can debug code faster than I can slurp a bowl of <span className={globalStyles.highlighted}>ramen</span> - and trust me, that&apos;s saying something! So whether you&apos;re here to collaborate on the next big tech innovation or simply to chat about the intersection of code and culture, I&apos;m always ready for the next adventure. Let&apos;s write the future together, one line of code at a time!
-              </p>
+              <h1 className={styles.sectionTitle} dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'pageTitle')}}/>
+              <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'introText')}}/>
+              <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'academicText')}}/>
+              <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'hobbyText')}}/>
+              <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'skillText')}}/>
             </div>
           </Col>
         </Row>
@@ -113,36 +109,29 @@ export default function About() {
       <Container className="my-5">
         <Row className="mb-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Education</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>{t('educationTitle')}</span></h2>
             <div className={styles.educationItem}>
-              <h4><span className={globalStyles.highlighted}>IT Automation Systems</span></h4>
-              <p>Wrocław University of Science and Technology</p>
-              <p className="text-white">October 2021 - Present</p>
+              <h4><span className={globalStyles.highlighted}>{t('educationDegree')}</span></h4>
+              <p>{t('educationSchool')}</p>
+              <p className="text-white">{t('educationPeriod')}</p>
             </div>
           </Col>
         </Row>
 
         <Row className="mb-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Professional Experience</span></h2>
-            <ExperienceItem 
-              title="Full Stack Developer"
-              company="Correct Context (Comscore)"
-              period="Present"
-              description="Spearheading full-stack development initiatives, leveraging Python and JavaScript to craft robust and scalable solutions. Collaborating with cross-functional teams to deliver high-quality software products that meet and exceed client expectations."
-            />
-            <ExperienceItem 
-              title="Software Developer Intern"
-              company="Dolby Laboratories"
-              period="September 2023 - Present"
-              description="Contributed to data migration projects, enhancing system efficiency and data integrity. Played a key role in maintaining and improving the Dolby Access application, focusing on bug fixes and feature implementation using .NET technologies."
-            />
-            <ExperienceItem 
-              title="Quality Analyst Intern"
-              company="Dolby Laboratories"
-              period="December 2022 - September 2023"
-              description="Developed crucial Python packages, including Raspberry Pi USB Gadget and Page Object Model, streamlining testing processes. Authored comprehensive documentation and automated test scripts using Pytest, significantly improving test coverage and efficiency. Actively participated in regression testing, ensuring product quality and reliability."
-            />
+            <h2 className={styles.sectionTitle}>
+              <span className={globalStyles.highlighted}>{t('experienceTitle')}</span>
+            </h2>
+            {Object.values(t.raw('experienceItems')).map((item, index) => (
+              <ExperienceItem 
+                key={index}
+                title={item.title}
+                company={item.company}
+                period={item.period}
+                description={item.description}
+              />
+            ))}
           </Col>
         </Row>
       </Container>
@@ -150,7 +139,7 @@ export default function About() {
       <SectionBackground>
         <Row className="py-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Technology Stack</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>{t('techStackTitle')}</span></h2>
             <div className="d-flex flex-wrap justify-content-center">
               {technologies.map((tech, index) => (
                 <TechStack key={index} tech={tech.name} icon={tech.icon} />
@@ -160,7 +149,7 @@ export default function About() {
         </Row>
         <Row className="py-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>Tools & Environments</span></h2>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>{t('toolsTitle')}</span></h2>
             <div className="d-flex flex-wrap justify-content-center">
               {tools.map((tool, index) => (
                 <TechStack key={index} tech={tool.name} icon={tool.icon} />
@@ -173,16 +162,9 @@ export default function About() {
       <Container>
         <Row className="py-5">
           <Col>
-            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>What&apos;s Next?</span></h2>
-            <p>
-              As I continue to explore the vast universe of technology, I&apos;m particularly excited about diving deeper into <span className={globalStyles.highlighted}>machine learning</span> and <span className={globalStyles.highlighted}>AI</span>. The potential of these technologies to revolutionize industries and solve complex problems is truly awe-inspiring, and I&apos;m eager to be at the forefront of this digital revolution.
-            </p>
-            <p>
-              I&apos;m also looking forward to contributing more to <span className={globalStyles.highlighted}>open-source projects</span>. The collaborative nature of open-source development aligns perfectly with my belief in the power of community-driven innovation. Additionally, I&apos;m contemplating starting a <span className={globalStyles.highlighted}>tech blog</span> to share my adventures in coding, lessons learned, and insights gained along the way.
-            </p>
-            <p>
-              Whether you&apos;re here to collaborate on a groundbreaking project, discuss the intricate plot twists of your favorite <span className={globalStyles.highlighted}>sci-fi novel</span>, or engage in a friendly debate about the best <span className={globalStyles.highlighted}>ramen spots in Wrocław</span>, I&apos;m always up for an engaging conversation. Let&apos;s connect, innovate, and create something extraordinary together!
-            </p>
+            <h2 className={styles.sectionTitle}><span className={globalStyles.highlighted}>{t('futureTitle')}</span></h2>
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'futureText1')}}/>
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'futureText2')}}/><p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'futureText3')}}/>
           </Col>
         </Row>
       </Container>
