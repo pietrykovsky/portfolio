@@ -166,6 +166,10 @@ button:focus {
   transition: all 0.3s ease-out 0s;
 }
 
+.navbar-nav .nav-item {
+  text-align: center !important;
+}
+
 @media (max-width: 767px) {
   .navbar-nav .nav-item a::after {
     display: none;
@@ -173,10 +177,6 @@ button:focus {
   
   .navbar-nav .nav-item a:hover::after {
     transform: none;
-  }
-
-  .navbar-nav .nav-item {
-    text-align: center !important;
   }
 
   .navbar-nav .nav-item a:hover {

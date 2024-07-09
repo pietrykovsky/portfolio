@@ -1,0 +1,15 @@
+{
+  "pageTitle": "Moje Projekty",
+  "demoButton": "Demo",
+  "repoButton": "Repozytorium",
+  "projectDescriptions": {
+    "portfolio": "Osobista strona portfolio zbudowana przy użyciu Next.js i React Bootstrap, prezentująca moje projekty i umiejętności.",
+    "pythonRaycaster": "Gra napisana w Pythonie z wykorzystaniem biblioteki Pygame, z silnikiem gry zbudowanym od podstaw. Zawiera renderowanie raycasting, wykrywanie kolizji, interfejs użytkownika, możliwość ekwipowania broni i prostą AI.",
+    "legoRanking": "Aplikacja internetowa do rankingowania najbardziej opłacalnych zestawów Lego, z własnym scraperem. Zbudowana przy użyciu Django, Selenium, Docker i React.",
+    "androidTodo": "Prosta aplikacja Todo na Androida z operacjami CRUD, niestandardowym systemem powiadomień, ustawianiem alarmów, mechanizmem filtrowania, napisana w Kotlinie przy użyciu Android Studio.",
+    "szczurTV": "Prosta platforma streamingowa inspirowana Twitch i Kick z funkcją streamingu, czatem na żywo i autentykacją użytkowników. Opracowana przy użyciu C#, Blazor, ASP.NET Core, Docker i nginx.",
+    "djangoBlog": "Django-blog to prosty blog zbudowany z Django z funkcjonalnością CRUD dla postów i kategorii, systemem uwierzytelniania użytkowników, systemem komentowania postów, profilami użytkowników, interfejsem opartym na szablonach stylizowanym bootstrapem, systemem wyszukiwania, filtrowaniem kategorii, systemem powiadomień e-mail i feedbacku, statusem redaktora pozwalającym użytkownikowi na CRUD postów i komentarzy.",
+    "ticTacToe": "Prosta gra w kółko i krzyżyk w Pythonie z implementacją AI wykorzystującą algorytm minimax z alfa-beta cięciami, zrealizowana przy użyciu pygame.",
+    "mazeGenerator": "Generator Labiryntów to projekt w Pythonie, który wykorzystuje algorytm pathfindingu A* do znalezienia najkrótszej ścieżki przez losowo wygenerowany labirynt. Projekt zawiera również generator labiryntów oparty na zmodyfikowanej wersji algorytmu Kruskala."
+  }
+}

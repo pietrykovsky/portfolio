@@ -1,0 +1,15 @@
+{
+  "pageTitle": "My Projects",
+  "demoButton": "Demo",
+  "repoButton": "Repository",
+  "projectDescriptions": {
+    "portfolio": "A personal portfolio website built with Next.js and React Bootstrap, showcasing my projects and skills.",
+    "pythonRaycaster": "Game written in Python using Pygame library with game engine built from scratch. Features raycasting rendering, collision detection, user interface, equipable weapons and simple AI.",
+    "legoRanking": "A web application for ranking most cost effective Lego bundles, with custom scraper. Built with Django, Selenium, Docker and React.",
+    "androidTodo": "Simple Todo App for Android with CRUD operations, custom notification system, alarm setting, filtering mechanism, written in Kotlin using Android Studio.",
+    "szczurTV": "A simple streaming platform inspired by Twitch and Kick with streaming feature, live chat and user authentication. Developed using C#, Blazor, ASP.NET Core, Docker and nginx.",
+    "djangoBlog": "django-blog is a simple blog built with Django with posts and categories CRUD functionality, user authentication system, posts commenting system, user profiles, template-based interface styled with bootstrap, search system, category filtering, email notification and feedback system, redactor status allowing user to CRUD posts and comments.",
+    "ticTacToe": "Simple Python tictactoe game with alpha beta pruning minimax AI implemented with pygame.",
+    "mazeGenerator": "Maze Generator is a Python project that uses an A* pathfinding algorithm to find the shortest path through a randomly generated maze. The project also includes a maze generator based on a modified version of Kruskal's algorithm."
+  }
+}
