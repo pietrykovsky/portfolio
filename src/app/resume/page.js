@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Button, Spinner } from 'react-bootstrap';
 import { FaDownload, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Document, Page, pdfjs } from 'react-pdf';
+import { useTranslations } from 'next-intl';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import styles from './page.module.css';
@@ -11,6 +12,8 @@ import styles from './page.module.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function Resume() {
+  const t = useTranslations('resume');
+
   const pdfUrl = '/resume_preview.pdf';
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -49,9 +52,9 @@ export default function Resume() {
     <Container className={styles.resumeContainer}>
       <div className={styles.pdfContent} style={{ maxWidth: containerWidth }}>
         <div className={styles.headerRow}>
-          <h1 className={styles.pageTitle}>Resume</h1>
+          <h1 className={styles.pageTitle}>{t('header')}</h1>
           <Button variant="outline-light" onClick={handleDownload} className={styles.downloadButton}>
-            <FaDownload className="me-2" /> Download
+            <FaDownload className="me-2" /> {t('downloadButton')}
           </Button>
         </div>
 
