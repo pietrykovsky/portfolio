@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import Container from "react-bootstrap/Container";
-import NavigationBar from "@/components/NavigationBar";
+import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import StarBackground from "@/components/Particles/StarBackground";
 import Footer from "@/components/Footer";
 
