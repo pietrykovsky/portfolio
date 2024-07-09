@@ -1,9 +1,9 @@
 {
-    "headerHello": "Witaj Świecie!",
-    "headerIntro": "Jestem <highlighted>Michał Pietrykowski</highlighted>",
-    "headerRole": "<bold>Software Developer</bold>",
-    "descHeader": "Witaj w mojej <highlighted>Cyfrowej Przestrzeni</highlighted>",
-    "descP1": "Jestem 23-letnim entuzjastą kodowania z Wrocławia, obecnie studiującym na Informatycznych Systemach Automatyki na Politechnice Wrocławskiej. Moja podróż od tekstowych przygodówek w <highlighted>QBASIC</highlighted> do full-stack web developera była prawdziwą odyseją kosmiczną!",
-    "descP2": "Jako full-stack developer, posługuję się <highlighted>Pythonem</highlighted> i <highlighted>JavaScriptem</highlighted>, tworząc cyfrowe rozwiązania z wykorzystaniem frameworków takich jak <highlighted>Django</highlighted> i <highlighted>React</highlighted>. Zapuściłem się również w krainę <highlighted>C#</highlighted>, rozwijając aplikacje desktopowe, które przesuwają granice możliwości.",
-    "descP3": "Kiedy nie jestem zajęty rozszyfrowywaniem tajemnic cyfrowego świata lub eksperymentowaniem z algorytmami <highlighted>uczenia maszynowego</highlighted>, możesz mnie znaleźć zanużonego w światach Asimova, zgłębiającego sztukę japońskich ceremonii picia herbaty lub ratującego Night City w Cyberpunk 2077. I tak, potrafię debugować kod prawie tak szybko, jak potrafię wchłonąć miskę ramenu - to moja supermoc!"
+  "headerHello": "Witaj Świecie!",
+  "headerIntro": "Jestem <highlighted>Michał Pietrykowski</highlighted>",
+  "headerRole": "<bold>Software Developer</bold>",
+  "descHeader": "Witaj w mojej <highlighted>Cyfrowej Przestrzeni</highlighted>",
+  "descP1": "Jestem 23-letnim entuzjastą kodowania z Wrocławia, obecnie studiującym na Informatycznych Systemach Automatyki na Politechnice Wrocławskiej. Moja podróż od tekstowych przygodówek w <highlighted>QBASIC</highlighted> do full-stack web developera była prawdziwą odyseją kosmiczną!",
+  "descP2": "Jako full-stack developer, posługuję się <highlighted>Pythonem</highlighted> i <highlighted>JavaScriptem</highlighted>, tworząc cyfrowe rozwiązania z wykorzystaniem frameworków takich jak <highlighted>Django</highlighted> i <highlighted>React</highlighted>. Zapuściłem się również w krainę <highlighted>C#</highlighted>, rozwijając aplikacje desktopowe, które przesuwają granice możliwości.",
+  "descP3": "Kiedy nie jestem zajęty rozszyfrowywaniem tajemnic cyfrowego świata lub eksperymentowaniem z algorytmami <highlighted>uczenia maszynowego</highlighted>, możesz mnie znaleźć zanużonego w światach Asimova, zgłębiającego sztukę japońskich ceremonii picia herbaty lub ratującego Night City w Cyberpunk 2077. I tak, potrafię debugować kod prawie tak szybko, jak potrafię wchłonąć miskę ramenu - to moja supermoc!"
 }

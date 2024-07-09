@@ -1,38 +1,38 @@
 {
-    "pageTitle": "About <highlighted>Me</highlighted>",
-    "introText": "Greetings, fellow code enthusiasts and digital explorers! I'm <highlighted>Michał Pietrykowski</highlighted>, a 23-year-old software developer from the city of <highlighted>Wrocław, Poland</highlighted>. My journey through the binary realms began in the hallowed halls of secondary school, where I first encountered the mystical language of <highlighted>QBASIC</highlighted>. Little did I know that this encounter would spark a lifelong passion for coding and set me on a path to becoming a <highlighted>full-stack sorcerer</highlighted>.",
-    "academicText": "My quest for knowledge led me to the prestigious <highlighted>Wrocław University of Science and Technology</highlighted>, where I'm currently unraveling the secrets of <highlighted>IT Automation Systems</highlighted>. This academic adventure has equipped me with a diverse arsenal of programming languages and technologies, from the serpentine coils of <highlighted>Python</highlighted> to the sleek efficiency of <highlighted>C#</highlighted>.",
-    "hobbyText": "When I'm not conjuring code or debugging in digital dungeons, you might find me lost in the pages of an <highlighted>Asimov</highlighted> novel, contemplating the future of AI, or perfecting the art of the <highlighted>Japanese tea ceremony</highlighted>. And yes, I've been known to save <highlighted>Night City</highlighted> a time or two in <highlighted>Cyberpunk 2077</highlighted> - because even in the virtual world, there's always code to be written and bugs to be squashed!",
-    "skillText": "My superpower? I can debug code faster than I can drink a bowl of <highlighted>matcha</highlighted> - and trust me, that's saying something! So whether you're here to collaborate on the next big tech innovation or simply to chat about the intersection of code and culture, I'm always ready for the next adventure. Let's write the future together, one line of code at a time!",
-    "educationTitle": "Education",
-    "educationDegree": "IT Automation Systems",
-    "educationSchool": "Wrocław University of Science and Technology",
-    "educationPeriod": "October 2021 - Present",
-    "experienceTitle": "Professional Experience",
-    "experienceItems": [
-      {
-        "title": "Junior Full Stack Developer",
-        "company": "Correct Context (Comscore)",
-        "period": "April 2024 - Present",
-        "description": "Implementing new backend functionalities and maintaining existing user interfaces with Python and JavaScript."
-      },
-      {
-        "title": "Software Developer Intern",
-        "company": "Dolby Laboratories",
-        "period": "September 2023 - March 2024",
-        "description": "Contributed to data migration projects, enhancing system efficiency and data integrity. Played a key role in maintaining and improving the Dolby Access application, focusing on bug fixes and feature implementation using .NET technologies."
-      },
-      {
-        "title": "Quality Analyst Intern",
-        "company": "Dolby Laboratories",
-        "period": "December 2022 - September 2023",
-        "description": "Developed and maintained crucial Python packages, including Raspberry Pi USB Gadget and Page Object Model, streamlining testing processes. Authored comprehensive documentation and automated test scripts using Pytest, significantly improving test coverage and efficiency. Actively participated in regression testing, ensuring product quality and reliability."
-      }
-    ],
-    "techStackTitle": "Technology Stack",
-    "toolsTitle": "Tools & Environments",
-    "futureTitle": "What's Next?",
-    "futureText1": "As I continue to explore the vast universe of technology, I'm particularly excited about diving deeper into <highlighted>machine learning</highlighted> and <highlighted>AI</highlighted>. The potential of these technologies to revolutionize industries and solve complex problems is truly awe-inspiring, and I'm eager to be at the forefront of this digital revolution.",
-    "futureText2": "I'm also looking forward to contributing more to <highlighted>open-source projects</highlighted>. The collaborative nature of open-source development aligns perfectly with my belief in the power of community-driven innovation. Additionally, I'm contemplating starting a <highlighted>tech blog</highlighted> to share my adventures in coding, lessons learned, and insights gained along the way.",
-    "futureText3": "Whether you're here to collaborate on a groundbreaking project, discuss the intricate plot twists of your favorite <highlighted>sci-fi novel</highlighted>, or engage in a friendly debate about the best <highlighted>ramen, sushi or tea spots in Wrocław</highlighted>, I'm always up for an engaging conversation. Let's connect, innovate, and create something extraordinary together!"
-  }
+  "pageTitle": "About <highlighted>Me</highlighted>",
+  "introText": "Greetings, fellow code enthusiasts and digital explorers! I'm <highlighted>Michał Pietrykowski</highlighted>, a 23-year-old software developer from the city of <highlighted>Wrocław, Poland</highlighted>. My journey through the binary realms began in the hallowed halls of secondary school, where I first encountered the mystical language of <highlighted>QBASIC</highlighted>. Little did I know that this encounter would spark a lifelong passion for coding and set me on a path to becoming a <highlighted>full-stack sorcerer</highlighted>.",
+  "academicText": "My quest for knowledge led me to the prestigious <highlighted>Wrocław University of Science and Technology</highlighted>, where I'm currently unraveling the secrets of <highlighted>IT Automation Systems</highlighted>. This academic adventure has equipped me with a diverse arsenal of programming languages and technologies, from the serpentine coils of <highlighted>Python</highlighted> to the sleek efficiency of <highlighted>C#</highlighted>.",
+  "hobbyText": "When I'm not conjuring code or debugging in digital dungeons, you might find me lost in the pages of an <highlighted>Asimov</highlighted> novel, contemplating the future of AI, or perfecting the art of the <highlighted>Japanese tea ceremony</highlighted>. And yes, I've been known to save <highlighted>Night City</highlighted> a time or two in <highlighted>Cyberpunk 2077</highlighted> - because even in the virtual world, there's always code to be written and bugs to be squashed!",
+  "skillText": "My superpower? I can debug code faster than I can drink a bowl of <highlighted>matcha</highlighted> - and trust me, that's saying something! So whether you're here to collaborate on the next big tech innovation or simply to chat about the intersection of code and culture, I'm always ready for the next adventure. Let's write the future together, one line of code at a time!",
+  "educationTitle": "Education",
+  "educationDegree": "IT Automation Systems",
+  "educationSchool": "Wrocław University of Science and Technology",
+  "educationPeriod": "October 2021 - Present",
+  "experienceTitle": "Professional Experience",
+  "experienceItems": [
+    {
+      "title": "Junior Full Stack Developer",
+      "company": "Correct Context (Comscore)",
+      "period": "April 2024 - Present",
+      "description": "Implementing new backend functionalities and maintaining existing user interfaces with Python and JavaScript."
+    },
+    {
+      "title": "Software Developer Intern",
+      "company": "Dolby Laboratories",
+      "period": "September 2023 - March 2024",
+      "description": "Contributed to data migration projects, enhancing system efficiency and data integrity. Played a key role in maintaining and improving the Dolby Access application, focusing on bug fixes and feature implementation using .NET technologies."
+    },
+    {
+      "title": "Quality Analyst Intern",
+      "company": "Dolby Laboratories",
+      "period": "December 2022 - September 2023",
+      "description": "Developed and maintained crucial Python packages, including Raspberry Pi USB Gadget and Page Object Model, streamlining testing processes. Authored comprehensive documentation and automated test scripts using Pytest, significantly improving test coverage and efficiency. Actively participated in regression testing, ensuring product quality and reliability."
+    }
+  ],
+  "techStackTitle": "Technology Stack",
+  "toolsTitle": "Tools & Environments",
+  "futureTitle": "What's Next?",
+  "futureText1": "As I continue to explore the vast universe of technology, I'm particularly excited about diving deeper into <highlighted>machine learning</highlighted> and <highlighted>AI</highlighted>. The potential of these technologies to revolutionize industries and solve complex problems is truly awe-inspiring, and I'm eager to be at the forefront of this digital revolution.",
+  "futureText2": "I'm also looking forward to contributing more to <highlighted>open-source projects</highlighted>. The collaborative nature of open-source development aligns perfectly with my belief in the power of community-driven innovation. Additionally, I'm contemplating starting a <highlighted>tech blog</highlighted> to share my adventures in coding, lessons learned, and insights gained along the way.",
+  "futureText3": "Whether you're here to collaborate on a groundbreaking project, discuss the intricate plot twists of your favorite <highlighted>sci-fi novel</highlighted>, or engage in a friendly debate about the best <highlighted>ramen, sushi or tea spots in Wrocław</highlighted>, I'm always up for an engaging conversation. Let's connect, innovate, and create something extraordinary together!"
+}

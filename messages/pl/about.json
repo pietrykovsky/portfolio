@@ -1,38 +1,38 @@
 {
-    "pageTitle": "O <highlighted>Mnie</highlighted>",
-    "introText": "Witajcie, entuzjaści kodu i cyfrowi odkrywcy! Jestem <highlighted>Michał Pietrykowski</highlighted>, 23-letni inżynier oprogramowania z miasta <highlighted>Wrocław, Polska</highlighted>. Moja podróż przez binarne krainy rozpoczęła się w murach szkoły średniej, gdzie po raz pierwszy zetknąłem się z mistycznym językiem <highlighted>QBASIC</highlighted>. Nie wiedziałem wtedy, że to spotkanie rozbudzi we mnie życiową pasję do kodowania i wyznaczy ścieżkę do zostania <highlighted>developerem full-stack</highlighted>.",
-    "academicText": "Moje poszukiwanie wiedzy zaprowadziło mnie na prestiżową <highlighted>Politechnikę Wrocławską</highlighted>, gdzie obecnie zgłębiam tajniki <highlighted>Systemów Automatyki IT</highlighted>. Ta akademicka przygoda wyposażyła mnie w różnorodny arsenał języków programowania i technologii, od wijących się zwojów <highlighted>Pythona</highlighted> po elegancką efektywność <highlighted>C#</highlighted>.",
-    "hobbyText": "Kiedy nie czaruję kodu lub nie debuguję w cyfrowych lochach, możecie mnie znaleźć zanużonego w stronach powieści <highlighted>Asimova</highlighted>, rozważającego przyszłość AI lub doskonalącego sztukę <highlighted>japońskiej ceremonii picia herbaty</highlighted>. I tak, zdarzyło mi się ocalić <highlighted>Night City</highlighted> raz czy dwa w <highlighted>Cyberpunk 2077</highlighted> - bo nawet w wirtualnym świecie zawsze jest kod do napisania i błędy do zgniecenia!",
-    "skillText": "Moja supermoc? Potrafię debugować kod szybciej niż wypić czarkę <highlighted>matchy</highlighted> - a uwierzcie mi, to coś znaczy! Więc niezależnie od tego, czy jesteś tu, aby współpracować przy kolejnej wielkiej innowacji technologicznej, czy po prostu porozmawiać o przecięciu kodu i kultury, zawsze jestem gotowy na kolejną przygodę. Napiszmy przyszłość razem, linijka kodu po linijce!",
-    "educationTitle": "Edukacja",
-    "educationDegree": "Informatyczne Systemy Automatyki",
-    "educationSchool": "Politechnika Wrocławska",
-    "educationPeriod": "Październik 2021 - Obecnie",
-    "experienceTitle": "Doświadczenie",
-    "experienceItems": [
-      {
-        "title": "Junior Full Stack Developer",
-        "company": "Correct Context (Comscore)",
-        "period": "Kwiecień 2024 - Obecnie",
-        "description": "Zajmuję się implementacją nowych funkcjonalności po stronie backendu jak i utrzymaniem istniejących interfejsów użytkownika korzystając z Pythona i JavaScripta."
-      },
-      {
-        "title": "Stażysta Software Developer",
-        "company": "Dolby Laboratories",
-        "period": "Wrzesień 2023 - Marzec 2024",
-        "description": "Przyczyniłem się do projektów migracji danych, zwiększając wydajność systemu i integralność danych. Odegrałem kluczową rolę w utrzymaniu i ulepszaniu aplikacji Dolby Access, koncentrując się na naprawie błędów i implementacji nowych funkcji przy użyciu technologii .NET."
-      },
-      {
-        "title": "Stażysta Quality Analyst",
-        "company": "Dolby Laboratories",
-        "period": "Grudzień 2022 - Wrzesień 2023",
-        "description": "Zajmowałem się tworzeniem i utrzymaniem paczek w Pythonie, w tym Raspberry Pi USB Gadget i Page Object Model, usprawniając procesy testowe. Brałem udział w czynnym tworzeniu dokumentacji oraz automatyzowaniu testów z pomocą Pytest, znacznie poprawiając zakres i efektywność testów. Aktywnie uczestniczyłem w testach regresyjnych, zapewniając jakość i niezawodność produktu."
-      }
-    ],  
-    "techStackTitle": "Stack Technologiczny",
-    "toolsTitle": "Narzędzia i Środowiska",
-    "futureTitle": "Co Dalej?",
-    "futureText1": "Kontynuując eksplorację ogromnego świata technologii, jestem szczególnie podekscytowany perspektywą zgłębienia <highlighted>uczenia maszynowego</highlighted> i <highlighted>AI</highlighted>. Potencjał tych technologii do rewolucjonizowania branż i rozwiązywania złożonych problemów jest naprawdę inspirujący, i jestem chętny, by być na czele tej cyfrowej rewolucji.",
-    "futureText2": "Planuję również więcej przyczynić się do <highlighted>projektów open-source</highlighted>. Współpracująca natura rozwoju open-source idealnie pasuje do mojego przekonania o sile innowacji napędzanej przez społeczność. Dodatkowo, rozważam rozpoczęcie <highlighted>bloga technologicznego</highlighted>, aby dzielić się moimi przygodami w kodowaniu, wyciągniętymi wnioskami i zdobytymi spostrzeżeniami po drodze.",
-    "futureText3": "Niezależnie od tego, czy jesteś tu, aby współpracować nad przełomowym projektem, omówić zawiłe zwroty akcji w twojej ulubionej <highlighted>powieści science-fiction</highlighted>, czy zaangażować się w przyjazną debatę o najlepszych <highlighted>miejscach z ramenem, sushi lub herbatą we Wrocławiu</highlighted>, zawsze jestem gotowy na angażującą rozmowę. Połączmy siły, innowujmy i stwórzmy coś niezwykłego razem!"
-  }
+  "pageTitle": "O <highlighted>Mnie</highlighted>",
+  "introText": "Witajcie, entuzjaści kodu i cyfrowi odkrywcy! Jestem <highlighted>Michał Pietrykowski</highlighted>, 23-letni inżynier oprogramowania z miasta <highlighted>Wrocław, Polska</highlighted>. Moja podróż przez binarne krainy rozpoczęła się w murach szkoły średniej, gdzie po raz pierwszy zetknąłem się z mistycznym językiem <highlighted>QBASIC</highlighted>. Nie wiedziałem wtedy, że to spotkanie rozbudzi we mnie życiową pasję do kodowania i wyznaczy ścieżkę do zostania <highlighted>developerem full-stack</highlighted>.",
+  "academicText": "Moje poszukiwanie wiedzy zaprowadziło mnie na prestiżową <highlighted>Politechnikę Wrocławską</highlighted>, gdzie obecnie zgłębiam tajniki <highlighted>Systemów Automatyki IT</highlighted>. Ta akademicka przygoda wyposażyła mnie w różnorodny arsenał języków programowania i technologii, od wijących się zwojów <highlighted>Pythona</highlighted> po elegancką efektywność <highlighted>C#</highlighted>.",
+  "hobbyText": "Kiedy nie czaruję kodu lub nie debuguję w cyfrowych lochach, możecie mnie znaleźć zanużonego w stronach powieści <highlighted>Asimova</highlighted>, rozważającego przyszłość AI lub doskonalącego sztukę <highlighted>japońskiej ceremonii picia herbaty</highlighted>. I tak, zdarzyło mi się ocalić <highlighted>Night City</highlighted> raz czy dwa w <highlighted>Cyberpunk 2077</highlighted> - bo nawet w wirtualnym świecie zawsze jest kod do napisania i błędy do zgniecenia!",
+  "skillText": "Moja supermoc? Potrafię debugować kod szybciej niż wypić czarkę <highlighted>matchy</highlighted> - a uwierzcie mi, to coś znaczy! Więc niezależnie od tego, czy jesteś tu, aby współpracować przy kolejnej wielkiej innowacji technologicznej, czy po prostu porozmawiać o przecięciu kodu i kultury, zawsze jestem gotowy na kolejną przygodę. Napiszmy przyszłość razem, linijka kodu po linijce!",
+  "educationTitle": "Edukacja",
+  "educationDegree": "Informatyczne Systemy Automatyki",
+  "educationSchool": "Politechnika Wrocławska",
+  "educationPeriod": "Październik 2021 - Obecnie",
+  "experienceTitle": "Doświadczenie",
+  "experienceItems": [
+    {
+      "title": "Junior Full Stack Developer",
+      "company": "Correct Context (Comscore)",
+      "period": "Kwiecień 2024 - Obecnie",
+      "description": "Zajmuję się implementacją nowych funkcjonalności po stronie backendu jak i utrzymaniem istniejących interfejsów użytkownika korzystając z Pythona i JavaScripta."
+    },
+    {
+      "title": "Stażysta Software Developer",
+      "company": "Dolby Laboratories",
+      "period": "Wrzesień 2023 - Marzec 2024",
+      "description": "Przyczyniłem się do projektów migracji danych, zwiększając wydajność systemu i integralność danych. Odegrałem kluczową rolę w utrzymaniu i ulepszaniu aplikacji Dolby Access, koncentrując się na naprawie błędów i implementacji nowych funkcji przy użyciu technologii .NET."
+    },
+    {
+      "title": "Stażysta Quality Analyst",
+      "company": "Dolby Laboratories",
+      "period": "Grudzień 2022 - Wrzesień 2023",
+      "description": "Zajmowałem się tworzeniem i utrzymaniem paczek w Pythonie, w tym Raspberry Pi USB Gadget i Page Object Model, usprawniając procesy testowe. Brałem udział w czynnym tworzeniu dokumentacji oraz automatyzowaniu testów z pomocą Pytest, znacznie poprawiając zakres i efektywność testów. Aktywnie uczestniczyłem w testach regresyjnych, zapewniając jakość i niezawodność produktu."
+    }
+  ],  
+  "techStackTitle": "Stack Technologiczny",
+  "toolsTitle": "Narzędzia i Środowiska",
+  "futureTitle": "Co Dalej?",
+  "futureText1": "Kontynuując eksplorację ogromnego świata technologii, jestem szczególnie podekscytowany perspektywą zgłębienia <highlighted>uczenia maszynowego</highlighted> i <highlighted>AI</highlighted>. Potencjał tych technologii do rewolucjonizowania branż i rozwiązywania złożonych problemów jest naprawdę inspirujący, i jestem chętny, by być na czele tej cyfrowej rewolucji.",
+  "futureText2": "Planuję również więcej przyczynić się do <highlighted>projektów open-source</highlighted>. Współpracująca natura rozwoju open-source idealnie pasuje do mojego przekonania o sile innowacji napędzanej przez społeczność. Dodatkowo, rozważam rozpoczęcie <highlighted>bloga technologicznego</highlighted>, aby dzielić się moimi przygodami w kodowaniu, wyciągniętymi wnioskami i zdobytymi spostrzeżeniami po drodze.",
+  "futureText3": "Niezależnie od tego, czy jesteś tu, aby współpracować nad przełomowym projektem, omówić zawiłe zwroty akcji w twojej ulubionej <highlighted>powieści science-fiction</highlighted>, czy zaangażować się w przyjazną debatę o najlepszych <highlighted>miejscach z ramenem, sushi lub herbatą we Wrocławiu</highlighted>, zawsze jestem gotowy na angażującą rozmowę. Połączmy siły, innowujmy i stwórzmy coś niezwykłego razem!"
+}
