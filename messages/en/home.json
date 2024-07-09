@@ -1,9 +1,9 @@
 {
-    "header-hello": "Hello World!",
-    "header-intro": "I'm <highlighted>Michał Pietrykowski</highlighted>",
-    "header-role": "a <bold>Software Developer</bold>",
-    "desc-header": "Welcome to <highlighted>My Digital Universe</highlighted>",
-    "desc-p1": "I'm a 23-year-old code enthusiast from Wrocław, currently navigating the galaxy of IT Automation Systems at Wrocław University of Science and Technology. My journey from <highlighted>QBASIC</highlighted> text adventures to full-stack engineering has been quite the space odyssey!",
-    "desc-p2": "As a full-stack engineer, I wield the power of <highlighted>Python</highlighted> and <highlighted>JavaScript</highlighted>, crafting digital solutions with frameworks like <highlighted>Django</highlighted> and <highlighted>React</highlighted>. I've also ventured into the realm of <highlighted>C#</highlighted>, developing desktop applications that push the boundaries of what's possible.",
-    "desc-p3": "When I'm not busy decoding the mysteries of the digital realm or experimenting with <highlighted>machine learning</highlighted> algorithms, you might find me lost in Asimov's worlds, mastering the art of Japanese tea ceremonies, or saving Night City in Cyberpunk 2077. And yes, I can debug code almost as fast as I can slurp a bowl of ramen - it's my superpower!"
+    "headerHello": "Hello World!",
+    "headerIntro": "I'm <highlighted>Michał Pietrykowski</highlighted>",
+    "headerRole": "a <bold>Software Developer</bold>",
+    "descHeader": "Welcome to <highlighted>My Digital Universe</highlighted>",
+    "descP1": "I'm a 23-year-old code enthusiast from Wrocław, currently navigating the galaxy of IT Automation Systems at Wrocław University of Science and Technology. My journey from <highlighted>QBASIC</highlighted> text adventures to full-stack engineering has been quite the space odyssey!",
+    "descP2": "As a full-stack engineer, I wield the power of <highlighted>Python</highlighted> and <highlighted>JavaScript</highlighted>, crafting digital solutions with frameworks like <highlighted>Django</highlighted> and <highlighted>React</highlighted>. I've also ventured into the realm of <highlighted>C#</highlighted>, developing desktop applications that push the boundaries of what's possible.",
+    "descP3": "When I'm not busy decoding the mysteries of the digital realm or experimenting with <highlighted>machine learning</highlighted> algorithms, you might find me lost in Asimov's worlds, mastering the art of Japanese tea ceremonies, or saving Night City in Cyberpunk 2077. And yes, I can debug code almost as fast as I can slurp a bowl of ramen - it's my superpower!"
 }

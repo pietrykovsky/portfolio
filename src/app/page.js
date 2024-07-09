@@ -17,11 +17,11 @@ export default function Home() {
   }, [t]);
 
   const getTypewriterString = () => {
-    const hello = t('header-hello');
-    const introduction = t.rich('header-intro', {
+    const hello = t('headerHello');
+    const introduction = t.rich('headerIntro', {
       highlighted: (chunks) => `<span class="${styles.highlighted}">${chunks}</span>`
     });
-    const role = t.rich('header-role', {
+    const role = t.rich('headerRole', {
       bold: (chunks) => `<b>${chunks}</b>`
     });
 
@@ -69,10 +69,10 @@ export default function Home() {
             />
           </Col>
           <Col className="align-content-center p-3" md={7}>
-            <h2 className="mb-4" dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-header') }} />
-            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-p1') }} />
-            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-p2') }} />
-            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'desc-p3') }} />
+            <h2 className="mb-4" dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'descHeader') }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'descP1') }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'descP2') }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, 'descP3') }} />
           </Col>
         </Row>
       </Container>

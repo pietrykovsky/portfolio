@@ -13,13 +13,13 @@ const Footer = () => {
       <Container>
         <Row className="justify-content-between align-items-center py-4">
           <Col md={4} className="text-md-start text-center mb-3 mb-md-0">
-            <p className="mb-0">{t('designed-with')}</p>
+            <p className="mb-0">{t('designedWith')}</p>
           </Col>
           <Col md={4} className="text-center mb-3 mb-md-0 order-md-last">
-            <p className="mb-0">{t('privacy-policy', {currentYear: currentYear})}</p>
+            <p className="mb-0">{t('privacyPolicy', {currentYear: currentYear})}</p>
           </Col>
           <Col md={4} className="text-center mb-3 mb-md-0">
-            <h5 className="mb-3">{t('find-me-on')}</h5>
+            <h5 className="mb-3">{t('findMeOn')}</h5>
             <div className="social-icons">
               <a href="https://github.com/pietrykovsky" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
                 <FaGithub />
