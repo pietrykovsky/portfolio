@@ -1,7 +1,7 @@
 "use client";
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { LuHome, LuLaptop, LuUser, LuFileText } from 'react-icons/lu';
+import { LuHome, LuLaptop, LuUser, LuFileText, LuMail } from 'react-icons/lu';
 import {useTranslations} from 'next-intl';
 import LocaleSwitcher from './LocaleSwitcher';
 
@@ -9,7 +9,7 @@ export default function NavigationBar() {
   const t = useTranslations('navbar');
 
   return (
-    <Navbar fixed="top" expand="md">
+    <Navbar fixed="top" expand="lg">
       <Container>
         <Navbar.Brand href="/">pietrykovsky</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -37,6 +37,11 @@ export default function NavigationBar() {
             <Nav.Item>
               <Nav.Link href="/resume">
                 <LuFileText className='mb-1'/> {t('resume')}
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/contact">
+                <LuMail className='mb-1'/> {t('contact')}
               </Nav.Link>
             </Nav.Item>
           </Nav>

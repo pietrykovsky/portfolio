@@ -1,0 +1,19 @@
+{
+  "pageTitle": "Napisz do mnie",
+  "nameLabel": "Imię",
+  "namePlaceholder": "Wprowadź swoje imię",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Wprowadź swój email",
+  "topicLabel": "Temat",
+  "topicPlaceholder": "Wybierz temat",
+  "topicOptions": [
+    {"value": "offer", "label": "Oferta pracy"},
+    {"value": "bug", "label": "Zgłoszenie błędu"},
+    {"value": "question", "label": "Ogólne pytanie"},
+    {"value": "other", "label": "Inne"}
+  ],
+  "messageLabel": "Wiadomość",
+  "messagePlaceholder": "Wprowadź swoją wiadomość",
+  "submitButton": "Wyślij wiadomość",
+  "successMessage": "Twoja wiadomość została wysłana pomyślnie!"
+}

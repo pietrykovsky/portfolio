@@ -1,0 +1,19 @@
+{
+  "pageTitle": "Contact Me",
+  "nameLabel": "Name",
+  "namePlaceholder": "Enter your name",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Enter your email",
+  "topicLabel": "Topic",
+  "topicPlaceholder": "Select a topic",
+  "topicOptions": [
+    {"value": "offer", "label": "Job Offer"},
+    {"value": "bug", "label": "Report a Bug"},
+    {"value": "question", "label": "General Question"},
+    {"value": "other", "label": "Other"}
+  ],
+  "messageLabel": "Message",
+  "messagePlaceholder": "Enter your message",
+  "submitButton": "Send Message",
+  "successMessage": "Your message has been sent successfully!"
+}
