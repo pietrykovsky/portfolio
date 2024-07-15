@@ -54,7 +54,7 @@ export default function Contact() {
         setFormData({ name: '', email: '', topic: '', message: '' });
       } else {
         setAlertVariant('danger');
-        setAlertMessage(response.status == 429 ? t('tooManyRequestsMessage', {time: data.message}) : t('errorMessage'));
+        setAlertMessage(t('errorMessage'));
       }
     } catch (error) {
       console.error('Error:', error);

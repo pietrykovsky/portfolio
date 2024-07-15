@@ -17,6 +17,5 @@
   "submitButton": "Send Message",
   "successMessage": "Your message has been sent successfully!",
   "errorMessage": "There was an error sending your message. Please try again later.",
-  "tooManyRequestsMessage": "Too many message sending attempts. Please try again in {time} seconds.",
   "recaptchaRequired": "Please complete the reCAPTCHA challenge."
 }

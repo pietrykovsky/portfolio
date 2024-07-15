@@ -15,7 +15,7 @@ This project is a personal portfolio website built with Next.js and React Bootst
 - Resume/CV page
 - Particle.js background for visual appeal
 - Internationalization support (English and Polish)
-- Contact form with reCAPTCHA integration and rate limiting
+- Contact form with reCAPTCHA integration
 
 ## Technologies Used
 - Next.js
