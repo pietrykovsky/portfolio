@@ -21,10 +21,13 @@ export default function Contact() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    setFormData(prevState => {
+      const newState = {
+        ...prevState,
+        [name]: value
+      };
+      return newState;
+    });
   };
 
   const handleSubmit = async (e) => {

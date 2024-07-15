@@ -21,7 +21,7 @@ export default async function sendContactEmail(name, email, topic, message) {
   // Replace placeholders with actual content
   htmlTemplate = htmlTemplate.replace('{{name}}', name)
                              .replace('{{email}}', email)
-                             .replace('{{topic}}', topic)
+                             .replaceAll('{{topic}}', topic.toUpperCase())
                              .replace('{{message}}', message.replace(/\n/g, '<br>'));
 
   try {
