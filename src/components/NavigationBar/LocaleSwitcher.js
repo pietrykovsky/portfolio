@@ -2,7 +2,7 @@
 
 import { Nav } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
-import { getUserLocale, setUserLocale } from '@/locale';
+import { getUserLocale, setUserLocale } from '@/services/locale';
 import styles from './LocaleSwitcher.module.css';
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
 

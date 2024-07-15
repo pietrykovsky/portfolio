@@ -1,0 +1,82 @@
+.contactContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  margin-bottom: 2rem;
+  color: white;
+  text-align: left;
+}
+
+.contactForm {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(125, 190, 255, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.contactForm label {
+  color: white;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(125, 190, 255, 0.3);
+  color: white;
+}
+
+.contactForm input::placeholder,
+.contactForm select::placeholder,
+.contactForm textarea::placeholder {
+  color: #aaa;
+}
+
+.contactForm input:focus,
+.contactForm select:focus,
+.contactForm textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #7dbeff;
+  box-shadow: 0 0 0 0.2rem rgba(125, 190, 255, 0.25);
+  color: white;
+}
+
+.contactForm select:focus {
+  color: #242424;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitButton {
+  background-color: #7dbeff;
+  border-color: #7dbeff;
+  color: black;
+}
+
+.submitButton:hover {
+  background-color: #5ca8ff;
+  border-color: #5ca8ff;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    padding-top: 1rem;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactForm {
+    padding: 1rem;
+  }
+}
