@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import { getUserLocale } from './locale';
+import { getUserLocale } from './services/locale';
 import fs from 'fs/promises';
 import path from 'path';
 

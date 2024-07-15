@@ -15,5 +15,6 @@
   "messageLabel": "Wiadomość",
   "messagePlaceholder": "Wprowadź swoją wiadomość",
   "submitButton": "Wyślij wiadomość",
-  "successMessage": "Twoja wiadomość została wysłana pomyślnie!"
+  "successMessage": "Twoja wiadomość została wysłana pomyślnie!",
+  "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbować ponownie później."
 }

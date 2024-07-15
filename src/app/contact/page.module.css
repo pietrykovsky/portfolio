@@ -45,6 +45,10 @@
   color: white;
 }
 
+.contactForm select:focus {
+  color: #242424;
+}
+
 .buttonWrapper {
   display: flex;
   justify-content: flex-end;

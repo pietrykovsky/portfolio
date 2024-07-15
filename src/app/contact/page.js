@@ -14,6 +14,8 @@ export default function Contact() {
     message: ''
   });
   const [showAlert, setShowAlert] = useState(false);
+  const [alertVariant, setAlertVariant] = useState('success');
+  const [alertMessage, setAlertMessage] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,21 +25,43 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // todo: send form data to backend
-    console.log(formData);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setAlertVariant('success');
+        setAlertMessage(t('successMessage'));
+        setFormData({ name: '', email: '', topic: '', message: '' });
+      } else {
+        setAlertVariant('danger');
+        setAlertMessage(t('errorMessage'));
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setAlertVariant('danger');
+      setAlertMessage(t('errorMessage'));
+    }
+
     setShowAlert(true);
-    setFormData({ name: '', email: '', topic: '', message: '' });
-    setTimeout(() => setShowAlert(false), 3000);
+    setTimeout(() => setShowAlert(false), 10000);
   };
 
   return (
     <Container className={styles.contactContainer}>
       <h1 className={styles.pageTitle}>{t('pageTitle')}</h1>
       {showAlert && (
-        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
-          {t('successMessage')}
+        <Alert variant={alertVariant} onClose={() => setShowAlert(false)} dismissible>
+          {alertMessage}
         </Alert>
       )}
       <Form onSubmit={handleSubmit} className={styles.contactForm}>
