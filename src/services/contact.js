@@ -26,7 +26,7 @@ export default async function sendContactEmail(name, email, topic, message) {
 
   try {
     await transporter.sendMail({
-      from: `"Contact Form" <${process.env.EMAIL_FROM}>`,
+      from: `"Portfolio Website" <${process.env.EMAIL_FROM}>`,
       replyTo: email,
       to: process.env.EMAIL_TO,
       subject: `[${topic.toUpperCase()}] New Contact Form Submission`,

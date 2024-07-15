@@ -17,6 +17,5 @@
   "submitButton": "Wyślij wiadomość",
   "successMessage": "Twoja wiadomość została wysłana pomyślnie!",
   "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbować ponownie później.",
-  "tooManyRequestsMessage": "Zbyt wiele prób wysłania wiadomości. Proszę spróbować za {time} sekund.",
   "recaptchaRequired": "Proszę wypełnić reCAPTCHA."
 }
