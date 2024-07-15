@@ -1,28 +1,26 @@
 import { LRUCache } from 'lru-cache';
 
 export function rateLimit({ interval, uniqueTokenPerInterval }) {
-  const cache = new LRUCache({
+  const tokenCache = new LRUCache({
     max: uniqueTokenPerInterval || 500,
     ttl: interval || 60000,
   });
 
   return {
-    check: (limit, token) =>
+    check: (token) =>
       new Promise((resolve) => {
-        const tokenCount = cache.get(token) || [0];
-        if (tokenCount[0] === 0) {
-          cache.set(token, tokenCount);
-        }
-        tokenCount[0] += 1;
-
-        const currentUsage = tokenCount[0];
-        const isRateLimited = currentUsage > limit;
+        const tokenCount = tokenCache.get(token) || 0;
+        const currentTimestamp = Date.now();
+        const isRateLimited = tokenCount > 0;
         
+        if (!isRateLimited) {
+          tokenCache.set(token, currentTimestamp);
+        }
+
         resolve({
           isRateLimited,
-          limit,
-          currentUsage,
-          remainingTime: cache.getRemainingTTL(token)
+          limit: 1,
+          remainingTime: isRateLimited ? tokenCache.getRemainingTTL(token) : 0,
         });
       }),
   };

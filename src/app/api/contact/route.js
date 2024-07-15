@@ -24,7 +24,7 @@ async function verifyRecaptcha(token) {
 export async function POST(request) {
   try {
     const ip = request.headers.get('x-forwarded-for') || 'unknown';
-    const { isRateLimited, limit, currentUsage, remainingTime } = await limiter.check(1, ip);
+    const { isRateLimited, remainingTime } = await limiter.check(ip);
 
     if (isRateLimited) {
       return NextResponse.json({ 
