@@ -27,6 +27,8 @@ jobs:
         echo "SMTP_PASS=${{ secrets.SMTP_PASS }}" >> .env.local
         echo "EMAIL_FROM=${{ secrets.EMAIL_FROM }}" >> .env.local
         echo "EMAIL_TO=${{ secrets.EMAIL_TO }}" >> .env.local
+        echo "NEXT_PUBLIC_RECAPTCHA_WEBSITE_KEY=${{ secrets.RECAPTCHA_WEBSITE_KEY }}" >> .env.local
+        echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> .env.local
     
     - name: Install dependencies
       run: npm ci

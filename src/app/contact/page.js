@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Container, Form, Button, Alert } from 'react-bootstrap';
 import { useTranslations } from 'next-intl';
 import styles from './page.module.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const t = useTranslations('contact');
+  const recaptchaRef = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,13 +29,21 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const recaptchaValue = recaptchaRef.current.getValue();
+    if (!recaptchaValue) {
+      setAlertVariant('danger');
+      setAlertMessage(t('recaptchaRequired'));
+      setShowAlert(true);
+      return;
+    }
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaToken: recaptchaValue }),
       });
 
       const data = await response.json();
@@ -44,7 +54,7 @@ export default function Contact() {
         setFormData({ name: '', email: '', topic: '', message: '' });
       } else {
         setAlertVariant('danger');
-        setAlertMessage(t('errorMessage'));
+        setAlertMessage(response.status == 429 ? t('tooManyRequestsMessage', {time: data.message}) : t('errorMessage'));
       }
     } catch (error) {
       console.error('Error:', error);
@@ -52,6 +62,7 @@ export default function Contact() {
       setAlertMessage(t('errorMessage'));
     }
 
+    recaptchaRef.current.reset();
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 10000);
   };
@@ -116,6 +127,13 @@ export default function Contact() {
             placeholder={t('messagePlaceholder')}
           />
         </Form.Group>
+        
+        <div className='my-3'>
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_WEBSITE_KEY}
+            ref={recaptchaRef}
+          />
+        </div>
 
         <div className={styles.buttonWrapper}>
           <Button variant="primary" type="submit" className={styles.submitButton}>
