@@ -6,7 +6,7 @@ import {useTranslations} from 'next-intl';
 import LocaleSwitcher from './LocaleSwitcher';
 
 export default function NavigationBar() {
-  const t = useTranslations('navbar');
+  const t = useTranslations('navigation');
 
   return (
     <Navbar fixed="top" expand="lg">

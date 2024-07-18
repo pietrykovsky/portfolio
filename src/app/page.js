@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Container fluid className={styles.tildeBackground}>
-        <Container className="my-5">
+        <Container className="mt-5">
           <Row>
             <Col className="align-content-center p-3" md={7}>
               <h1>
@@ -58,7 +58,7 @@ export default function Home() {
           </Row>
         </Container>
       </Container>
-      <Container className="my-5 py-5">
+      <Container className="mt-5 py-5">
         <Row>
           <Col className="text-center p-3" md={5}>
             <Image 
