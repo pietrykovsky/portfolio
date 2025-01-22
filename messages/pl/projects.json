@@ -3,6 +3,7 @@
   "demoButton": "Demo",
   "repoButton": "Repozytorium",
   "projectDescriptions": {
+    "gymTracker": "GymTracker to aplikacja webowa przeznaczona dla entuzjastów fitnessu do śledzenia swoich treningów, monitorowania pomiarów ciała i analizowania postępów treningowych. Zbudowany z Blazor Server i nowoczesnych technologii .NET, oferuje solidną platformę do zarządzania swoją podróżą fitness.",
     "portfolio": "Osobista strona portfolio zbudowana przy użyciu Next.js i React Bootstrap, prezentująca moje projekty i umiejętności.",
     "pythonRaycaster": "Gra napisana w Pythonie z wykorzystaniem biblioteki Pygame, z silnikiem gry zbudowanym od podstaw. Zawiera renderowanie raycasting, wykrywanie kolizji, interfejs użytkownika, możliwość ekwipowania broni i prostą AI.",
     "legoRanking": "Aplikacja internetowa do rankingowania najbardziej opłacalnych zestawów Lego, z własnym scraperem. Zbudowana przy użyciu Django, Selenium, Docker i React.",

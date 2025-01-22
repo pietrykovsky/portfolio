@@ -3,6 +3,7 @@
   "demoButton": "Demo",
   "repoButton": "Repository",
   "projectDescriptions": {
+    "gymTracker": "GymTracker is a comprehensive web application designed for fitness enthusiasts to track their workouts, monitor body measurements, and analyze training progress. Built with Blazor Server and modern .NET technologies, it offers a robust platform for managing your fitness journey.",
     "portfolio": "A personal portfolio website built with Next.js and React Bootstrap, showcasing my projects and skills.",
     "pythonRaycaster": "Game written in Python using Pygame library with game engine built from scratch. Features raycasting rendering, collision detection, user interface, equipable weapons and simple AI.",
     "legoRanking": "A web application for ranking most cost effective Lego bundles, with custom scraper. Built with Django, Selenium, Docker and React.",
