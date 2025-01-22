@@ -1,20 +1,20 @@
 {
   "pageTitle": "O <highlighted>Mnie</highlighted>",
-  "introText": "Witajcie, entuzjaści kodu i cyfrowi odkrywcy! Jestem <highlighted>Michał Pietrykowski</highlighted>, 23-letni inżynier oprogramowania z miasta <highlighted>Wrocław, Polska</highlighted>. Moja podróż przez binarne krainy rozpoczęła się w murach szkoły średniej, gdzie po raz pierwszy zetknąłem się z mistycznym językiem <highlighted>QBASIC</highlighted>. Nie wiedziałem wtedy, że to spotkanie rozbudzi we mnie życiową pasję do kodowania i wyznaczy ścieżkę do zostania <highlighted>developerem full-stack</highlighted>.",
-  "academicText": "Moje poszukiwanie wiedzy zaprowadziło mnie na prestiżową <highlighted>Politechnikę Wrocławską</highlighted>, gdzie obecnie zgłębiam tajniki <highlighted>Systemów Automatyki IT</highlighted>. Ta akademicka przygoda wyposażyła mnie w różnorodny arsenał języków programowania i technologii, od wijących się zwojów <highlighted>Pythona</highlighted> po elegancką efektywność <highlighted>C#</highlighted>.",
+  "introText": "Witajcie, entuzjaści kodu i cyfrowi odkrywcy! Jestem <highlighted>Michał Pietrykowski</highlighted>, 23-letni inżynier oprogramowania z miasta <highlighted>Wrocław, Polska</highlighted>. Moja podróż przez binarne krainy rozpoczęła się w murach szkoły średniej, gdzie po raz pierwszy zetknąłem się z mistycznym językiem <highlighted>QBASIC</highlighted>. Nie wiedziałem wtedy, że to spotkanie rozbudzi we mnie życiową pasję do kodowania i wyznaczy ścieżkę do zostania <highlighted>deweloperem full-stack</highlighted>.",
+  "academicText": "Moje poszukiwanie wiedzy zaprowadziło mnie na prestiżową <highlighted>Politechnikę Wrocławską</highlighted>, gdzie udało mi się obronić moją pracę inżynierską i zdobyć tytuł inżyniera na kierunku <highlighted>Informatyczne Systemy Automatyki</highlighted>. Ta akademicka przygoda wyposażyła mnie w różnorodny arsenał języków programowania i technologii, od wijących się zwojów <highlighted>Pythona</highlighted> po elegancką efektywność <highlighted>C#</highlighted>.",
   "hobbyText": "Kiedy nie czaruję kodu lub nie debuguję w cyfrowych lochach, możecie mnie znaleźć zanużonego w stronach powieści <highlighted>Asimova</highlighted>, rozważającego przyszłość AI lub doskonalącego sztukę <highlighted>japońskiej ceremonii picia herbaty</highlighted>. I tak, zdarzyło mi się ocalić <highlighted>Night City</highlighted> raz czy dwa w <highlighted>Cyberpunk 2077</highlighted> - bo nawet w wirtualnym świecie zawsze jest kod do napisania i błędy do zgniecenia!",
   "skillText": "Moja supermoc? Potrafię debugować kod szybciej niż wypić czarkę <highlighted>matchy</highlighted> - a uwierzcie mi, to coś znaczy! Więc niezależnie od tego, czy jesteś tu, aby współpracować przy kolejnej wielkiej innowacji technologicznej, czy po prostu porozmawiać o przecięciu kodu i kultury, zawsze jestem gotowy na kolejną przygodę. Napiszmy przyszłość razem, linijka kodu po linijce!",
   "educationTitle": "Edukacja",
-  "educationDegree": "Informatyczne Systemy Automatyki",
+  "educationDegree": "Inżynier - Informatyczne Systemy Automatyki",
   "educationSchool": "Politechnika Wrocławska",
-  "educationPeriod": "Październik 2021 - Obecnie",
+  "educationPeriod": "Październik 2021 - Styczeń 2025",
   "experienceTitle": "Doświadczenie",
   "experienceItems": [
     {
       "title": "Junior Full Stack Developer",
       "company": "Correct Context (Comscore)",
       "period": "Kwiecień 2024 - Obecnie",
-      "description": "Zajmuję się implementacją nowych funkcjonalności po stronie backendu jak i utrzymaniem istniejących interfejsów użytkownika korzystając z Pythona i JavaScripta."
+      "description": "Zajmuję się implementacją nowych funkcjonalności oraz utrzymaniem aplikacji webowych REST w takich technologiach jak Django, FastAPI, Flask czy React.js. Automatyzuję procesy z pomocą Jenkinsa i Dockera oraz testy jednostkowe i integracyjne z Pytestem, a także dbam o jakość kodu i bezpieczeństwo aplikacji. Zajmuję się również migracją infrastruktury do chmury AWS."
     },
     {
       "title": "Stażysta Software Developer",
@@ -28,7 +28,7 @@
       "period": "Grudzień 2022 - Wrzesień 2023",
       "description": "Zajmowałem się tworzeniem i utrzymaniem paczek w Pythonie, w tym Raspberry Pi USB Gadget i Page Object Model, usprawniając procesy testowe. Brałem udział w czynnym tworzeniu dokumentacji oraz automatyzowaniu testów z pomocą Pytest, znacznie poprawiając zakres i efektywność testów. Aktywnie uczestniczyłem w testach regresyjnych, zapewniając jakość i niezawodność produktu."
     }
-  ],  
+  ],
   "techStackTitle": "Stack Technologiczny",
   "toolsTitle": "Narzędzia i Środowiska",
   "futureTitle": "Co Dalej?",
