@@ -89,6 +89,7 @@ const projects = [
     descriptionKey: "portfolio",
     image: "/previews/portfolio.jpg",
     technologies: [SiReact, SiJavascript, SiNextdotjs, SiNginx, SiDocker],
+    demoLink: "https://pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/portfolio",
   },
   {
@@ -103,7 +104,7 @@ const projects = [
     descriptionKey: "legoRanking",
     image: "/previews/lego-ranking.jpg",
     technologies: [SiPython, SiDjango, SiReact, SiDocker, SiSelenium, SiNginx],
-    demoLink: "https://lego-ranking.duckdns.org",
+    demoLink: "https://lego-ranking.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/lego-ranking-app",
   },
   {
@@ -118,6 +119,7 @@ const projects = [
     descriptionKey: "szczurTV",
     image: "/previews/szczurtv.jpg",
     technologies: [SiCsharp, SiDotnet, SiBlazor, SiDocker, SiNginx],
+    demoLink: "https://szczurtv.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/szczurtv",
   },
   {
