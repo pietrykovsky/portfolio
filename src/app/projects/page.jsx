@@ -19,6 +19,10 @@ import {
   SiAndroidstudio,
   SiPostgresql,
   SiBootstrap,
+  SiTailwindcss,
+  SiTypescript,
+  SiCelery,
+  SiRedis,
 } from "react-icons/si";
 import styles from "./page.module.css";
 import { useTranslations } from "next-intl";
@@ -103,7 +107,20 @@ const projects = [
     title: "Lego Ranking",
     descriptionKey: "legoRanking",
     image: "/previews/lego-ranking.jpg",
-    technologies: [SiPython, SiDjango, SiReact, SiDocker, SiSelenium, SiNginx],
+    technologies: [
+      SiPython,
+      SiDjango,
+      SiSelenium,
+      SiTypescript,
+      SiReact,
+      SiTailwindcss,
+      SiNextdotjs,
+      SiDocker,
+      SiNginx,
+      SiPostgresql,
+      SiCelery,
+      SiRedis,
+    ],
     demoLink: "https://lego-ranking.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/lego-ranking-app",
   },
