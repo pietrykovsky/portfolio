@@ -24,11 +24,7 @@
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
-<<<<<<< Updated upstream
-    "eslint": "^8",
-=======
     "eslint": "^9",
->>>>>>> Stashed changes
     "eslint-config-next": "^16.1.6"
   }
 }
