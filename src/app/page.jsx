@@ -1,20 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
 import { getHighlightedString } from "./utils";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Typewriter from "typewriter-effect";
 
 export default function Home() {
   const t = useTranslations('home');
-  const [key, setKey] = useState(0);
-
-  useEffect(() => {
-    // This effect will run whenever the locale changes
-    setKey(prevKey => prevKey + 1);
-  }, [t]);
+  // Remount Typewriter on a locale change so it retypes the new string.
+  const locale = useLocale();
 
   const getTypewriterString = () => {
     const hello = t('headerHello');
@@ -36,7 +31,7 @@ export default function Home() {
             <Col className="align-content-center p-3" md={7}>
               <h1>
                 <Typewriter
-                  key={key}
+                  key={locale}
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(getTypewriterString())
