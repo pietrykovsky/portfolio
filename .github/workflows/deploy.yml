@@ -13,35 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '22.3.x'
-    
+
+    # The image is built on the server, so the runner does not need Node at all.
+    # It only assembles .env.local and ships the sources over.
     - name: Create .env.local file
       run: |
-        echo "SMTP_HOST=${{ secrets.SMTP_HOST }}" >> .env.local
-        echo "SMTP_PORT=${{ secrets.SMTP_PORT }}" >> .env.local
-        echo "SMTP_USER=${{ secrets.SMTP_USER }}" >> .env.local
-        echo "SMTP_PASS=${{ secrets.SMTP_PASS }}" >> .env.local
-        echo "EMAIL_FROM=${{ secrets.EMAIL_FROM }}" >> .env.local
-        echo "EMAIL_TO=${{ secrets.EMAIL_TO }}" >> .env.local
-        echo "NEXT_PUBLIC_RECAPTCHA_WEBSITE_KEY=${{ secrets.RECAPTCHA_WEBSITE_KEY }}" >> .env.local
-        echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> .env.local
-    
-    - name: Install dependencies
-      run: npm ci
-    
-    - name: Build project
-      run: npm run build
-    
+        cat > .env.local <<'ENVEOF'
+        SMTP_HOST=${{ secrets.SMTP_HOST }}
+        SMTP_PORT=${{ secrets.SMTP_PORT }}
+        SMTP_USER=${{ secrets.SMTP_USER }}
+        SMTP_PASS=${{ secrets.SMTP_PASS }}
+        EMAIL_FROM=${{ secrets.EMAIL_FROM }}
+        EMAIL_TO=${{ secrets.EMAIL_TO }}
+        NEXT_PUBLIC_RECAPTCHA_WEBSITE_KEY=${{ secrets.RECAPTCHA_WEBSITE_KEY }}
+        RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}
+        ENVEOF
+
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SERVER_SSH_KEY }}
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    
+
     - name: Deploy to Server
       env:
         SERVER_IP: ${{ secrets.SERVER_IP }}
@@ -51,16 +44,31 @@ jobs:
         rsync -avz --delete -e "ssh -p $SERVER_PORT" \
           --exclude='.git' \
           --exclude='node_modules' \
+          --exclude='.next' \
           ./ $SERVER_USER@$SERVER_IP:$DEPLOY_PATH
-    
+
     - name: Restart Application
       env:
         SERVER_IP: ${{ secrets.SERVER_IP }}
         SERVER_USER: ${{ secrets.SERVER_USER }}
         SERVER_PORT: ${{ secrets.SERVER_PORT }}
       run: |
-        ssh -p $SERVER_PORT $SERVER_USER@$SERVER_IP << EOF
-          cd $DEPLOY_PATH
-          docker-compose down
-          docker-compose up -d --build
-        EOF
+        ssh -p $SERVER_PORT $SERVER_USER@$SERVER_IP bash -euo pipefail <<EOSSH
+          cd "$DEPLOY_PATH"
+
+          # The 'web' network is shared and declared as external, so compose will
+          # not create it. It survives a reboot, but "docker network prune" wipes
+          # it when nothing is attached — hence the check on every deploy.
+          docker network inspect web >/dev/null 2>&1 || docker network create web
+
+          # No "down" beforehand: the image is built first and the container is
+          # swapped only once the build succeeds. A failed build therefore leaves
+          # the running site untouched instead of taking it down.
+          #
+          # nginx picks up the new container address on its own — conf.d/00-common.conf
+          # sets the Docker resolver and the upstream goes through a variable, so the
+          # address is not cached from startup. The proxy does NOT need restarting.
+          docker compose up -d --build --remove-orphans
+
+          docker image prune -f
+        EOSSH
