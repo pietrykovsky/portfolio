@@ -1,9 +1,9 @@
 {
   "headerHello": "Hello World!",
   "headerIntro": "I'm <highlighted>Michał Pietrykowski</highlighted>",
-  "headerRole": "a <bold>Software Developer</bold>",
+  "headerRole": "a <bold>Full Stack Developer</bold>",
   "descHeader": "Welcome to <highlighted>My Digital Universe</highlighted>",
-  "descP1": "I'm a 23-year-old code enthusiast from Wrocław, currently navigating the galaxy of IT Automation Systems at Wrocław University of Science and Technology. My journey from <highlighted>QBASIC</highlighted> text adventures to full-stack engineering has been quite the space odyssey!",
-  "descP2": "As a full-stack engineer, I wield the power of <highlighted>Python</highlighted> and <highlighted>JavaScript</highlighted>, crafting digital solutions with frameworks like <highlighted>Django</highlighted> and <highlighted>React</highlighted>. I've also ventured into the realm of <highlighted>C#</highlighted>, developing desktop applications that push the boundaries of what's possible.",
-  "descP3": "When I'm not busy decoding the mysteries of the digital realm or experimenting with <highlighted>machine learning</highlighted> algorithms, you might find me lost in Asimov's worlds, mastering the art of Japanese tea ceremonies, or saving Night City in Cyberpunk 2077. And yes, I can debug code almost as fast as I can slurp a bowl of ramen - it's my superpower!"
+  "descP1": "I'm a full stack developer from Wrocław with 4 years of commercial experience in <highlighted>Python</highlighted> and <highlighted>TypeScript</highlighted>. My journey went from <highlighted>QBASIC</highlighted> text adventures to web apps in Django, FastAPI, Flask, React, Vue.js and Next.js.",
+  "descP2": "For the past year I've mostly been building LLM-based products and <highlighted>AI agents</highlighted> in <highlighted>LangChain</highlighted>. At Causality I'm the main author of the AI assistant in STRUCTURA, and after hours I build <highlighted>VELMOIS</highlighted>, an online jewelry store that I develop and host on my own server.",
+  "descP3": "When I'm not coding, you'll find me in Asimov's worlds, at a Japanese tea ceremony or saving Night City in Cyberpunk 2077. And yes, I can still debug code almost as fast as I can slurp a bowl of ramen!"
 }

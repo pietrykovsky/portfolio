@@ -1,5 +1,21 @@
 .techCard {
+  width: 120px;
+  min-height: 120px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #7dbeff;
   transition: all 0.3s ease;
+}
+
+.techName {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.skillGroupTitle {
+  font-size: 1.25rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.75rem;
 }
 
 .techCard:hover {
@@ -40,4 +56,14 @@
 
 .fadeInUp {
   animation: fadeInUp 1s ease-out forwards;
+}
+@media (max-width: 576px) {
+  .techCard {
+    width: 100px;
+    min-height: 100px;
+  }
+
+  .techName {
+    font-size: 0.85rem;
+  }
 }

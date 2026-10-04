@@ -4,75 +4,169 @@ import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import { useTranslations } from "next-intl";
 import { getHighlightedString } from "../utils";
+import { FaAws, FaGitAlt, FaGithub, FaJira, FaSlack, FaMicrosoft, FaReact } from "react-icons/fa";
 import {
-  FaPython,
-  FaReact,
-  FaDocker,
-  FaGitAlt,
-  FaJira,
-  FaGithub,
-  FaBitbucket,
-  FaGitlab,
-  FaSlack,
-  FaMicrosoft,
-  FaUbuntu,
-  FaApple,
-  FaWindows,
-  FaJenkins,
-} from "react-icons/fa";
-import {
-  SiDjango,
-  SiFlask,
-  SiDotnet,
-  SiJavascript,
+  SiPython,
   SiTypescript,
-  SiKotlin,
-  SiCplusplus,
-  SiFastapi,
-  SiSelenium,
-  SiPytest,
-  SiBlazor,
-  SiGnubash,
-  SiNginx,
-  SiNextdotjs,
-  SiSqlalchemy,
+  SiJavascript,
   SiHtml5,
   SiCss,
-  SiBootstrap,
+  SiFastapi,
+  SiDjango,
+  SiFlask,
+  SiNestjs,
+  SiNodedotjs,
+  SiSocketdotio,
+  SiSqlalchemy,
+  SiPrisma,
+  SiGraphql,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiQuasar,
+  SiTailwindcss,
+  SiShadcnui,
+  SiGooglechrome,
+  SiLangchain,
+  SiModelcontextprotocol,
+  SiClaude,
+  SiPostgresql,
+  SiPytest,
+  SiVitest,
+  SiSelenium,
+  SiDotnet,
+  SiGooglecloud,
+  SiDocker,
+  SiGithubactions,
+  SiGitlab,
+  SiJenkins,
+  SiLinux,
+  SiNginx,
+  SiApacheairflow,
+  SiTerraform,
 } from "react-icons/si";
-import { DiZend } from "react-icons/di";
-import { TbBrandCSharp } from "react-icons/tb";
+import { TbApi, TbBrandCSharp, TbBrandOpenai, TbMasksTheater, TbRobot, TbSql, TbTool } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 import globalStyles from "../page.module.css";
 import styles from "./page.module.css";
 
-const TechStack = ({ tech, icon }) => (
-  <Card
-    className={`m-2 ${styles.techCard}`}
-    style={{
-      width: "120px",
-      height: "120px",
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      border: "1px solid #7dbeff",
-    }}
-  >
-    <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-      {icon}
-      <Card.Title className="text-center text-white mt-2">{tech}</Card.Title>
+const TechStack = ({ tech, Icon }) => (
+  <Card className={`m-2 ${styles.techCard}`}>
+    <Card.Body className="d-flex flex-column justify-content-center align-items-center p-2">
+      <Icon size={30} color="#7dbeff" />
+      <Card.Title className={`text-center text-white mt-2 mb-0 ${styles.techName}`}>{tech}</Card.Title>
     </Card.Body>
   </Card>
 );
 
-const ExperienceItem = ({ title, company, period, description }) => (
+const ExperienceItem = ({ title, company, period, description, highlights }) => (
   <div className={styles.experienceItem}>
     <h4>
       <span className={globalStyles.highlighted}>{title}</span> -{" "}
       <span className={globalStyles.highlighted}>{company}</span>
     </h4>
     <p className="text-white">{period}</p>
-    <p>{description}</p>
+    {description && <p>{description}</p>}
+    {highlights && (
+      <ul className="mb-0">
+        {highlights.map((highlight, index) => (
+          <li key={index}>{highlight}</li>
+        ))}
+      </ul>
+    )}
   </div>
 );
+
+// Mirrors the SKILLS section of the resume; group titles live in messages/*/about.json.
+const skillGroups = [
+  {
+    key: "languages",
+    skills: [
+      { name: "Python", icon: SiPython },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "SQL", icon: TbSql },
+      { name: "C#", icon: TbBrandCSharp },
+      { name: "HTML", icon: SiHtml5 },
+      { name: "CSS", icon: SiCss },
+    ],
+  },
+  {
+    key: "backend",
+    skills: [
+      { name: "FastAPI", icon: SiFastapi },
+      { name: "Django", icon: SiDjango },
+      { name: "Django REST Framework", icon: SiDjango },
+      { name: "Flask", icon: SiFlask },
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Socket.IO", icon: SiSocketdotio },
+      { name: "SQLAlchemy", icon: SiSqlalchemy },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "REST", icon: TbApi },
+      { name: "GraphQL", icon: SiGraphql },
+    ],
+  },
+  {
+    key: "frontend",
+    skills: [
+      { name: "React", icon: FaReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Vue.js", icon: SiVuedotjs },
+      { name: "Quasar", icon: SiQuasar },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "shadcn/ui", icon: SiShadcnui },
+      { name: "Chrome Extensions", icon: SiGooglechrome },
+    ],
+  },
+  {
+    key: "ai",
+    skills: [
+      { name: "LangChain", icon: SiLangchain },
+      { name: "OpenAI API", icon: TbBrandOpenai },
+      { name: "AI Agents", icon: TbRobot },
+      { name: "Tool Calling", icon: TbTool },
+      { name: "MCP", icon: SiModelcontextprotocol },
+      { name: "Claude Code", icon: SiClaude },
+    ],
+  },
+  {
+    key: "dataTesting",
+    skills: [
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Pytest", icon: SiPytest },
+      { name: "Vitest", icon: SiVitest },
+      { name: "Playwright", icon: TbMasksTheater },
+      { name: "xUnit", icon: SiDotnet },
+      { name: "Selenium", icon: SiSelenium },
+    ],
+  },
+  {
+    key: "cloudDevops",
+    skills: [
+      { name: "AWS", icon: FaAws },
+      { name: "GCP", icon: SiGooglecloud },
+      { name: "Docker", icon: SiDocker },
+      { name: "GitHub Actions", icon: SiGithubactions },
+      { name: "GitLab CI", icon: SiGitlab },
+      { name: "Jenkins", icon: SiJenkins },
+      { name: "Linux", icon: SiLinux },
+      { name: "nginx", icon: SiNginx },
+      { name: "Airflow", icon: SiApacheairflow },
+      { name: "Terraform", icon: SiTerraform },
+    ],
+  },
+  {
+    key: "tools",
+    skills: [
+      { name: "Git", icon: FaGitAlt },
+      { name: "GitHub", icon: FaGithub },
+      { name: "VS Code", icon: VscVscode },
+      { name: "Jira", icon: FaJira },
+      { name: "Slack", icon: FaSlack },
+      { name: "Teams", icon: FaMicrosoft },
+    ],
+  },
+];
 
 const SectionBackground = ({ children }) => (
   <div className={globalStyles.tildeBackground}>
@@ -82,49 +176,6 @@ const SectionBackground = ({ children }) => (
 
 export default function About() {
   const t = useTranslations("about");
-
-  const technologies = [
-    { name: "HTML5", icon: <SiHtml5 size={30} color="#7dbeff" /> },
-    { name: "CSS3", icon: <SiCss size={30} color="#7dbeff" /> },
-    { name: "Bootstrap", icon: <SiBootstrap size={30} color="#7dbeff" /> },
-    { name: "Python", icon: <FaPython size={30} color="#7dbeff" /> },
-    { name: "Django", icon: <SiDjango size={30} color="#7dbeff" /> },
-    { name: "FastAPI", icon: <SiFastapi size={30} color="#7dbeff" /> },
-    { name: "Flask", icon: <SiFlask size={30} color="#7dbeff" /> },
-    { name: "Pytest", icon: <SiPytest size={30} color="#7dbeff" /> },
-    { name: "SQLAlchemy", icon: <SiSqlalchemy size={30} color="#7dbeff" /> },
-    { name: "Selenium", icon: <SiSelenium size={30} color="#7dbeff" /> },
-    { name: "C#", icon: <TbBrandCSharp size={30} color="#7dbeff" /> },
-    { name: "ASP.Net", icon: <SiDotnet size={30} color="#7dbeff" /> },
-    { name: "Blazor", icon: <SiBlazor size={30} color="#7dbeff" /> },
-    { name: "EF Core", icon: <SiDotnet size={30} color="#7dbeff" /> },
-    { name: "UWP", icon: <FaWindows size={30} color="#7dbeff" /> },
-    { name: "JavaScript", icon: <SiJavascript size={30} color="#7dbeff" /> },
-    { name: "TypeScript", icon: <SiTypescript size={30} color="#7dbeff" /> },
-    { name: "React", icon: <FaReact size={30} color="#7dbeff" /> },
-    { name: "Next.js", icon: <SiNextdotjs size={30} color="#7dbeff" /> },
-    { name: "Docker", icon: <FaDocker size={30} color="#7dbeff" /> },
-    { name: "Kotlin", icon: <SiKotlin size={30} color="#7dbeff" /> },
-    { name: "C++", icon: <SiCplusplus size={30} color="#7dbeff" /> },
-    { name: "nginx", icon: <SiNginx size={30} color="#7dbeff" /> },
-  ];
-
-  const tools = [
-    { name: "VS Code", icon: <VscVscode size={30} color="#7dbeff" /> },
-    { name: "macOS", icon: <FaApple size={30} color="#7dbeff" /> },
-    { name: "Windows", icon: <FaWindows size={30} color="#7dbeff" /> },
-    { name: "Ubuntu", icon: <FaUbuntu size={30} color="#7dbeff" /> },
-    { name: "zsh", icon: <DiZend size={30} color="#7dbeff" /> },
-    { name: "bash", icon: <SiGnubash size={30} color="#7dbeff" /> },
-    { name: "Slack", icon: <FaSlack size={30} color="#7dbeff" /> },
-    { name: "Teams", icon: <FaMicrosoft size={30} color="#7dbeff" /> },
-    { name: "GitHub", icon: <FaGithub size={30} color="#7dbeff" /> },
-    { name: "Bitbucket", icon: <FaBitbucket size={30} color="#7dbeff" /> },
-    { name: "GitLab", icon: <FaGitlab size={30} color="#7dbeff" /> },
-    { name: "Jira", icon: <FaJira size={30} color="#7dbeff" /> },
-    { name: "Git", icon: <FaGitAlt size={30} color="#7dbeff" /> },
-    { name: "Jenkins", icon: <FaJenkins size={30} color="#7dbeff" /> },
-  ];
 
   const aboutTextRef = useRef(null);
 
@@ -154,8 +205,8 @@ export default function About() {
               />
               <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "introText") }} />
               <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "academicText") }} />
-              <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "hobbyText") }} />
               <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "skillText") }} />
+              <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "hobbyText") }} />
             </div>
           </Col>
         </Row>
@@ -167,13 +218,16 @@ export default function About() {
             <h2 className={styles.sectionTitle}>
               <span className={globalStyles.highlighted}>{t("educationTitle")}</span>
             </h2>
-            <div className={styles.educationItem}>
-              <h4>
-                <span className={globalStyles.highlighted}>{t("educationDegree")}</span>
-              </h4>
-              <p>{t("educationSchool")}</p>
-              <p className="text-white">{t("educationPeriod")}</p>
-            </div>
+            {t.raw("educationItems").map((item, index) => (
+              <div key={index} className={styles.educationItem}>
+                <h4>
+                  <span className={globalStyles.highlighted}>{item.degree}</span>
+                </h4>
+                <p>{item.school}</p>
+                <p className="text-white">{item.period}</p>
+                {item.note && <p className="mb-0">{item.note}</p>}
+              </div>
+            ))}
           </Col>
         </Row>
 
@@ -182,14 +236,8 @@ export default function About() {
             <h2 className={styles.sectionTitle}>
               <span className={globalStyles.highlighted}>{t("experienceTitle")}</span>
             </h2>
-            {Object.values(t.raw("experienceItems")).map((item, index) => (
-              <ExperienceItem
-                key={index}
-                title={item.title}
-                company={item.company}
-                period={item.period}
-                description={item.description}
-              />
+            {t.raw("experienceItems").map((item, index) => (
+              <ExperienceItem key={index} {...item} />
             ))}
           </Col>
         </Row>
@@ -201,23 +249,16 @@ export default function About() {
             <h2 className={styles.sectionTitle}>
               <span className={globalStyles.highlighted}>{t("techStackTitle")}</span>
             </h2>
-            <div className="d-flex flex-wrap justify-content-center">
-              {technologies.map((tech, index) => (
-                <TechStack key={index} tech={tech.name} icon={tech.icon} />
-              ))}
-            </div>
-          </Col>
-        </Row>
-        <Row className="py-5">
-          <Col>
-            <h2 className={styles.sectionTitle}>
-              <span className={globalStyles.highlighted}>{t("toolsTitle")}</span>
-            </h2>
-            <div className="d-flex flex-wrap justify-content-center">
-              {tools.map((tool, index) => (
-                <TechStack key={index} tech={tool.name} icon={tool.icon} />
-              ))}
-            </div>
+            {skillGroups.map((group) => (
+              <div key={group.key} className="mb-4">
+                <h3 className={styles.skillGroupTitle}>{t(`skillGroups.${group.key}`)}</h3>
+                <div className="d-flex flex-wrap justify-content-center">
+                  {group.skills.map((skill) => (
+                    <TechStack key={skill.name} tech={skill.name} Icon={skill.icon} />
+                  ))}
+                </div>
+              </div>
+            ))}
           </Col>
         </Row>
       </SectionBackground>

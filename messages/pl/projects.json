@@ -3,8 +3,9 @@
   "demoButton": "Demo",
   "repoButton": "Repozytorium",
   "projectDescriptions": {
+    "velmois": "Sklep internetowy naszej marki biżuterii z moissanitem (MOISS sp. z o.o.), którą współtworzę. Jestem jedynym deweloperem i odpowiadam za architekturę, implementację, wdrożenia i zgodność z prawem. Projekt zaczął się jako FastAPI i Next.js, a potem przepisałem go na jedną aplikację Next.js. Teraz działa jako strona stagingowa przed startem sprzedaży.",
+    "portfolio": "Ta strona. Zbudowana w Next.js 16 i React 19, po polsku i angielsku dzięki next-intl, z językiem wybieranym na podstawie przeglądarki lub ciasteczka. Ma podgląd CV w PDF w przeglądarce, formularz kontaktowy z reCAPTCHA i walidacją po stronie serwera oraz nagłówki bezpieczeństwa. Działa jako obraz Dockera na moim serwerze za nginxem, a wdrożenie uruchamia tag gita w GitHub Actions.",
     "gymTracker": "GymTracker to aplikacja webowa przeznaczona dla entuzjastów fitnessu do śledzenia swoich treningów, monitorowania pomiarów ciała i analizowania postępów treningowych. Zbudowany z Blazor Server i nowoczesnych technologii .NET, oferuje solidną platformę do zarządzania swoją podróżą fitness.",
-    "portfolio": "Osobista strona portfolio zbudowana przy użyciu Next.js i React Bootstrap, prezentująca moje projekty i umiejętności.",
     "pythonRaycaster": "Gra napisana w Pythonie z wykorzystaniem biblioteki Pygame, z silnikiem gry zbudowanym od podstaw. Zawiera renderowanie raycasting, wykrywanie kolizji, interfejs użytkownika, możliwość ekwipowania broni i prostą AI.",
     "legoRanking": "Aplikacja internetowa do rankingowania najbardziej opłacalnych zestawów Lego, z własnym scraperem. Zbudowana przy użyciu Pythona (Django, Django REST Framework, Selenium, Poetry), PostgreSQL, Docker, Redis, Celery i TypeScript (React.js, Next.js, Tailwind CSS).",
     "androidTodo": "Prosta aplikacja Todo na Androida z operacjami CRUD, niestandardowym systemem powiadomień, ustawianiem alarmów, mechanizmem filtrowania, napisana w Kotlinie przy użyciu Android Studio.",
@@ -12,5 +13,16 @@
     "djangoBlog": "Django-blog to prosty blog zbudowany z Django z funkcjonalnością CRUD dla postów i kategorii, systemem uwierzytelniania użytkowników, systemem komentowania postów, profilami użytkowników, interfejsem opartym na szablonach stylizowanym bootstrapem, systemem wyszukiwania, filtrowaniem kategorii, systemem powiadomień e-mail i feedbacku, statusem redaktora pozwalającym użytkownikowi na CRUD postów i komentarzy.",
     "ticTacToe": "Prosta gra w kółko i krzyżyk w Pythonie z implementacją AI wykorzystującą algorytm minimax z alfa-beta cięciami, zrealizowana przy użyciu pygame.",
     "mazeGenerator": "Generator Labiryntów to projekt w Pythonie, który wykorzystuje algorytm pathfindingu A* do znalezienia najkrótszej ścieżki przez losowo wygenerowany labirynt. Projekt zawiera również generator labiryntów oparty na zmodyfikowanej wersji algorytmu Kruskala."
+  },
+  "featuredLabel": "Wyróżniony projekt",
+  "projectHighlights": {
+    "velmois": [
+      "Zakupy bez konta z rezerwacją towaru na czas płatności, płatności Przelewy24 (BLIK, przelewy, raty) z idempotentnymi webhookami i wybór Paczkomatu InPost na mapie.",
+      "Panel administracyjny do produktów, magazynu, zamówień, zwrotów i treści strony głównej. Magazyn to księga ruchów pilnowana triggerami w bazie.",
+      "Wyszukiwarka pełnotekstowa z tolerancją literówek (pg_trgm), analityka bez ciasteczek liczona po stronie serwera i kolejka maili z ponowieniami wysyłana przez AWS SES.",
+      "CSP z nonce, HSTS, hasła w Argon2id, skróty tokenów sesji, limity zapytań i kontener tylko do odczytu, bez roota.",
+      "Około 350 testów jednostkowych i integracyjnych w Vitest (na prawdziwym PostgreSQL) i 71 testów E2E w Playwright. CI blokuje każdy merge, a tag gita wdraża nowy kontener po healthchecku.",
+      "Regulamin, polityka prywatności i historia cen zgodna z dyrektywą Omnibus, sprawdzone względem prawa konsumenckiego i RODO, z tekstami wersjonowanymi w repozytorium."
+    ]
   }
 }

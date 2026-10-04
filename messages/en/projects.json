@@ -3,8 +3,9 @@
   "demoButton": "Demo",
   "repoButton": "Repository",
   "projectDescriptions": {
+    "velmois": "Online store for our moissanite jewelry brand (MOISS sp. z o.o.), which I co-founded. I'm the sole developer, responsible for architecture, implementation, deployments and legal compliance. It started as FastAPI and Next.js and was later rewritten into a single Next.js app, now live as a staging site before sales start.",
+    "portfolio": "This website. Built with Next.js 16 and React 19, in Polish and English with next-intl, with the language picked from the browser or a cookie. Includes an in-browser PDF resume preview, a contact form with reCAPTCHA and server-side validation, and security headers. Shipped as a Docker image and deployed to my own server behind nginx by pushing a git tag in GitHub Actions.",
     "gymTracker": "GymTracker is a comprehensive web application designed for fitness enthusiasts to track their workouts, monitor body measurements, and analyze training progress. Built with Blazor Server and modern .NET technologies, it offers a robust platform for managing your fitness journey.",
-    "portfolio": "A personal portfolio website built with Next.js and React Bootstrap, showcasing my projects and skills.",
     "pythonRaycaster": "Game written in Python using Pygame library with game engine built from scratch. Features raycasting rendering, collision detection, user interface, equipable weapons and simple AI.",
     "legoRanking": "A web application for ranking most cost effective Lego bundles, with custom scraper. Built with Python (Django, Django REST Framework, Selenium, Poetry), PostgreSQL, Docker, Redis, Celery and TypeScript (React.js, Next.js, Tailwind CSS).",
     "androidTodo": "Simple Todo App for Android with CRUD operations, custom notification system, alarm setting, filtering mechanism, written in Kotlin using Android Studio.",
@@ -12,5 +13,16 @@
     "djangoBlog": "django-blog is a simple blog built with Django with posts and categories CRUD functionality, user authentication system, posts commenting system, user profiles, template-based interface styled with bootstrap, search system, category filtering, email notification and feedback system, redactor status allowing user to CRUD posts and comments.",
     "ticTacToe": "Simple Python tictactoe game with alpha beta pruning minimax AI implemented with pygame.",
     "mazeGenerator": "Maze Generator is a Python project that uses an A* pathfinding algorithm to find the shortest path through a randomly generated maze. The project also includes a maze generator based on a modified version of Kruskal's algorithm."
+  },
+  "featuredLabel": "Featured project",
+  "projectHighlights": {
+    "velmois": [
+      "Guest checkout with stock reservation during payment, Przelewy24 payments (BLIK, transfers, installments) with idempotent webhooks, and InPost parcel lockers picked on a map.",
+      "Admin panel for products, stock, orders, returns and homepage content. Stock is a movement ledger guarded by database triggers.",
+      "Full-text search with typo tolerance (pg_trgm), cookieless server-side analytics, and an email outbox with retries sent through AWS SES.",
+      "CSP with nonces, HSTS, Argon2id passwords, hashed session tokens, rate limits and a read-only container running without root.",
+      "Around 350 unit and integration tests in Vitest (on a real PostgreSQL) and 71 Playwright E2E tests. CI blocks every merge, and a git tag deploys a new container after a healthcheck.",
+      "Terms, privacy policy and Omnibus price history checked against Polish consumer law and GDPR, with legal texts versioned in the repository."
+    ]
   }
 }
