@@ -8,7 +8,6 @@ import {
   SiDjango,
   SiReact,
   SiJavascript,
-  SiCsharp,
   SiDotnet,
   SiDocker,
   SiSelenium,
@@ -24,6 +23,7 @@ import {
   SiCelery,
   SiRedis,
 } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
 import styles from "./page.module.css";
 import { useTranslations } from "next-intl";
 
@@ -84,7 +84,7 @@ const projects = [
     title: "GymTracker",
     descriptionKey: "gymTracker",
     image: "/previews/gym-tracker.png",
-    technologies: [SiCsharp, SiDotnet, SiBlazor, SiPostgresql, SiBootstrap, SiNginx, SiDocker],
+    technologies: [TbBrandCSharp, SiDotnet, SiBlazor, SiPostgresql, SiBootstrap, SiNginx, SiDocker],
     demoLink: "https://gym-tracker.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/gym-tracker",
   },
@@ -135,7 +135,7 @@ const projects = [
     title: "SzczurTV",
     descriptionKey: "szczurTV",
     image: "/previews/szczurtv.jpg",
-    technologies: [SiCsharp, SiDotnet, SiBlazor, SiDocker, SiNginx],
+    technologies: [TbBrandCSharp, SiDotnet, SiBlazor, SiDocker, SiNginx],
     demoLink: "https://szczurtv.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/szczurtv",
   },

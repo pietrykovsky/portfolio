@@ -23,7 +23,6 @@ import {
 import {
   SiDjango,
   SiFlask,
-  SiCsharp,
   SiDotnet,
   SiJavascript,
   SiTypescript,
@@ -33,16 +32,17 @@ import {
   SiSelenium,
   SiPytest,
   SiBlazor,
-  SiVisualstudiocode,
   SiGnubash,
   SiNginx,
   SiNextdotjs,
   SiSqlalchemy,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiBootstrap,
 } from "react-icons/si";
 import { DiZend } from "react-icons/di";
+import { TbBrandCSharp } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
 import globalStyles from "../page.module.css";
 import styles from "./page.module.css";
 
@@ -85,7 +85,7 @@ export default function About() {
 
   const technologies = [
     { name: "HTML5", icon: <SiHtml5 size={30} color="#7dbeff" /> },
-    { name: "CSS3", icon: <SiCss3 size={30} color="#7dbeff" /> },
+    { name: "CSS3", icon: <SiCss size={30} color="#7dbeff" /> },
     { name: "Bootstrap", icon: <SiBootstrap size={30} color="#7dbeff" /> },
     { name: "Python", icon: <FaPython size={30} color="#7dbeff" /> },
     { name: "Django", icon: <SiDjango size={30} color="#7dbeff" /> },
@@ -94,7 +94,7 @@ export default function About() {
     { name: "Pytest", icon: <SiPytest size={30} color="#7dbeff" /> },
     { name: "SQLAlchemy", icon: <SiSqlalchemy size={30} color="#7dbeff" /> },
     { name: "Selenium", icon: <SiSelenium size={30} color="#7dbeff" /> },
-    { name: "C#", icon: <SiCsharp size={30} color="#7dbeff" /> },
+    { name: "C#", icon: <TbBrandCSharp size={30} color="#7dbeff" /> },
     { name: "ASP.Net", icon: <SiDotnet size={30} color="#7dbeff" /> },
     { name: "Blazor", icon: <SiBlazor size={30} color="#7dbeff" /> },
     { name: "EF Core", icon: <SiDotnet size={30} color="#7dbeff" /> },
@@ -110,7 +110,7 @@ export default function About() {
   ];
 
   const tools = [
-    { name: "VS Code", icon: <SiVisualstudiocode size={30} color="#7dbeff" /> },
+    { name: "VS Code", icon: <VscVscode size={30} color="#7dbeff" /> },
     { name: "macOS", icon: <FaApple size={30} color="#7dbeff" /> },
     { name: "Windows", icon: <FaWindows size={30} color="#7dbeff" /> },
     { name: "Ubuntu", icon: <FaUbuntu size={30} color="#7dbeff" /> },

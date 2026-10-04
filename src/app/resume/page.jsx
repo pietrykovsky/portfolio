@@ -3,13 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Button, Spinner } from 'react-bootstrap';
 import { FaDownload, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { Document, Page, pdfjs } from 'react-pdf';
+import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
 import styles from './page.module.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+const PdfPreview = dynamic(() => import('@/components/PdfPreview'), { ssr: false });
 
 export default function Resume() {
   const t = useTranslations('resume');
@@ -64,19 +62,13 @@ export default function Resume() {
               <Spinner animation="border" variant="light" />
             </div>
           )}
-          <Document
+          <PdfPreview
             file={pdfUrl}
+            pageNumber={pageNumber}
             onLoadSuccess={onDocumentLoadSuccess}
-            className={styles.pdfDocument}
-          >
-            <Page 
-              pageNumber={pageNumber} 
-              className={styles.pdfPage}
-              renderTextLayer={false}
-              renderAnnotationLayer={false}
-              scale={1.5}
-            />
-          </Document>
+            documentClassName={styles.pdfDocument}
+            pageClassName={styles.pdfPage}
+          />
         </div>
 
         {numPages > 1 && (

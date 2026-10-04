@@ -1,7 +1,7 @@
 "use client";
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { LuHome, LuLaptop, LuUser, LuFileText, LuMail } from 'react-icons/lu';
+import { LuHouse, LuLaptop, LuUser, LuFileText, LuMail } from 'react-icons/lu';
 import {useTranslations} from 'next-intl';
 import LocaleSwitcher from './LocaleSwitcher';
 
@@ -21,7 +21,7 @@ export default function NavigationBar() {
           <Nav className="ms-auto">
             <Nav.Item>
               <Nav.Link href="/">
-                <LuHome className='mb-1'/> {t('home')}
+                <LuHouse className='mb-1'/> {t('home')}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
