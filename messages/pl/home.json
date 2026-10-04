@@ -3,7 +3,7 @@
   "headerIntro": "Jestem <highlighted>Michał Pietrykowski</highlighted>",
   "headerRole": "<bold>Full Stack Developer</bold>",
   "descHeader": "Witaj w mojej <highlighted>Cyfrowej Przestrzeni</highlighted>",
-  "descP1": "Jestem full stack developerem z Wrocławia z 4 latami komercyjnego doświadczenia w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>. Moja droga prowadziła od tekstowych przygodówek w <highlighted>QBASIC</highlighted> do aplikacji webowych w Django, FastAPI, Flasku, Reakcie, Vue.js i Next.js.",
-  "descP2": "Przez ostatni rok budowałem głównie produkty oparte na LLM i <highlighted>agentów AI</highlighted> w <highlighted>LangChainie</highlighted>. W Causality jestem głównym autorem asystenta AI w STRUCTURZE, a po godzinach tworzę <highlighted>VELMOIS</highlighted>, sklep internetowy z biżuterią, który rozwijam i hostuję na własnym serwerze.",
-  "descP3": "Kiedy nie programuję, możesz mnie znaleźć w światach Asimova, przy japońskiej ceremonii herbacianej albo ratującego Night City w Cyberpunku 2077. I tak, nadal debuguję kod prawie tak szybko, jak wciągam miskę ramenu!"
+  "descP1": "Jestem full stack developerem z Wrocławia. Od 4 lat zawodowo piszę w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>, głównie aplikacje webowe w Django, FastAPI, Flasku, Reakcie, Vue.js i Next.js.",
+  "descP2": "Od zeszłego roku zajmuję się głównie produktami opartymi na LLM. W Causality buduję asystenta AI w aplikacji STRUCTURA, korzystając z <highlighted>LangChaina</highlighted>. Po godzinach tworzę <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii.",
+  "descP3": "Programować zacząłem w szkole średniej, pisząc tekstowe przygodówki w QBASIC-u. Poza pracą czytam Asimova, piję dużo matchy i co jakiś czas wracam do Cyberpunka 2077."
 }

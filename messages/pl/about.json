@@ -1,9 +1,9 @@
 {
   "pageTitle": "O <highlighted>Mnie</highlighted>",
-  "introText": "Cześć! Jestem <highlighted>Michał Pietrykowski</highlighted>, <highlighted>full stack developer</highlighted> z <highlighted>Wrocławia</highlighted>, z 4 latami komercyjnego doświadczenia w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>. Wszystko zaczęło się w szkole średniej od tekstowych przygodówek w <highlighted>QBASIC</highlighted>. Dziś większość czasu poświęcam produktom opartym na LLM i <highlighted>agentom AI</highlighted> w LangChainie.",
-  "academicText": "Tytuł inżyniera na kierunku <highlighted>Informatyczne Systemy Automatyki</highlighted> zdobyłem na <highlighted>Politechnice Wrocławskiej</highlighted> z oceną 5.0, a teraz studiuję zaocznie <highlighted>informatykę</highlighted> (studia magisterskie) na Uniwersytecie WSB Merito.",
-  "skillText": "W pracy najbardziej dbam o <highlighted>code review</highlighted> i <highlighted>testy automatyczne</highlighted>. Na co dzień programuję z pomocą AI, w <highlighted>Claude Code</highlighted> i MCP, ale każda decyzja i każdy pull request przechodzą przeze mnie. Po godzinach rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który hostuję na własnym serwerze.",
-  "hobbyText": "Poza kodem czytam <highlighted>Asimova</highlighted>, ćwiczę <highlighted>japońską ceremonię herbacianą</highlighted> przy czarce matchy albo po raz kolejny ratuję <highlighted>Night City</highlighted> w Cyberpunku 2077.",
+  "introText": "Jestem <highlighted>Michał Pietrykowski</highlighted>, full stack developer z <highlighted>Wrocławia</highlighted>. Pierwsze programy, głównie tekstowe przygodówki, napisałem w <highlighted>QBASIC-u</highlighted> w szkole średniej. Dziś pracuję przede wszystkim w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>, a od roku najczęściej przy <highlighted>agentach AI</highlighted> w LangChainie.",
+  "academicText": "Mam tytuł inżyniera z <highlighted>Informatycznych Systemów Automatyki</highlighted> na <highlighted>Politechnice Wrocławskiej</highlighted> (ocena 5.0). Teraz robię zaocznie magisterkę z <highlighted>informatyki</highlighted> na Uniwersytecie WSB Merito i powinienem skończyć na początku 2027 roku.",
+  "skillText": "Dużą wagę przykładam do <highlighted>code review</highlighted> i <highlighted>testów</highlighted>. Większość kodu piszę teraz w <highlighted>Claude Code</highlighted>, więc przeglądam wszystko, co wygeneruje, zanim trafi do mastera. W wolnym czasie rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który stoi na moim własnym serwerze.",
+  "hobbyText": "Poza programowaniem czytam <highlighted>Asimova</highlighted>, uczę się <highlighted>japońskiej ceremonii herbacianej</highlighted> i co jakiś czas wracam do <highlighted>Cyberpunka 2077</highlighted>.",
   "educationTitle": "Edukacja",
   "educationItems": [
     {
@@ -24,14 +24,15 @@
       "title": "Full Stack Developer (AI)",
       "company": "Causality",
       "period": "Styczeń 2026 - Obecnie",
-      "description": "Główny autor asystenta AI w STRUCTURZE, platformie SaaS dla wielu organizacji, w której firmy same definiują schematy danych, a LLM wypełnia je danymi z dokumentów, Gmaila, OwnClouda i Kalendarza Google.",
+      "description": "Główny autor asystenta AI w aplikacji STRUCTURA. To platforma SaaS, w której każda firma sama definiuje schematy danych, a LLM wypełnia je danymi z dokumentów, Gmaila, OwnClouda i Kalendarza Google.",
       "highlights": [
         "Zbudowałem od zera czat w Next.js i LangChainie: streaming odpowiedzi, historia rozmów w wątkach i odnośniki do rekordów z bazy.",
-        "Rozszerzyłem asystenta tak, że przez czat da się zrobić wszystko, co w interfejsie: od wyszukiwania i edycji rekordów oraz zarządzania schematami po wgrywanie dokumentów i uruchamianie ekstrakcji danych przez LLM.",
-        "Agent nigdy nie zapisuje danych sam. Każda zmiana trafia do użytkownika jako propozycja i jest wykonywana w transakcji, z kontrolą uprawnień, dopiero po akceptacji. Narzędzia agenta są generowane ze schematów klienta, więc działają dla dowolnej konfiguracji.",
-        "Dodałem wyszukiwanie pełnotekstowe w PostgreSQL z indeksami pg_trgm i obsługą polskich znaków oraz przekazywanie dokumentów (PDF, obrazy, DOCX) do modelu w pętli agenta przez middleware.",
-        "Zbudowałem rozszerzenie Chrome (Manifest V3), które czyta strony i wypełnia formularze danymi z systemu, także w aplikacjach React, zawsze po potwierdzeniu użytkownika. Dodałem logowanie Auth0 z PKCE i około 195 testów w Vitest i Testing Library.",
-        "Przeniosłem agenta z SSE na Socket.IO, dzięki czemu może w trakcie odpowiedzi wywołać narzędzie w przeglądarce użytkownika, a przerwanie odpowiedzi faktycznie zatrzymuje generowanie na serwerze."
+        "Rozszerzyłem asystenta tak, żeby przez czat dało się zrobić to samo co w interfejsie: wyszukiwać i edytować rekordy, zarządzać schematami, wgrywać dokumenty i uruchamiać ekstrakcję danych przez LLM.",
+        "Agent nigdy nie zapisuje danych sam. Każdą zmianę pokazuje użytkownikowi jako propozycję, a wykonuje ją dopiero po akceptacji, w transakcji i z kontrolą uprawnień. Narzędzia agenta generują się ze schematów klienta, więc działają przy każdej konfiguracji.",
+        "Dodałem wyszukiwanie pełnotekstowe w PostgreSQL na indeksach pg_trgm, które radzi sobie z polskimi znakami.",
+        "Dodałem middleware, które przekazuje modelowi dokumenty (PDF, obrazy, DOCX) w trakcie działania agenta, także pliki pobrane przez jego narzędzia.",
+        "Zbudowałem rozszerzenie Chrome (Manifest V3), które czyta strony i wypełnia formularze danymi z systemu, także w aplikacjach React, ale zawsze dopiero po potwierdzeniu użytkownika. Dodałem logowanie przez Auth0 z PKCE i około 195 testów w Vitest i Testing Library.",
+        "Przeniosłem agenta z SSE na Socket.IO. Dzięki temu w trakcie odpowiedzi może wywołać narzędzie w przeglądarce użytkownika i poczekać na wynik, a przycisk stop faktycznie przerywa generowanie na serwerze."
       ]
     },
     {
@@ -40,7 +41,7 @@
       "period": "Kwiecień 2025 - Obecnie",
       "description": "Rozwijam IRMATIC CMS oraz aplikacje działające na szafach lekowych i inteligentnych skrytkach IRMATIC.",
       "highlights": [
-        "Prowadzę integrację urządzeń IRMATIC ze szpitalnym systemem AMMS, współpracując bezpośrednio z Asseco i personelem szpitali.",
+        "Prowadzę integrację urządzeń IRMATIC ze szpitalnym systemem AMMS i współpracuję przy tym bezpośrednio z Asseco i personelem szpitali.",
         "Front-end w Vue.js, Quasarze i TypeScripcie, back-end we Flasku, SQLAlchemy i PostgreSQL.",
         "Piszę testy w Pyteście i wdrażam aplikacje w Dockerze na AWS, gdzie infrastruktura jest zarządzana w Terraformie."
       ]
@@ -56,7 +57,7 @@
       ]
     },
     {
-      "title": "Stażysta Software Engineer i QA Automation",
+      "title": "Stażysta Software Engineer, wcześniej QA Automation",
       "company": "Dolby Laboratories",
       "period": "Grudzień 2022 - Kwiecień 2024",
       "highlights": [
@@ -76,7 +77,7 @@
     "tools": "Narzędzia"
   },
   "futureTitle": "Co Dalej?",
-  "futureText1": "Teraz skupiam się na <highlighted>agentach AI</highlighted>, które wykonują prawdziwą pracę w bezpieczny sposób: narzędzia generowane z danych, akceptacja człowieka przed każdą zmianą i testy, które łapią regresje, zanim zrobią to użytkownicy.",
-  "futureText2": "Następne w kolejce są start sprzedaży w <highlighted>VELMOIS</highlighted> i obrona <highlighted>pracy magisterskiej</highlighted> na początku 2027 roku. Chciałbym też częściej dzielić się tym, czego się uczę, przez open source i może bloga technologicznego.",
-  "futureText3": "Pracuję w pełni zdalnie na B2B. Jeśli szukasz full stack developera z doświadczeniem w AI albo chcesz po prostu pogadać o <highlighted>science fiction</highlighted> czy najlepszych <highlighted>miejscach z ramenem, sushi i herbatą we Wrocławiu</highlighted>, napisz do mnie!"
+  "futureText1": "W pracy chcę dalej budować agentów AI działających na prawdziwych danych firm, gdzie każda zmiana musi przejść przez akceptację użytkownika.",
+  "futureText2": "Poza pracą najbliższy duży krok to start sprzedaży w <highlighted>VELMOIS</highlighted>. Chcę też w końcu założyć bloga technicznego.",
+  "futureText3": "Pracuję zdalnie na B2B. Jeśli masz projekt albo ofertę pracy, albo po prostu znasz dobry <highlighted>ramen we Wrocławiu</highlighted>, napisz do mnie przez <highlighted>formularz kontaktowy</highlighted>."
 }
