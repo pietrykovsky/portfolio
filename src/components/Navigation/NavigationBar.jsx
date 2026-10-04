@@ -2,6 +2,7 @@
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import {useTranslations} from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import LocaleSwitcher from './LocaleSwitcher';
 import { pages } from './pages';
 
@@ -9,9 +10,9 @@ export default function NavigationBar() {
   const t = useTranslations('navigation');
 
   return (
-    <Navbar fixed="top" expand="lg">
+    <Navbar fixed="top" expand="lg" collapseOnSelect>
       <Container>
-        <Navbar.Brand href="/">pietrykovsky</Navbar.Brand>
+        <Navbar.Brand as={Link} href="/">pietrykovsky</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <span></span>
           <span></span>
@@ -21,7 +22,7 @@ export default function NavigationBar() {
           <Nav className="ms-auto">
             {pages.map(({ path, key, icon: Icon }) => (
               <Nav.Item key={path}>
-                <Nav.Link href={path}>
+                <Nav.Link as={Link} href={path} eventKey={path}>
                   <Icon className='mb-1'/> {t(key)}
                 </Nav.Link>
               </Nav.Item>

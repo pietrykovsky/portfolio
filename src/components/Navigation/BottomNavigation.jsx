@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 import styles from './BottomNavigation.module.css';

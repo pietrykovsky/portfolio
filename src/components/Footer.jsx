@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode } from 'react-icons/fa';
 import { FaSquareXTwitter } from "react-icons/fa6";

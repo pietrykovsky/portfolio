@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Image, Card } from "react-bootstrap";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { getPathname } from "@/i18n/navigation";
 import { getHighlightedString } from "../utils";
 import { FaAws, FaGitAlt, FaGithub, FaJira, FaSlack, FaMicrosoft, FaReact } from "react-icons/fa";
 import {
@@ -172,6 +173,7 @@ const SectionBackground = ({ children }) => (
 
 export default function About() {
   const t = useTranslations("about");
+  const contactHref = getPathname({ href: "/contact", locale: useLocale() });
 
   const aboutTextRef = useRef(null);
 
@@ -267,7 +269,7 @@ export default function About() {
             </h2>
             <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "futureText1") }} />
             <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "futureText2") }} />
-            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "futureText3") }} />
+            <p dangerouslySetInnerHTML={{ __html: getHighlightedString(t, "futureText3", { contactHref }) }} />
           </Col>
         </Row>
       </Container>

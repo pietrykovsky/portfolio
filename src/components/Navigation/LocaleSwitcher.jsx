@@ -1,33 +1,22 @@
 "use client";
 
 import { Nav } from 'react-bootstrap';
-import React, { useState, useEffect } from 'react';
-import { getUserLocale, setUserLocale } from '@/services/locale';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/navigation';
 import styles from './LocaleSwitcher.module.css';
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 const LocaleSwitcher = () => {
-  const [currentLocale, setCurrentLocale] = useState(null);
+  const currentLocale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const fetchLocale = async () => {
-      const locale = await getUserLocale();
-      setCurrentLocale(locale);
-    };
-    fetchLocale();
-  }, []);
-
-  const changeLocale = async (newLocale) => {
+  const changeLocale = (newLocale) => {
     if (newLocale !== currentLocale) {
-      await setUserLocale(newLocale);
-      setCurrentLocale(newLocale);
-      window.location.reload();
+      // Same page under the other locale's URL, e.g. /about <-> /pl/about.
+      router.replace(pathname, { locale: newLocale });
     }
   };
-
-  if (currentLocale === null) {
-    return null;
-  }
 
   return (
     <Nav.Item className={styles.localeSwitcher}>

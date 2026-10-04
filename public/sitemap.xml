@@ -1,27 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pietrykovsky.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/"/>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pietrykovsky.com/projects</loc>
+    <loc>https://pietrykovsky.com/pl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/"/>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://pietrykovsky.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/about"/>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pietrykovsky.com/about</loc>
+    <loc>https://pietrykovsky.com/pl/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/about"/>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pietrykovsky.com/projects</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/projects"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/projects"/>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pietrykovsky.com/pl/projects</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/projects"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/projects"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/projects"/>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pietrykovsky.com/resume</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/resume"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/resume"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/resume"/>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pietrykovsky.com/pl/resume</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/resume"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/resume"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/resume"/>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pietrykovsky.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/contact"/>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pietrykovsky.com/pl/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pietrykovsky.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://pietrykovsky.com/pl/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pietrykovsky.com/contact"/>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
