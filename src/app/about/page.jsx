@@ -26,9 +26,7 @@ import {
   SiTailwindcss,
   SiShadcnui,
   SiGooglechrome,
-  SiLangchain,
   SiModelcontextprotocol,
-  SiClaude,
   SiPostgresql,
   SiPytest,
   SiVitest,
@@ -121,12 +119,10 @@ const skillGroups = [
   {
     key: "ai",
     skills: [
-      { name: "LangChain", icon: SiLangchain },
       { name: "OpenAI API", icon: TbBrandOpenai },
       { name: "AI Agents", icon: TbRobot },
       { name: "Tool Calling", icon: TbTool },
       { name: "MCP", icon: SiModelcontextprotocol },
-      { name: "Claude Code", icon: SiClaude },
     ],
   },
   {

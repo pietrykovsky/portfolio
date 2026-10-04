@@ -1,9 +1,9 @@
 {
   "pageTitle": "About <highlighted>Me</highlighted>",
-  "introText": "I'm <highlighted>Michał Pietrykowski</highlighted>, a full stack developer from <highlighted>Wrocław</highlighted>. I wrote my first programs, mostly text adventures, in <highlighted>QBASIC</highlighted> in secondary school. Today I work mainly in <highlighted>Python</highlighted> and <highlighted>TypeScript</highlighted>, and for the past year mostly on <highlighted>AI agents</highlighted> built with LangChain.",
+  "introText": "I'm <highlighted>Michał Pietrykowski</highlighted>, a full stack developer from <highlighted>Wrocław</highlighted>. I wrote my first programs, mostly text adventures, in <highlighted>QBASIC</highlighted> in secondary school. Today I work mainly in <highlighted>Python</highlighted> and <highlighted>TypeScript</highlighted>, and for the past year mostly on <highlighted>LLM-based</highlighted> products.",
   "academicText": "I have an engineering degree in <highlighted>IT Automation Systems</highlighted> from <highlighted>Wrocław University of Science and Technology</highlighted> (grade 5.0). I'm now doing a part-time master's in <highlighted>Computer Science</highlighted> at WSB Merito University and should finish in early 2027.",
-  "skillText": "I care a lot about <highlighted>code review</highlighted> and <highlighted>tests</highlighted>. I use <highlighted>Claude Code</highlighted> every day, and I review and test everything before it gets merged. In my free time I build <highlighted>VELMOIS</highlighted>, the online store for our moissanite jewelry brand, which runs on my own server.",
-  "hobbyText": "Outside of programming I read <highlighted>Asimov</highlighted>, practice the <highlighted>Japanese tea ceremony</highlighted> and keep coming back to <highlighted>Cyberpunk 2077</highlighted>.",
+  "skillText": "I care a lot about <highlighted>code review</highlighted> and <highlighted>automated tests</highlighted>. In my free time I build <highlighted>VELMOIS</highlighted>, the online store for our moissanite jewelry brand, which runs on my own server.",
+  "hobbyText": "Outside of programming I read <highlighted>Asimov</highlighted>, drink a lot of <highlighted>coffee</highlighted> and keep coming back to <highlighted>Cyberpunk 2077</highlighted>.",
   "educationTitle": "Education",
   "educationItems": [
     {
@@ -24,15 +24,11 @@
       "title": "Full Stack Developer (AI)",
       "company": "Causality",
       "period": "January 2026 - Present",
-      "description": "Main author of the AI assistant in STRUCTURA, a multi-tenant SaaS where companies define their own data schemas and an LLM fills them with data from documents, Gmail, OwnCloud and Google Calendar.",
+      "description": "Main author of the AI assistant in STRUCTURA, a SaaS platform where companies define their own data schemas and an LLM fills them with data from documents, Gmail, OwnCloud and Google Calendar.",
       "highlights": [
-        "Built the chat from scratch in Next.js and LangChain, with streaming, threaded history and links to database records.",
-        "Extended the assistant so that the chat can do the same things as the UI: search and edit records, manage schemas, upload documents and run LLM extraction.",
-        "The agent never saves data on its own. It shows every change to the user as a proposal and runs it only after approval, in a transaction and with permission checks. Its tools are generated from each customer's schemas, so they work with any configuration.",
-        "Added full-text search in PostgreSQL on pg_trgm indexes that handles Polish characters.",
-        "Added middleware that passes documents (PDF, images, DOCX) to the model while the agent runs, including files fetched by its tools.",
-        "Built a Chrome extension (Manifest V3) that reads web pages and fills in forms with data from the system, also in React apps, but only after the user confirms. Added Auth0 login with PKCE and around 195 tests in Vitest and Testing Library.",
-        "Moved the agent from SSE to Socket.IO, so it can call a tool in the user's browser mid-response and wait for the result, and the stop button actually stops generation on the server."
+        "Built the assistant's chat in Next.js and LangChain, with streaming and threaded history, and extended it so it can do everything the UI can.",
+        "The agent never saves data on its own. Every change goes to the user as a proposal and runs only after approval.",
+        "Built a Chrome extension (Manifest V3) that fills in forms on web pages with data from the system, with Auth0 login and tests in Vitest."
       ]
     },
     {

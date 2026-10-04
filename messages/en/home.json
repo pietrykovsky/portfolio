@@ -4,6 +4,6 @@
   "headerRole": "a <bold>Full Stack Developer</bold>",
   "descHeader": "Welcome to <highlighted>My Digital Universe</highlighted>",
   "descP1": "I'm a full stack developer from Wrocław. For 4 years I've been writing <highlighted>Python</highlighted> and <highlighted>TypeScript</highlighted> professionally, mostly web apps in Django, FastAPI, Flask, React, Vue.js and Next.js.",
-  "descP2": "Since last year I've been working mostly on LLM-based products. At Causality I'm building the AI assistant in STRUCTURA with <highlighted>LangChain</highlighted>. In my free time I'm building <highlighted>VELMOIS</highlighted>, an online store for our jewelry brand.",
-  "descP3": "I started programming in secondary school, writing text adventures in QBASIC. Outside of work I read Asimov, drink a lot of matcha and keep coming back to Cyberpunk 2077."
+  "descP2": "Since last year I've been working mostly on LLM-based products. At Causality I'm building the <highlighted>AI assistant</highlighted> in STRUCTURA. In my free time I'm building <highlighted>VELMOIS</highlighted>, an online store for our jewelry brand.",
+  "descP3": "I started programming in secondary school, writing text adventures in QBASIC. Outside of work I read Asimov, drink a lot of coffee and keep coming back to Cyberpunk 2077."
 }

@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "Michał Pietrykowski - Full Stack Developer",
   description: "Personal portfolio of Michał Pietrykowski, a full stack developer from Wrocław, Poland, working with Python, TypeScript and AI/LLM. View my experience, projects and resume.",
-  keywords: "Michał Pietrykowski, pietrykovsky, full stack developer, software developer, Python, TypeScript, Next.js, LangChain, AI agents, LLM, portfolio, Poland, Wrocław",
+  keywords: "Michał Pietrykowski, pietrykovsky, full stack developer, software developer, Python, TypeScript, Next.js, AI, LLM, portfolio, Poland, Wrocław",
   openGraph: {
     title: "Michał Pietrykowski - Full Stack Developer",
     description: "Personal portfolio of Michał Pietrykowski, a full stack developer from Wrocław, Poland, working with Python, TypeScript and AI/LLM. View my experience, projects and resume.",

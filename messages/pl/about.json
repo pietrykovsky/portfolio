@@ -1,9 +1,9 @@
 {
   "pageTitle": "O <highlighted>Mnie</highlighted>",
-  "introText": "Jestem <highlighted>Michał Pietrykowski</highlighted>, full stack developer z <highlighted>Wrocławia</highlighted>. Pierwsze programy, głównie tekstowe przygodówki, napisałem w <highlighted>QBASIC-u</highlighted> w szkole średniej. Dziś pracuję przede wszystkim w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>, a od roku najczęściej przy <highlighted>agentach AI</highlighted> w LangChainie.",
+  "introText": "Jestem <highlighted>Michał Pietrykowski</highlighted>, full stack developer z <highlighted>Wrocławia</highlighted>. Pierwsze programy, głównie tekstowe przygodówki, napisałem w <highlighted>QBASIC-u</highlighted> w szkole średniej. Dziś pracuję przede wszystkim w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>, a od roku najczęściej przy produktach opartych na <highlighted>LLM</highlighted>.",
   "academicText": "Mam tytuł inżyniera z <highlighted>Informatycznych Systemów Automatyki</highlighted> na <highlighted>Politechnice Wrocławskiej</highlighted> (ocena 5.0). Teraz robię zaocznie magisterkę z <highlighted>informatyki</highlighted> na Uniwersytecie WSB Merito i powinienem skończyć na początku 2027 roku.",
-  "skillText": "Dużą wagę przykładam do <highlighted>code review</highlighted> i <highlighted>testów</highlighted>. Na co dzień korzystam z <highlighted>Claude Code</highlighted>, a wszystko przeglądam i testuję, zanim trafi do mastera. W wolnym czasie rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który stoi na moim własnym serwerze.",
-  "hobbyText": "Poza programowaniem czytam <highlighted>Asimova</highlighted>, uczę się <highlighted>japońskiej ceremonii herbacianej</highlighted> i co jakiś czas wracam do <highlighted>Cyberpunka 2077</highlighted>.",
+  "skillText": "Dużą wagę przykładam do <highlighted>code review</highlighted> i <highlighted>testów automatycznych</highlighted>. W wolnym czasie rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który stoi na moim własnym serwerze.",
+  "hobbyText": "Poza programowaniem czytam <highlighted>Asimova</highlighted>, piję dużo <highlighted>kawy</highlighted> i co jakiś czas wracam do <highlighted>Cyberpunka 2077</highlighted>.",
   "educationTitle": "Edukacja",
   "educationItems": [
     {
@@ -24,15 +24,11 @@
       "title": "Full Stack Developer (AI)",
       "company": "Causality",
       "period": "Styczeń 2026 - Obecnie",
-      "description": "Główny autor asystenta AI w aplikacji STRUCTURA. To platforma SaaS, w której każda firma sama definiuje schematy danych, a LLM wypełnia je danymi z dokumentów, Gmaila, OwnClouda i Kalendarza Google.",
+      "description": "Główny autor asystenta AI w aplikacji STRUCTURA. To platforma SaaS, w której firmy same definiują schematy danych, a LLM wypełnia je danymi z dokumentów, Gmaila, OwnClouda i Kalendarza Google.",
       "highlights": [
-        "Zbudowałem od zera czat w Next.js i LangChainie: streaming odpowiedzi, historia rozmów w wątkach i odnośniki do rekordów z bazy.",
-        "Rozszerzyłem asystenta tak, żeby przez czat dało się zrobić to samo co w interfejsie: wyszukiwać i edytować rekordy, zarządzać schematami, wgrywać dokumenty i uruchamiać ekstrakcję danych przez LLM.",
-        "Agent nigdy nie zapisuje danych sam. Każdą zmianę pokazuje użytkownikowi jako propozycję, a wykonuje ją dopiero po akceptacji, w transakcji i z kontrolą uprawnień. Narzędzia agenta generują się ze schematów klienta, więc działają przy każdej konfiguracji.",
-        "Dodałem wyszukiwanie pełnotekstowe w PostgreSQL na indeksach pg_trgm, które radzi sobie z polskimi znakami.",
-        "Dodałem middleware, które przekazuje modelowi dokumenty (PDF, obrazy, DOCX) w trakcie działania agenta, także pliki pobrane przez jego narzędzia.",
-        "Zbudowałem rozszerzenie Chrome (Manifest V3), które czyta strony i wypełnia formularze danymi z systemu, także w aplikacjach React, ale zawsze dopiero po potwierdzeniu użytkownika. Dodałem logowanie przez Auth0 z PKCE i około 195 testów w Vitest i Testing Library.",
-        "Przeniosłem agenta z SSE na Socket.IO. Dzięki temu w trakcie odpowiedzi może wywołać narzędzie w przeglądarce użytkownika i poczekać na wynik, a przycisk stop faktycznie przerywa generowanie na serwerze."
+        "Zbudowałem czat asystenta w Next.js i LangChainie, ze streamingiem i historią rozmów w wątkach, i rozszerzyłem go tak, żeby mógł zrobić wszystko to co interfejs.",
+        "Agent nigdy nie zapisuje danych sam. Każda zmiana trafia do użytkownika jako propozycja i wykonuje się dopiero po akceptacji.",
+        "Zbudowałem rozszerzenie Chrome (Manifest V3), które wypełnia formularze na stronach danymi z systemu, z logowaniem przez Auth0 i testami w Vitest."
       ]
     },
     {
