@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useTranslations } from 'next-intl';
 import styles from './BottomNavigation.module.css';
+import { pages as navigationPages } from './pages';
 
 const NavButton = ({ direction, page, onHover, onLeave }) => (
   <Link href={page?.path || '#'} passHref>
@@ -25,13 +25,7 @@ const BottomNavigation = () => {
   const pathname = usePathname();
   const [hoverDirection, setHoverDirection] = useState(null);
 
-  const pages = [
-    { path: '/', name: t('home') },
-    { path: '/about', name: t('about') },
-    { path: '/projects', name: t('projects') },
-    { path: '/resume', name: t('resume') },
-    { path: '/contact', name: t('contact') }
-  ];
+  const pages = navigationPages.map(({ path, key }) => ({ path, name: t(key) }));
 
   const currentPageIndex = pages.findIndex(page => page.path === pathname);
   const prevPage = pages[(currentPageIndex - 1 + pages.length) % pages.length];

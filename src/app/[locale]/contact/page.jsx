@@ -6,6 +6,13 @@ import { useTranslations } from 'next-intl';
 import styles from './page.module.css';
 import ReCAPTCHA from "react-google-recaptcha";
 
+// Inlined at build time; missing in a local checkout without .env.
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_WEBSITE_KEY;
+
+// Fallback for visitors whose blockers stop reCAPTCHA from loading.
+const CONTACT_EMAIL = 'm.pietrykowski2001@gmail.com';
+const LINKEDIN_URL = 'https://linkedin.com/in/pietrykovsky';
+
 export default function Contact() {
   const t = useTranslations('contact');
   const recaptchaRef = useRef(null);
@@ -32,7 +39,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const recaptchaValue = recaptchaRef.current.getValue();
+    const recaptchaValue = recaptchaRef.current?.getValue();
     if (!recaptchaValue) {
       setAlertVariant('danger');
       setAlertMessage(t('recaptchaRequired'));
@@ -65,7 +72,7 @@ export default function Contact() {
       setAlertMessage(t('errorMessage'));
     }
 
-    recaptchaRef.current.reset();
+    recaptchaRef.current?.reset();
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 10000);
   };
@@ -131,12 +138,14 @@ export default function Contact() {
           />
         </Form.Group>
         
-        <div className='my-3'>
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_WEBSITE_KEY}
-            ref={recaptchaRef}
-          />
-        </div>
+        {RECAPTCHA_SITE_KEY && (
+          <div className='my-3'>
+            <ReCAPTCHA
+              sitekey={RECAPTCHA_SITE_KEY}
+              ref={recaptchaRef}
+            />
+          </div>
+        )}
 
         <div className={styles.buttonWrapper}>
           <Button variant="primary" type="submit" className={styles.submitButton}>
@@ -144,6 +153,12 @@ export default function Contact() {
           </Button>
         </div>
       </Form>
+      <p className={styles.altContact}>
+        {t.rich('altContact', {
+          email: () => <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>,
+          linkedin: (chunks) => <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">{chunks}</a>,
+        })}
+      </p>
     </Container>
   );
 }

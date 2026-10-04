@@ -7,15 +7,28 @@
   "topicLabel": "Topic",
   "topicPlaceholder": "Select a topic",
   "topicOptions": [
-    {"value": "offer", "label": "Job Offer"},
-    {"value": "bug", "label": "Report a Bug"},
-    {"value": "question", "label": "General Question"},
-    {"value": "other", "label": "Other"}
+    {
+      "value": "offer",
+      "label": "Job Offer"
+    },
+    {
+      "value": "bug",
+      "label": "Report a Bug"
+    },
+    {
+      "value": "question",
+      "label": "General Question"
+    },
+    {
+      "value": "other",
+      "label": "Other"
+    }
   ],
   "messageLabel": "Message",
   "messagePlaceholder": "Enter your message",
   "submitButton": "Send Message",
   "successMessage": "Your message has been sent successfully!",
   "errorMessage": "There was an error sending your message. Please try again later.",
-  "recaptchaRequired": "Please complete the reCAPTCHA challenge."
+  "recaptchaRequired": "Please complete the reCAPTCHA challenge.",
+  "altContact": "Form not working? Write to me directly at <email></email> or on <linkedin>LinkedIn</linkedin>."
 }

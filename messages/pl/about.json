@@ -1,38 +1,79 @@
 {
   "pageTitle": "O <highlighted>Mnie</highlighted>",
-  "introText": "Witajcie, entuzjaści kodu i cyfrowi odkrywcy! Jestem <highlighted>Michał Pietrykowski</highlighted>, 23-letni inżynier oprogramowania z miasta <highlighted>Wrocław, Polska</highlighted>. Moja podróż przez binarne krainy rozpoczęła się w murach szkoły średniej, gdzie po raz pierwszy zetknąłem się z mistycznym językiem <highlighted>QBASIC</highlighted>. Nie wiedziałem wtedy, że to spotkanie rozbudzi we mnie życiową pasję do kodowania i wyznaczy ścieżkę do zostania <highlighted>deweloperem full-stack</highlighted>.",
-  "academicText": "Moje poszukiwanie wiedzy zaprowadziło mnie na prestiżową <highlighted>Politechnikę Wrocławską</highlighted>, gdzie udało mi się obronić moją pracę inżynierską i zdobyć tytuł inżyniera na kierunku <highlighted>Informatyczne Systemy Automatyki</highlighted>. Ta akademicka przygoda wyposażyła mnie w różnorodny arsenał języków programowania i technologii, od wijących się zwojów <highlighted>Pythona</highlighted> po elegancką efektywność <highlighted>C#</highlighted>.",
-  "hobbyText": "Kiedy nie czaruję kodu lub nie debuguję w cyfrowych lochach, możecie mnie znaleźć zanużonego w stronach powieści <highlighted>Asimova</highlighted>, rozważającego przyszłość AI lub doskonalącego sztukę <highlighted>japońskiej ceremonii picia herbaty</highlighted>. I tak, zdarzyło mi się ocalić <highlighted>Night City</highlighted> raz czy dwa w <highlighted>Cyberpunk 2077</highlighted> - bo nawet w wirtualnym świecie zawsze jest kod do napisania i błędy do zgniecenia!",
-  "skillText": "Moja supermoc? Potrafię debugować kod szybciej niż wypić czarkę <highlighted>matchy</highlighted> - a uwierzcie mi, to coś znaczy! Więc niezależnie od tego, czy jesteś tu, aby współpracować przy kolejnej wielkiej innowacji technologicznej, czy po prostu porozmawiać o przecięciu kodu i kultury, zawsze jestem gotowy na kolejną przygodę. Napiszmy przyszłość razem, linijka kodu po linijce!",
+  "introText": "Jestem <highlighted>Michał Pietrykowski</highlighted>, full stack developer z <highlighted>Wrocławia</highlighted>. Pierwsze programy, głównie tekstowe przygodówki, napisałem w <highlighted>QBASIC-u</highlighted> w szkole średniej. Dziś pracuję przede wszystkim w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>, a od roku najczęściej przy produktach opartych na <highlighted>LLM</highlighted>.",
+  "academicText": "Mam tytuł inżyniera z <highlighted>Informatycznych Systemów Automatyki</highlighted> na <highlighted>Politechnice Wrocławskiej</highlighted> (ocena 5.0). Teraz robię zaocznie magisterkę z <highlighted>informatyki</highlighted> na Uniwersytecie WSB Merito i powinienem skończyć na początku 2027 roku.",
+  "skillText": "Dużą wagę przykładam do <highlighted>code review</highlighted> i <highlighted>testów automatycznych</highlighted>. W wolnym czasie rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który stoi na moim własnym serwerze.",
+  "hobbyText": "Poza programowaniem czytam <highlighted>Asimova</highlighted>, piję dużo <highlighted>kawy</highlighted> i co jakiś czas wracam do <highlighted>Cyberpunka 2077</highlighted>.",
   "educationTitle": "Edukacja",
-  "educationDegree": "Inżynier - Informatyczne Systemy Automatyki",
-  "educationSchool": "Politechnika Wrocławska",
-  "educationPeriod": "Październik 2021 - Styczeń 2025",
+  "educationItems": [
+    {
+      "degree": "Magister - Informatyka (studia niestacjonarne)",
+      "school": "Uniwersytet WSB Merito we Wrocławiu",
+      "period": "Marzec 2025 - Luty 2027 (planowo)"
+    },
+    {
+      "degree": "Inżynier - Informatyczne Systemy Automatyki",
+      "school": "Politechnika Wrocławska",
+      "period": "Październik 2021 - Styczeń 2025",
+      "note": "Ocena 5.0. Praca inżynierska: aplikacja webowa do śledzenia postępów na siłowni (GymTracker)."
+    }
+  ],
   "experienceTitle": "Doświadczenie",
   "experienceItems": [
     {
-      "title": "Junior Full Stack Developer",
+      "title": "Full Stack Developer (AI)",
+      "company": "Causality",
+      "period": "Styczeń 2026 - Obecnie",
+      "description": "Główny autor asystenta AI w aplikacji STRUCTURA. To platforma SaaS, w której firmy same definiują schematy danych, a LLM wypełnia je danymi z dokumentów, Gmaila, OwnClouda i Kalendarza Google.",
+      "highlights": [
+        "Zbudowałem czat asystenta w Next.js i LangChainie, ze streamingiem i historią rozmów w wątkach, i rozszerzyłem go tak, żeby mógł zrobić wszystko to co interfejs.",
+        "Agent nigdy nie zapisuje danych sam. Każda zmiana trafia do użytkownika jako propozycja i wykonuje się dopiero po akceptacji.",
+        "Zbudowałem rozszerzenie Chrome (Manifest V3), które wypełnia formularze na stronach danymi z systemu, z logowaniem przez Auth0 i testami w Vitest."
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Lokey (IRMATIC)",
+      "period": "Kwiecień 2025 - Obecnie",
+      "description": "Rozwijam IRMATIC CMS oraz aplikacje działające na szafach lekowych i inteligentnych skrytkach IRMATIC.",
+      "highlights": [
+        "Prowadzę integrację urządzeń IRMATIC ze szpitalnym systemem AMMS i współpracuję przy tym bezpośrednio z Asseco i personelem szpitali.",
+        "Front-end w Vue.js, Quasarze i TypeScripcie, back-end we Flasku, SQLAlchemy i PostgreSQL.",
+        "Piszę testy w Pyteście i wdrażam aplikacje w Dockerze na AWS, gdzie infrastruktura jest zarządzana w Terraformie."
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
       "company": "Correct Context (Comscore)",
-      "period": "Kwiecień 2024 - Obecnie",
-      "description": "Zajmuję się implementacją nowych funkcjonalności oraz utrzymaniem aplikacji webowych REST w takich technologiach jak Django, FastAPI, Flask czy React.js. Automatyzuję procesy z pomocą Jenkinsa i Dockera oraz testy jednostkowe i integracyjne z Pytestem, a także dbam o jakość kodu i bezpieczeństwo aplikacji. Zajmuję się również migracją infrastruktury do chmury AWS."
+      "period": "Kwiecień 2024 - Grudzień 2025",
+      "highlights": [
+        "Budowałem REST API i mikroserwisy w Django, Django REST Framework i FastAPI, z Reactem na front-endzie.",
+        "Pisałem DAG-i w Airflow do przetwarzania danych i przygotowałem dokumentację migracji z serwerowni on-premise do AWS.",
+        "Utrzymywałem pipeline'y CI/CD w Jenkinsie i testy w Pyteście."
+      ]
     },
     {
-      "title": "Stażysta Software Developer",
+      "title": "Stażysta Software Engineer, wcześniej QA Automation",
       "company": "Dolby Laboratories",
-      "period": "Wrzesień 2023 - Marzec 2024",
-      "description": "Przyczyniłem się do projektów migracji danych, zwiększając wydajność systemu i integralność danych. Odegrałem kluczową rolę w utrzymaniu i ulepszaniu aplikacji Dolby Access, koncentrując się na naprawie błędów i implementacji nowych funkcji przy użyciu technologii .NET."
-    },
-    {
-      "title": "Stażysta Quality Analyst",
-      "company": "Dolby Laboratories",
-      "period": "Grudzień 2022 - Wrzesień 2023",
-      "description": "Zajmowałem się tworzeniem i utrzymaniem paczek w Pythonie, w tym Raspberry Pi USB Gadget i Page Object Model, usprawniając procesy testowe. Brałem udział w czynnym tworzeniu dokumentacji oraz automatyzowaniu testów z pomocą Pytest, znacznie poprawiając zakres i efektywność testów. Aktywnie uczestniczyłem w testach regresyjnych, zapewniając jakość i niezawodność produktu."
+      "period": "Grudzień 2022 - Kwiecień 2024",
+      "highlights": [
+        "Utrzymywałem aplikację desktopową Dolby Access w C# i .NET: naprawiałem błędy, dodawałem funkcje i pisałem testy w xUnit.",
+        "Wcześniej, jako stażysta QA, tworzyłem automatyzację testów w Pythonie i Pyteście, w tym paczkę Raspberry Pi USB Gadget i Page Object Model, oraz pomagałem w testach regresyjnych."
+      ]
     }
   ],
-  "techStackTitle": "Stack Technologiczny",
-  "toolsTitle": "Narzędzia i Środowiska",
+  "techStackTitle": "Umiejętności",
+  "skillGroups": {
+    "languages": "Języki",
+    "backend": "Back-end",
+    "frontend": "Front-end",
+    "ai": "AI",
+    "dataTesting": "Bazy danych i testy",
+    "cloudDevops": "Chmura i DevOps",
+    "tools": "Narzędzia"
+  },
   "futureTitle": "Co Dalej?",
-  "futureText1": "Kontynuując eksplorację ogromnego świata technologii, jestem szczególnie podekscytowany perspektywą zgłębienia <highlighted>uczenia maszynowego</highlighted> i <highlighted>AI</highlighted>. Potencjał tych technologii do rewolucjonizowania branż i rozwiązywania złożonych problemów jest naprawdę inspirujący, i jestem chętny, by być na czele tej cyfrowej rewolucji.",
-  "futureText2": "Planuję również więcej przyczynić się do <highlighted>projektów open-source</highlighted>. Współpracująca natura rozwoju open-source idealnie pasuje do mojego przekonania o sile innowacji napędzanej przez społeczność. Dodatkowo, rozważam rozpoczęcie <highlighted>bloga technologicznego</highlighted>, aby dzielić się moimi przygodami w kodowaniu, wyciągniętymi wnioskami i zdobytymi spostrzeżeniami po drodze.",
-  "futureText3": "Niezależnie od tego, czy jesteś tu, aby współpracować nad przełomowym projektem, omówić zawiłe zwroty akcji w twojej ulubionej <highlighted>powieści science-fiction</highlighted>, czy zaangażować się w przyjazną debatę o najlepszych <highlighted>miejscach z ramenem, sushi lub herbatą we Wrocławiu</highlighted>, zawsze jestem gotowy na angażującą rozmowę. Połączmy siły, innowujmy i stwórzmy coś niezwykłego razem!"
+  "futureText1": "W pracy chcę dalej budować agentów AI działających na prawdziwych danych firm, gdzie każda zmiana musi przejść przez akceptację użytkownika.",
+  "futureText2": "Poza pracą przygotowuję <highlighted>VELMOIS</highlighted> do startu.",
+  "futureText3": "Jestem otwarty na pracę w pełni zdalną na B2B. Jeśli masz projekt albo ofertę pracy, albo po prostu znasz dobry <highlighted>ramen we Wrocławiu</highlighted>, napisz do mnie przez <contactLink>formularz kontaktowy</contactLink>."
 }

@@ -1,9 +1,9 @@
 {
   "headerHello": "Hello World!",
   "headerIntro": "I'm <highlighted>Michał Pietrykowski</highlighted>",
-  "headerRole": "a <bold>Software Developer</bold>",
+  "headerRole": "a <bold>Full Stack Developer</bold>",
   "descHeader": "Welcome to <highlighted>My Digital Universe</highlighted>",
-  "descP1": "I'm a 23-year-old code enthusiast from Wrocław, currently navigating the galaxy of IT Automation Systems at Wrocław University of Science and Technology. My journey from <highlighted>QBASIC</highlighted> text adventures to full-stack engineering has been quite the space odyssey!",
-  "descP2": "As a full-stack engineer, I wield the power of <highlighted>Python</highlighted> and <highlighted>JavaScript</highlighted>, crafting digital solutions with frameworks like <highlighted>Django</highlighted> and <highlighted>React</highlighted>. I've also ventured into the realm of <highlighted>C#</highlighted>, developing desktop applications that push the boundaries of what's possible.",
-  "descP3": "When I'm not busy decoding the mysteries of the digital realm or experimenting with <highlighted>machine learning</highlighted> algorithms, you might find me lost in Asimov's worlds, mastering the art of Japanese tea ceremonies, or saving Night City in Cyberpunk 2077. And yes, I can debug code almost as fast as I can slurp a bowl of ramen - it's my superpower!"
+  "descP1": "I'm a full stack developer from Wrocław. For 4 years I've been writing <highlighted>Python</highlighted> and <highlighted>TypeScript</highlighted> professionally, mostly web apps in Django, FastAPI, Flask, React, Vue.js and Next.js.",
+  "descP2": "Since last year I've been working mostly on LLM-based products. At Causality I'm building the <highlighted>AI assistant</highlighted> in STRUCTURA. In my free time I'm building <highlighted>VELMOIS</highlighted>, an online store for our jewelry brand.",
+  "descP3": "I started programming in secondary school, writing text adventures in QBASIC. Outside of work I read Asimov, drink a lot of coffee and keep coming back to Cyberpunk 2077."
 }

@@ -66,6 +66,17 @@
   color: black;
 }
 
+.altContact {
+  margin-top: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.altContact a {
+  color: #7dbeff;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .contactContainer {
     padding-top: 1rem;

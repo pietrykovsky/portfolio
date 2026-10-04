@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaAws, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import {
   SiPython,
   SiDjango,
@@ -22,12 +22,16 @@ import {
   SiTypescript,
   SiCelery,
   SiRedis,
+  SiPrisma,
+  SiShadcnui,
+  SiVitest,
+  SiGithubactions,
 } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
+import { TbBrandCSharp, TbMasksTheater } from "react-icons/tb";
 import styles from "./page.module.css";
 import { useTranslations } from "next-intl";
 
-const ProjectCard = ({ title, description, image, technologies, demoLink, repoLink, delay, alt, t }) => {
+const ProjectCard = ({ title, description, highlights, featured, image, technologies, demoLink, repoLink, delay, alt, t }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,12 +40,20 @@ const ProjectCard = ({ title, description, image, technologies, demoLink, repoLi
   }, [delay]);
 
   return (
-    <Card className={`${styles.projectCard} ${isVisible ? styles.visible : ""}`}>
+    <Card className={`${styles.projectCard} ${featured ? styles.featuredCard : ""} ${isVisible ? styles.visible : ""}`}>
       <Card.Img variant="top" src={image} className={styles.projectImage} alt={alt} />
       <Card.Body className={styles.cardBody}>
         <div>
+          {featured && <div className={styles.featuredLabel}>{t("featuredLabel")}</div>}
           <Card.Title className={styles.projectTitle}>{title}</Card.Title>
           <Card.Text className={styles.projectDescription}>{description}</Card.Text>
+          {highlights && (
+            <ul className={styles.projectHighlights}>
+              {highlights.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className={styles.cardFooter}>
           <div className={styles.technologies}>
@@ -79,22 +91,42 @@ const ProjectCard = ({ title, description, image, technologies, demoLink, repoLi
   );
 };
 
+// Private repository, so the store links only to the live site.
+const featuredProject = {
+  title: "VELMOIS",
+  descriptionKey: "velmois",
+  image: "/previews/velmois.jpg",
+  technologies: [
+    SiNextdotjs,
+    SiTypescript,
+    SiTailwindcss,
+    SiShadcnui,
+    SiPrisma,
+    SiPostgresql,
+    SiVitest,
+    TbMasksTheater,
+    SiDocker,
+    SiGithubactions,
+    SiNginx,
+    FaAws,
+  ],
+  demoLink: "https://velmois.com",
+};
+
 const projects = [
+  {
+    title: "Portfolio Website",
+    descriptionKey: "portfolio",
+    image: "/previews/portfolio.jpg",
+    technologies: [SiReact, SiJavascript, SiNextdotjs, SiBootstrap, SiDocker, SiGithubactions, SiNginx],
+    repoLink: "https://github.com/pietrykovsky/portfolio",
+  },
   {
     title: "GymTracker",
     descriptionKey: "gymTracker",
     image: "/previews/gym-tracker.png",
     technologies: [TbBrandCSharp, SiDotnet, SiBlazor, SiPostgresql, SiBootstrap, SiNginx, SiDocker],
-    demoLink: "https://gym-tracker.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/gym-tracker",
-  },
-  {
-    title: "Portfolio Website",
-    descriptionKey: "portfolio",
-    image: "/previews/portfolio.jpg",
-    technologies: [SiReact, SiJavascript, SiNextdotjs, SiNginx, SiDocker],
-    demoLink: "https://pietrykovsky.com",
-    repoLink: "https://github.com/pietrykovsky/portfolio",
   },
   {
     title: "Python Raycaster",
@@ -121,7 +153,6 @@ const projects = [
       SiCelery,
       SiRedis,
     ],
-    demoLink: "https://lego-ranking.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/lego-ranking-app",
   },
   {
@@ -136,7 +167,6 @@ const projects = [
     descriptionKey: "szczurTV",
     image: "/previews/szczurtv.jpg",
     technologies: [TbBrandCSharp, SiDotnet, SiBlazor, SiDocker, SiNginx],
-    demoLink: "https://szczurtv.pietrykovsky.com",
     repoLink: "https://github.com/pietrykovsky/szczurtv",
   },
   {
@@ -168,13 +198,24 @@ export default function Projects() {
   return (
     <Container className={styles.projectsContainer}>
       <h1 className={styles.pageTitle}>{t("pageTitle")}</h1>
+      <div className="mb-4">
+        <ProjectCard
+          {...featuredProject}
+          featured
+          description={t(`projectDescriptions.${featuredProject.descriptionKey}`)}
+          highlights={t.raw(`projectHighlights.${featuredProject.descriptionKey}`)}
+          delay={0}
+          alt={`${featuredProject.title} Preview`}
+          t={t}
+        />
+      </div>
       <Row xs={1} md={2} lg={3} className="g-4">
         {projects.map((project, index) => (
           <Col key={`project-${index}`}>
             <ProjectCard
               {...project}
               description={t(`projectDescriptions.${project.descriptionKey}`)}
-              delay={index * 200}
+              delay={(index + 1) * 200}
               alt={`${project.title} Preview`}
               t={t}
             />

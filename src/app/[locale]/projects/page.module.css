@@ -113,6 +113,41 @@
   border-color: #fff;
 }
 
+.featuredLabel {
+  color: #7dbeff;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.projectHighlights {
+  color: white;
+  font-size: 0.95rem;
+  padding-left: 1.25rem;
+}
+
+.projectHighlights li {
+  margin-bottom: 0.35rem;
+}
+
+.featuredCard .projectImage {
+  height: auto;
+  max-height: 540px;
+  object-position: top;
+}
+
+@media (min-width: 992px) {
+  .featuredCard .projectHighlights {
+    column-count: 2;
+    column-gap: 2.5rem;
+  }
+
+  .featuredCard .projectHighlights li {
+    break-inside: avoid;
+  }
+}
+
 @media (max-width: 768px) {
   .projectsContainer {
     padding-top: 1rem;

@@ -7,15 +7,28 @@
   "topicLabel": "Temat",
   "topicPlaceholder": "Wybierz temat",
   "topicOptions": [
-    {"value": "offer", "label": "Oferta pracy"},
-    {"value": "bug", "label": "Zgłoszenie błędu"},
-    {"value": "question", "label": "Ogólne pytanie"},
-    {"value": "other", "label": "Inne"}
+    {
+      "value": "offer",
+      "label": "Oferta pracy"
+    },
+    {
+      "value": "bug",
+      "label": "Zgłoszenie błędu"
+    },
+    {
+      "value": "question",
+      "label": "Ogólne pytanie"
+    },
+    {
+      "value": "other",
+      "label": "Inne"
+    }
   ],
   "messageLabel": "Wiadomość",
   "messagePlaceholder": "Wprowadź swoją wiadomość",
   "submitButton": "Wyślij wiadomość",
   "successMessage": "Twoja wiadomość została wysłana pomyślnie!",
   "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbować ponownie później.",
-  "recaptchaRequired": "Proszę wypełnić reCAPTCHA."
+  "recaptchaRequired": "Proszę wypełnić reCAPTCHA.",
+  "altContact": "Formularz nie działa? Napisz bezpośrednio na <email></email> albo na <linkedin>LinkedInie</linkedin>."
 }
