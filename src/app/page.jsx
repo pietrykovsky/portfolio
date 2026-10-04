@@ -13,10 +13,10 @@ export default function Home() {
 
   const getTypewriterString = () => {
     const hello = t('headerHello');
-    const introduction = t.rich('headerIntro', {
+    const introduction = t.markup('headerIntro', {
       highlighted: (chunks) => `<span class="${styles.highlighted}">${chunks}</span>`
     });
-    const role = t.rich('headerRole', {
+    const role = t.markup('headerRole', {
       bold: (chunks) => `<b>${chunks}</b>`
     });
 
