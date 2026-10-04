@@ -27,6 +27,9 @@ ENV NODE_ENV=production
 USER node
 
 COPY package.json .
+# next start reads runtime options (e.g. poweredByHeader) from the config file;
+# without it they silently fall back to the defaults.
+COPY next.config.mjs .
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/.next ./.next
 COPY public ./public
