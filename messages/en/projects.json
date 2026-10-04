@@ -1,16 +1,16 @@
 {
   "pageTitle": "My Projects",
-  "demoButton": "Demo",
+  "demoButton": "Visit site",
   "repoButton": "Repository",
   "projectDescriptions": {
-    "velmois": "Online store for our moissanite jewelry brand, run by MOISS sp. z o.o., a company I co-founded. I'm the only developer, so architecture, code, deployments and the legal side are all on me. It started as FastAPI with a Next.js front end, and I later merged everything into one Next.js app. Until sales start, the store runs as a staging site.",
+    "velmois": "Online store for our moissanite jewelry brand, run by MOISS sp. z o.o., a company I co-founded. I'm the only developer, so I handle the architecture, code and deployments. It started as FastAPI with a Next.js front end, and I later merged everything into one Next.js app. Until sales start, the store runs as a staging site.",
     "portfolio": "The site you're on. It runs on Next.js 16 and React 19 and is available in Polish and English (next-intl picks the language from the browser or a cookie). It has a PDF preview of my resume and a contact form with reCAPTCHA. It runs in Docker on my own server behind nginx, and GitHub Actions deploys it when I push a git tag.",
     "gymTracker": "Web app for tracking workouts, body measurements and training progress, built as my engineering thesis. Written in Blazor Server and .NET with PostgreSQL.",
     "pythonRaycaster": "Game written in Python using Pygame library with game engine built from scratch. Features raycasting rendering, collision detection, user interface, equipable weapons and simple AI.",
     "legoRanking": "A web application for ranking most cost effective Lego bundles, with custom scraper. Built with Python (Django, Django REST Framework, Selenium, Poetry), PostgreSQL, Docker, Redis, Celery and TypeScript (React.js, Next.js, Tailwind CSS).",
     "androidTodo": "Simple Todo App for Android with CRUD operations, custom notification system, alarm setting, filtering mechanism, written in Kotlin using Android Studio.",
     "szczurTV": "A simple streaming platform inspired by Twitch and Kick with streaming feature, live chat and user authentication. Developed using C#, Blazor, ASP.NET Core, Docker and nginx.",
-    "djangoBlog": "django-blog is a simple blog built with Django with posts and categories CRUD functionality, user authentication system, posts commenting system, user profiles, template-based interface styled with bootstrap, search system, category filtering, email notification and feedback system, redactor status allowing user to CRUD posts and comments.",
+    "djangoBlog": "A blog built with Django: posts and categories with CRUD, user accounts and profiles, comments, search and category filters, and email notifications. Editors can manage posts and comments. Templates are styled with Bootstrap.",
     "ticTacToe": "Simple Python tictactoe game with alpha beta pruning minimax AI implemented with pygame.",
     "mazeGenerator": "Maze Generator is a Python project that uses an A* pathfinding algorithm to find the shortest path through a randomly generated maze. The project also includes a maze generator based on a modified version of Kruskal's algorithm."
   },
@@ -22,7 +22,7 @@
       "Full-text search that tolerates typos (pg_trgm), cookieless analytics computed on the server, and emails sent through AWS SES from a queue with retries.",
       "CSP with nonces, HSTS, Argon2id passwords, session tokens stored as hashes, rate limits and a read-only container running without root.",
       "Around 350 unit and integration tests in Vitest (on a real PostgreSQL) and 71 Playwright E2E tests. CI blocks every merge, and a git tag deploys a new container after a healthcheck.",
-      "Terms, privacy policy and Omnibus price history checked against Polish consumer law and GDPR. Legal texts are versioned in the repository."
+      "Implemented legal requirements in the app: Omnibus price history, account deletion on request (GDPR) and analytics without cookies or user identifiers."
     ]
   }
 }

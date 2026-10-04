@@ -2,7 +2,7 @@
   "pageTitle": "About <highlighted>Me</highlighted>",
   "introText": "I'm <highlighted>Michał Pietrykowski</highlighted>, a full stack developer from <highlighted>Wrocław</highlighted>. I wrote my first programs, mostly text adventures, in <highlighted>QBASIC</highlighted> in secondary school. Today I work mainly in <highlighted>Python</highlighted> and <highlighted>TypeScript</highlighted>, and for the past year mostly on <highlighted>AI agents</highlighted> built with LangChain.",
   "academicText": "I have an engineering degree in <highlighted>IT Automation Systems</highlighted> from <highlighted>Wrocław University of Science and Technology</highlighted> (grade 5.0). I'm now doing a part-time master's in <highlighted>Computer Science</highlighted> at WSB Merito University and should finish in early 2027.",
-  "skillText": "I care a lot about <highlighted>code review</highlighted> and <highlighted>tests</highlighted>. I write most of my code with <highlighted>Claude Code</highlighted> now, so I review everything it produces before it gets merged. In my free time I build <highlighted>VELMOIS</highlighted>, the online store for our moissanite jewelry brand, which runs on my own server.",
+  "skillText": "I care a lot about <highlighted>code review</highlighted> and <highlighted>tests</highlighted>. I use <highlighted>Claude Code</highlighted> every day, and I review and test everything before it gets merged. In my free time I build <highlighted>VELMOIS</highlighted>, the online store for our moissanite jewelry brand, which runs on my own server.",
   "hobbyText": "Outside of programming I read <highlighted>Asimov</highlighted>, practice the <highlighted>Japanese tea ceremony</highlighted> and keep coming back to <highlighted>Cyberpunk 2077</highlighted>.",
   "educationTitle": "Education",
   "educationItems": [
@@ -78,6 +78,6 @@
   },
   "futureTitle": "What's Next?",
   "futureText1": "At work I want to keep building AI agents that work on real company data, where every change has to be approved by the user.",
-  "futureText2": "Outside of work, the next big step is launching sales at <highlighted>VELMOIS</highlighted>. I'd also finally like to start a tech blog.",
-  "futureText3": "I work remotely on a B2B contract. If you have a project or a job offer, or just know a good <highlighted>ramen place in Wrocław</highlighted>, write to me through the <highlighted>contact form</highlighted>."
+  "futureText2": "Outside of work I'm getting <highlighted>VELMOIS</highlighted> ready for launch, and I'd like to finally start a tech blog.",
+  "futureText3": "I'm open to fully remote work on a B2B contract. If you have a project or a job offer, or just know a good <highlighted>ramen place in Wrocław</highlighted>, write to me through the <highlighted>contact form</highlighted>."
 }

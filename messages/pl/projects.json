@@ -1,16 +1,16 @@
 {
   "pageTitle": "Moje Projekty",
-  "demoButton": "Demo",
+  "demoButton": "Zobacz stronę",
   "repoButton": "Repozytorium",
   "projectDescriptions": {
-    "velmois": "Sklep internetowy naszej marki biżuterii z moissanitem, prowadzonej przez MOISS sp. z o.o., którą współzałożyłem. Jestem jedynym programistą, więc architektura, kod, wdrożenia i sprawy prawne są na mojej głowie. Zaczynałem od FastAPI z frontem w Next.js, a później połączyłem wszystko w jedną aplikację Next.js. Do startu sprzedaży sklep działa jako wersja stagingowa.",
+    "velmois": "Sklep internetowy naszej marki biżuterii z moissanitem, prowadzonej przez MOISS sp. z o.o., którą współzałożyłem. Jestem jedynym programistą, więc odpowiadam za architekturę, kod i wdrożenia. Zaczynałem od FastAPI z frontem w Next.js, a później połączyłem wszystko w jedną aplikację Next.js. Do startu sprzedaży sklep działa jako wersja stagingowa.",
     "portfolio": "Strona, na której właśnie jesteś. Działa na Next.js 16 i React 19, po polsku i angielsku (next-intl wybiera język na podstawie przeglądarki albo ciasteczka). Ma podgląd CV w PDF i formularz kontaktowy z reCAPTCHA. Stoi w Dockerze na moim serwerze za nginxem, a GitHub Actions wdraża ją, gdy wypchnę tag w gicie.",
     "gymTracker": "Aplikacja webowa do śledzenia treningów, pomiarów ciała i postępów na siłowni, zbudowana jako moja praca inżynierska. Napisana w Blazor Server i .NET z PostgreSQL.",
     "pythonRaycaster": "Gra napisana w Pythonie z wykorzystaniem biblioteki Pygame, z silnikiem gry zbudowanym od podstaw. Zawiera renderowanie raycasting, wykrywanie kolizji, interfejs użytkownika, możliwość ekwipowania broni i prostą AI.",
     "legoRanking": "Aplikacja internetowa do rankingowania najbardziej opłacalnych zestawów Lego, z własnym scraperem. Zbudowana przy użyciu Pythona (Django, Django REST Framework, Selenium, Poetry), PostgreSQL, Docker, Redis, Celery i TypeScript (React.js, Next.js, Tailwind CSS).",
     "androidTodo": "Prosta aplikacja Todo na Androida z operacjami CRUD, niestandardowym systemem powiadomień, ustawianiem alarmów, mechanizmem filtrowania, napisana w Kotlinie przy użyciu Android Studio.",
     "szczurTV": "Prosta platforma streamingowa inspirowana Twitch i Kick z funkcją streamingu, czatem na żywo i autentykacją użytkowników. Opracowana przy użyciu C#, Blazor, ASP.NET Core, Docker i nginx.",
-    "djangoBlog": "Django-blog to prosty blog zbudowany z Django z funkcjonalnością CRUD dla postów i kategorii, systemem uwierzytelniania użytkowników, systemem komentowania postów, profilami użytkowników, interfejsem opartym na szablonach stylizowanym bootstrapem, systemem wyszukiwania, filtrowaniem kategorii, systemem powiadomień e-mail i feedbacku, statusem redaktora pozwalającym użytkownikowi na CRUD postów i komentarzy.",
+    "djangoBlog": "Blog zbudowany w Django: posty i kategorie z CRUD, konta i profile użytkowników, komentarze, wyszukiwanie i filtrowanie po kategoriach oraz powiadomienia e-mail. Redaktorzy mogą zarządzać postami i komentarzami. Szablony są ostylowane Bootstrapem.",
     "ticTacToe": "Prosta gra w kółko i krzyżyk w Pythonie z implementacją AI wykorzystującą algorytm minimax z alfa-beta cięciami, zrealizowana przy użyciu pygame.",
     "mazeGenerator": "Generator Labiryntów to projekt w Pythonie, który wykorzystuje algorytm pathfindingu A* do znalezienia najkrótszej ścieżki przez losowo wygenerowany labirynt. Projekt zawiera również generator labiryntów oparty na zmodyfikowanej wersji algorytmu Kruskala."
   },
@@ -22,7 +22,7 @@
       "Wyszukiwarka pełnotekstowa odporna na literówki (pg_trgm), analityka bez ciasteczek liczona na serwerze i maile wysyłane przez AWS SES z kolejki z ponawianiem.",
       "CSP z nonce, HSTS, hasła w Argon2id, tokeny sesji przechowywane jako hashe, limity zapytań i kontener tylko do odczytu uruchamiany bez roota.",
       "Około 350 testów jednostkowych i integracyjnych w Vitest (na prawdziwym PostgreSQL) i 71 testów E2E w Playwright. CI blokuje każdy merge, a tag gita wdraża nowy kontener po healthchecku.",
-      "Regulamin, polityka prywatności i historia cen zgodna z Omnibusem, sprawdzone pod kątem prawa konsumenckiego i RODO. Teksty prawne są wersjonowane w repozytorium."
+      "Zaimplementowałem w aplikacji wymagania prawne: historię cen zgodną z dyrektywą Omnibus, usuwanie kont na żądanie (RODO) i analitykę bez ciasteczek i identyfikatorów użytkowników."
     ]
   }
 }

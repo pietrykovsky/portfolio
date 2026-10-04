@@ -2,7 +2,7 @@
   "pageTitle": "O <highlighted>Mnie</highlighted>",
   "introText": "Jestem <highlighted>Michał Pietrykowski</highlighted>, full stack developer z <highlighted>Wrocławia</highlighted>. Pierwsze programy, głównie tekstowe przygodówki, napisałem w <highlighted>QBASIC-u</highlighted> w szkole średniej. Dziś pracuję przede wszystkim w <highlighted>Pythonie</highlighted> i <highlighted>TypeScripcie</highlighted>, a od roku najczęściej przy <highlighted>agentach AI</highlighted> w LangChainie.",
   "academicText": "Mam tytuł inżyniera z <highlighted>Informatycznych Systemów Automatyki</highlighted> na <highlighted>Politechnice Wrocławskiej</highlighted> (ocena 5.0). Teraz robię zaocznie magisterkę z <highlighted>informatyki</highlighted> na Uniwersytecie WSB Merito i powinienem skończyć na początku 2027 roku.",
-  "skillText": "Dużą wagę przykładam do <highlighted>code review</highlighted> i <highlighted>testów</highlighted>. Większość kodu piszę teraz w <highlighted>Claude Code</highlighted>, więc przeglądam wszystko, co wygeneruje, zanim trafi do mastera. W wolnym czasie rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który stoi na moim własnym serwerze.",
+  "skillText": "Dużą wagę przykładam do <highlighted>code review</highlighted> i <highlighted>testów</highlighted>. Na co dzień korzystam z <highlighted>Claude Code</highlighted>, a wszystko przeglądam i testuję, zanim trafi do mastera. W wolnym czasie rozwijam <highlighted>VELMOIS</highlighted>, sklep internetowy naszej marki biżuterii z moissanitem, który stoi na moim własnym serwerze.",
   "hobbyText": "Poza programowaniem czytam <highlighted>Asimova</highlighted>, uczę się <highlighted>japońskiej ceremonii herbacianej</highlighted> i co jakiś czas wracam do <highlighted>Cyberpunka 2077</highlighted>.",
   "educationTitle": "Edukacja",
   "educationItems": [
@@ -78,6 +78,6 @@
   },
   "futureTitle": "Co Dalej?",
   "futureText1": "W pracy chcę dalej budować agentów AI działających na prawdziwych danych firm, gdzie każda zmiana musi przejść przez akceptację użytkownika.",
-  "futureText2": "Poza pracą najbliższy duży krok to start sprzedaży w <highlighted>VELMOIS</highlighted>. Chcę też w końcu założyć bloga technicznego.",
-  "futureText3": "Pracuję zdalnie na B2B. Jeśli masz projekt albo ofertę pracy, albo po prostu znasz dobry <highlighted>ramen we Wrocławiu</highlighted>, napisz do mnie przez <highlighted>formularz kontaktowy</highlighted>."
+  "futureText2": "Poza pracą przygotowuję <highlighted>VELMOIS</highlighted> do startu i chcę w końcu założyć bloga technicznego.",
+  "futureText3": "Jestem otwarty na pracę w pełni zdalną na B2B. Jeśli masz projekt albo ofertę pracy, albo po prostu znasz dobry <highlighted>ramen we Wrocławiu</highlighted>, napisz do mnie przez <highlighted>formularz kontaktowy</highlighted>."
 }
