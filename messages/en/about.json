@@ -74,6 +74,6 @@
   },
   "futureTitle": "What's Next?",
   "futureText1": "At work I want to keep building AI agents that work on real company data, where every change has to be approved by the user.",
-  "futureText2": "Outside of work I'm getting <highlighted>VELMOIS</highlighted> ready for launch, and I'd like to finally start a tech blog.",
-  "futureText3": "I'm open to fully remote work on a B2B contract. If you have a project or a job offer, or just know a good <highlighted>ramen place in Wrocław</highlighted>, write to me through the <highlighted>contact form</highlighted>."
+  "futureText2": "Outside of work I'm getting <highlighted>VELMOIS</highlighted> ready for launch.",
+  "futureText3": "I'm open to fully remote work on a B2B contract. If you have a project or a job offer, or just know a good <highlighted>ramen place in Wrocław</highlighted>, write to me through the <contactLink>contact form</contactLink>."
 }

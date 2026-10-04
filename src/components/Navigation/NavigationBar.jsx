@@ -1,9 +1,9 @@
 "use client";
 
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { LuHouse, LuLaptop, LuUser, LuFileText, LuMail } from 'react-icons/lu';
 import {useTranslations} from 'next-intl';
 import LocaleSwitcher from './LocaleSwitcher';
+import { pages } from './pages';
 
 export default function NavigationBar() {
   const t = useTranslations('navigation');
@@ -19,31 +19,13 @@ export default function NavigationBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Item>
-              <Nav.Link href="/">
-                <LuHouse className='mb-1'/> {t('home')}
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/projects">
-                <LuLaptop className='mb-1'/> {t('projects')}
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/about">
-                <LuUser className='mb-1'/> {t('about')}
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/resume">
-                <LuFileText className='mb-1'/> {t('resume')}
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/contact">
-                <LuMail className='mb-1'/> {t('contact')}
-              </Nav.Link>
-            </Nav.Item>
+            {pages.map(({ path, key, icon: Icon }) => (
+              <Nav.Item key={path}>
+                <Nav.Link href={path}>
+                  <Icon className='mb-1'/> {t(key)}
+                </Nav.Link>
+              </Nav.Item>
+            ))}
           </Nav>
           <Nav className="ms-auto">
             <LocaleSwitcher />

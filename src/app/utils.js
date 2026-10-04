@@ -4,7 +4,8 @@ export function getHighlightedString(translations, key) {
     return translations.markup(
         key, 
         {
-          highlighted: (chunks) => `<span class=${styles.highlighted}>${chunks}</span>`
+          highlighted: (chunks) => `<span class=${styles.highlighted}>${chunks}</span>`,
+          contactLink: (chunks) => `<a href="/contact" class=${styles.highlighted}>${chunks}</a>`
         });
 }
 

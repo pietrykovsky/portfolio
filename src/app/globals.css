@@ -223,6 +223,16 @@ button:focus {
   transform: translateY(-3px);
 }
 
+.footer .footer-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-link:hover {
+  color: #7dbeff;
+}
+
 @media (max-width: 767px) {
   .footer {
     text-align: center;
